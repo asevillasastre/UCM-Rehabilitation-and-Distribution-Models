@@ -9,8 +9,7 @@ It is studied through integer programming models, applying various multi-objecti
 It is used the situation of West Bank as a relevant case study
 
 ### Author
-- Antonio Sevilla Sastre
-- Directed by Mᵃ Teresa Ortuño Sánchez, from Complutense University of Madrid
+Antonio Sevilla Sastre; directed by Mᵃ Teresa Ortuño Sánchez, from Complutense University of Madrid
 
 ### Link to repository
 [asevillasastre/UCM-TFG](https://github.com/asevillasastre/UCM-TFG)
