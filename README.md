@@ -18,5 +18,4 @@ Antonio Sevilla Sastre; directed by Mᵃ Teresa Ortuño Sánchez, from Compluten
 
 -----------------------------------------------------------------------------
 
-- Check [my other projects](https://github.com/asevillasastre)!
-- Follow me on [LinkedIn](https://www.linkedin.com/in/asevillasastre/)!
+You can check [my other projects](https://github.com/asevillasastre) and follow me on [LinkedIn](https://www.linkedin.com/in/asevillasastre/)!
