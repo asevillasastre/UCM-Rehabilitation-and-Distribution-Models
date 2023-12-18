@@ -12,4 +12,4 @@ It is used the situation of West Bank as a relevant case study.
 Antonio Sevilla Sastre; directed by Mᵃ Teresa Ortuño Sánchez, from Complutense University of Madrid.
 
 ### Link to repository
-[asevillasastre/UCM-TFG](https://github.com/asevillasastre/UCM-TFG)](https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models)https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models
+
