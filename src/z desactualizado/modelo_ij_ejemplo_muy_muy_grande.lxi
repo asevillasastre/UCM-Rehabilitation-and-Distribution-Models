@@ -1,0 +1,48 @@
+B 3 C o m p i l a t i o n
+B 154 Equation Listing    SOLVE modelo1 Using MIP From line 142
+D 157 definir_Y
+D 168 solo_arcos_buenos
+D 179 lim_provisiones
+D 184 flujo_nulo
+D 193 existencia_ruta
+D 204 usabilidad_ruta
+D 215 existencia_ruta_min
+D 226 usabilidad_ruta_min
+D 237 lim_puentes
+D 242 def_insatisaux
+D 253 def_auxZ1
+D 264 def_auxZ2
+D 275 f_insatis
+D 280 f_eq
+B 286 Column Listing      SOLVE modelo1 Using MIP From line 142
+E 289 X
+E 319 Y
+E 338 auxZ
+E 357 H
+E 379 Insatis
+E 386 Insatisaux
+E 405 Eq
+B 413 Range Statistics    SOLVE modelo1 Using MIP From line 142
+B 424 Model Statistics    SOLVE modelo1 Using MIP From line 142
+B 437 Solution Report     SOLVE modelo1 Using MIP From line 142
+F 481 definir_Y
+F 502 solo_arcos_buenos
+F 645 lim_provisiones
+F 649 flujo_nulo
+F 657 existencia_ruta
+F 918 usabilidad_ruta
+F 1179 existencia_ruta_min
+F 1440 usabilidad_ruta_min
+F 1703 lim_puentes
+F 1705 def_insatisaux
+F 1722 def_auxZ1
+F 1739 def_auxZ2
+F 1750 f_insatis
+F 1751 f_eq
+G 1756 X
+G 2017 Y
+G 2038 auxZ
+G 2059 H
+G 2322 Insatis
+G 2323 Insatisaux
+G 2324 Eq

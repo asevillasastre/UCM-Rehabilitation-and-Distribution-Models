@@ -1,0 +1,31 @@
+
+--- Job intentando_romper_M-R.gms Start 02/20/23 18:03:50 41.2.0 5110e5ff WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    D:\GAMS\41\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "G:\Mi unidad\5. TFG\src\gams\intentando_romper_M-R.gms"
+    PageSize 0
+    ScrDir "G:\Mi unidad\5. TFG\src\gams\225p\"
+    SysDir D:\GAMS\41\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: GAMS Demo license for Antonio Sevilla Sastre   G221121|0002CO-GEN
+          UCM, Spain                                               DL079880
+          C:\Users\Antonio\Documents\GAMS\gamslice.txt
+          antsev01@ucm.es, Antonio Sevilla Sastre                          
+          Demo license for demonstration and instructional purposes only
+Processor information: 1 socket(s), 14 core(s), and 20 thread(s) available
+GAMS 41.2.0   Copyright (C) 1987-2022 GAMS Development. All rights reserved
+--- Starting compilation
+--- intentando_romper_M-R.gms(411) 3 Mb 1 Error
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\intentando_romper_M-R.gms
+    Domain violation for element
+--- intentando_romper_M-R.gms(441) 3 Mb 2 Errors
+*** Error 257 in G:\Mi unidad\5. TFG\src\gams\intentando_romper_M-R.gms
+    Solve statement not checked because of previous errors
+--- intentando_romper_M-R.gms(443) 3 Mb 2 Errors
+*** Status: Compilation error(s)
+--- Job intentando_romper_M-R.gms Stop 02/20/23 18:03:50 elapsed 0:00:00.095

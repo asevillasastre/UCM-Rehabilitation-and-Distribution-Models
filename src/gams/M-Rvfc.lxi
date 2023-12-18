@@ -1,0 +1,33 @@
+B 3 C o m p i l a t i o n
+B 211 E x e c u t i o n
+I 211 P
+B 229 Equation Listing    SOLVE modelo1 Using MIP From line 184
+D 232 definir_Y
+D 243 definir_Z
+D 254 definir_Z_
+D 265 definir_auxZ
+D 276 lim_salida
+D 287 flujo_ini
+D 298 flujo_ini_0
+D 303 existencia_ruta
+D 314 usabilidad_ruta
+D 325 orientacion
+D 336 lim_puentes
+D 341 lim_demanda
+D 352 arco_usado
+D 363 arco_usado_orientacion
+D 374 fiabilidad
+D 379 f_ayuda
+D 384 f_equidad
+B 390 Column Listing      SOLVE modelo1 Using MIP From line 184
+E 393 X
+E 418 Y
+E 440 Z
+E 459 Z_
+E 484 auxZ
+E 503 H
+E 586 Used
+E 606 Ayuda
+E 613 Eq
+B 621 Range Statistics    SOLVE modelo1 Using MIP From line 184
+B 632 Model Statistics    SOLVE modelo1 Using MIP From line 184

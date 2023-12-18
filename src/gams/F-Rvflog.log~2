@@ -1,0 +1,35 @@
+
+--- Job F-Rvflog.gms Start 02/05/23 12:10:57 41.2.0 5110e5ff WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\41\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "G:\Mi unidad\5. TFG\src\gams\F-Rvflog.gms"
+    PageSize 0
+    ScrDir "G:\Mi unidad\5. TFG\src\gams\225a\"
+    SysDir C:\GAMS\41\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: GAMS Demo license for Antonio Sevilla Sastre   G221121|0002CO-GEN
+          UCM, Spain                                               DL079880
+          C:\Users\Antonio\Documents\GAMS\gamslice.txt
+          antsev01@ucm.es, Antonio Sevilla Sastre                          
+          Demo license for demonstration and instructional purposes only
+Processor information: 1 socket(s), 14 core(s), and 20 thread(s) available
+GAMS 41.2.0   Copyright (C) 1987-2022 GAMS Development. All rights reserved
+--- Starting compilation
+--- F-Rvflog.gms(152) 3 Mb 1 Error
+*** Error 409 in G:\Mi unidad\5. TFG\src\gams\F-Rvflog.gms
+    Unrecognizable item - skip to find a new statement
+      looking for a ';' or a key word to get started again
+--- F-Rvflog.gms(157) 3 Mb 2 Errors
+*** Error 257 in G:\Mi unidad\5. TFG\src\gams\F-Rvflog.gms
+    Solve statement not checked because of previous errors
+--- F-Rvflog.gms(159) 3 Mb 3 Errors
+*** Error 257 in G:\Mi unidad\5. TFG\src\gams\F-Rvflog.gms
+    Solve statement not checked because of previous errors
+--- F-Rvflog.gms(172) 3 Mb 3 Errors
+*** Status: Compilation error(s)
+--- Job F-Rvflog.gms Stop 02/05/23 12:10:57 elapsed 0:00:00.055

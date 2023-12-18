@@ -1,0 +1,127 @@
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/25/22 12:22:46 Page 1
+modelo sencillo reconstruccion + reparto 1
+C o m p i l a t i o n
+
+
+   2   
+   3  Set
+   4  j nodos de llegada /0*6/
+   5  t periodos (cota superior) /0*6/
+   6  ;
+   7   
+   8  Alias
+   9  (j,i,k)
+  10  ;
+  11   
+  12  Parameters
+  13  dem(j) demanda por nodo /0 0,
+  14                           1 1,
+  15                           2 1,
+  16                           3 1
+  17                           4 8
+  18                           5 4
+  19                           6 4/
+  20  max_camiones maximo numero de camiones que podemos mandar /10/
+  21  max_puentes maximo numero de puentes que podemos reconstruir /2/
+  22  * un puente por cada sentido, grafo orientado
+  23  ;
+  24   
+  25  Table E(i,j) existe la ruta de i a j
+  26      0   1   2   3   4   5   6
+  27  0   0   1   1   1   0   1   0
+  28  1   1   0   0   0   0   0   0
+  29  2   1   0   0   0   0   0   0
+  30  3   1   0   0   0   1   0   0
+  31  4   0   0   0   1   0   0   0
+  32  5   1   0   0   0   0   0   1
+  33  6   0   0   0   0   0   1   0
+  34  ;
+  35   
+  36  Table U(i,j) al inicio es utilizable la ruta de i a j
+  37      0   1   2   3   4   5   6
+  38  0   0   1   0   1   0   0   0
+  39  1   1   0   0   0   0   0   0
+  40  2   0   0   0   0   0   0   0
+  41  3   1   0   0   0   0   0   0
+  42  4   0   0   0   0   0   0   0
+  43  5   0   0   0   0   0   0   1
+  44  6   0   0   0   0   0   1   0
+  45  ;
+  46   
+  47  Variables
+  48  X(i,j,t) camiones que van de i a j en el periodo t
+  49  Y(j,t) camiones que hay en j en el periodo t
+  50  Z(j) camiones totales repartidos a j al final del ultimo periodo
+  51  auxZ(j) se reparte algun camion a j al final del ultimo periodo
+  52   
+  53  H(i,j) habilitamos el puente de i a j
+  54   
+  55  Ayuda ayuda total repartida
+  56  Eq criterio de equidad = numero de nodos a los que se les reparte algun camion
+  57  ;
+  58   
+  59  Integer variables X, Y, Z;
+  60  Binary variables auxZ, H;
+  61   
+  62  Equations
+  63   
+  64  definir_Y(j,t) ecuacion de flujo
+  65  definir_Z(j) ultimo valor del almacenaje Y
+  66  definir_auxZ(j) nulidad de Z
+  67   
+  68  lim_salida(j,t) de un nodo como mucho sale lo almacenado en el periodo anterior
+  69  flujo_ini(j) no hay almacenado nada en ningun nodo no inicial
+  70  flujo_ini_0 en el nodo inicial esta almacenada la totalidad de camiones
+  71   
+  72  existencia_ruta(i,j,t)
+  73  usabilidad_ruta(i,j,t)
+  74  orientacion(i,j) si se habilita un sentido se ha de habilitar el opuesto
+  75  lim_puentes
+  76   
+  77  lim_demanda(j)
+  78   
+  79  f_ayuda funcion objetivo 1
+  80  f_equidad funcion objetivo 2
+  81  ;
+  82   
+  83  definir_Y(j,t)$(ord(t)>1).. Y(j,t) =E=
+  84                              Y(j,t-1) + sum(i, X(i,j,t)) - sum(i, X(j,i,t));
+  85  definir_Z(j).. Z(j) =E= Y(j,"3");
+  86  * "4" porque es el numero de periodos
+  87  definir_auxZ(j).. auxZ(j) =L= Z(j);
+  88   
+  89  lim_salida(j,t).. sum(i,X(j,i,t)) =L= Y(j,t-1);
+  90  flujo_ini(j)$(ord(j)>1).. Y(j,"0") =E= 0;
+  91  flujo_ini_0.. Y("0","0") =E= max_camiones;
+  92   
+  93  existencia_ruta(i,j,t).. X(i,j,t) =L= 99*E(i,j);
+  94  usabilidad_ruta(i,j,t).. X(i,j,t) =L= 99*(U(i,j) +  H(i,j));
+  95  orientacion(i,j).. H(i,j) =E= H(j,i);
+  96  lim_puentes..  sum(i, sum(j, H(i,j))) =L= max_puentes;
+  97   
+  98  lim_demanda(j).. Z(j) =L= dem(j);
+  99   
+ 100  f_ayuda.. Ayuda =E= sum(j, Z(j)-dem(j));
+ 101  f_equidad.. Eq =E= sum(j, auxZ(j));
+ 102  ;
+ 103   
+ 104  model modelo1 /all/;
+ 105   
+ 106  solve modelo1 using MIP maximizing Ayuda;
+ 107  solve modelo1 using MIP maximizing Eq;
+ 108   
+ 109   
+ 110   
+
+
+COMPILATION TIME     =        0.094 SECONDS      3 MB  41.2.0 5110e5ff WEX-WEI
+
+
+USER: GAMS Demo license for Antonio Sevilla Sastre   G221121|0002CO-GEN
+      UCM, Spain                                               DL079880
+
+
+**** FILE SUMMARY
+
+Input      G:\Mi unidad\TFG\src\miModelo.gms
+Output     G:\Mi unidad\TFG\src\miModelo.lst

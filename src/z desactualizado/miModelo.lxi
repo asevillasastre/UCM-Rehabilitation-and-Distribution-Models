@@ -1,0 +1,91 @@
+B 3 C o m p i l a t i o n
+B 120 Equation Listing    SOLVE modelo1 Using MIP From line 106
+D 123 definir_Y
+D 134 definir_Z
+D 145 definir_auxZ
+D 156 lim_salida
+D 167 flujo_ini
+D 178 flujo_ini_0
+D 183 existencia_ruta
+D 194 usabilidad_ruta
+D 205 orientacion
+D 216 lim_puentes
+D 221 lim_demanda
+D 232 f_ayuda
+D 237 f_equidad
+B 243 Column Listing      SOLVE modelo1 Using MIP From line 106
+E 246 X
+E 268 Y
+E 290 Z
+E 315 auxZ
+E 334 H
+E 375 Ayuda
+E 382 Eq
+B 390 Range Statistics    SOLVE modelo1 Using MIP From line 106
+B 401 Model Statistics    SOLVE modelo1 Using MIP From line 106
+B 414 Solution Report     SOLVE modelo1 Using MIP From line 106
+F 458 definir_Y
+F 505 definir_Z
+F 517 definir_auxZ
+F 529 lim_salida
+F 583 flujo_ini
+F 596 flujo_ini_0
+F 600 existencia_ruta
+F 948 usabilidad_ruta
+F 1296 orientacion
+F 1345 lim_puentes
+F 1347 lim_demanda
+F 1361 f_ayuda
+F 1362 f_equidad
+G 1367 X
+G 1715 Y
+G 1769 Z
+G 1781 auxZ
+G 1793 H
+G 1849 Ayuda
+G 1850 Eq
+B 1861 Equation Listing    SOLVE modelo1 Using MIP From line 107
+D 1864 definir_Y
+D 1875 definir_Z
+D 1886 definir_auxZ
+D 1897 lim_salida
+D 1908 flujo_ini
+D 1919 flujo_ini_0
+D 1924 existencia_ruta
+D 1935 usabilidad_ruta
+D 1946 orientacion
+D 1957 lim_puentes
+D 1962 lim_demanda
+D 1973 f_ayuda
+D 1978 f_equidad
+B 1984 Column Listing      SOLVE modelo1 Using MIP From line 107
+E 1987 X
+E 2009 Y
+E 2031 Z
+E 2056 auxZ
+E 2075 H
+E 2116 Ayuda
+E 2123 Eq
+B 2131 Range Statistics    SOLVE modelo1 Using MIP From line 107
+B 2142 Model Statistics    SOLVE modelo1 Using MIP From line 107
+B 2155 Solution Report     SOLVE modelo1 Using MIP From line 107
+F 2199 definir_Y
+F 2246 definir_Z
+F 2258 definir_auxZ
+F 2270 lim_salida
+F 2324 flujo_ini
+F 2337 flujo_ini_0
+F 2341 existencia_ruta
+F 2689 usabilidad_ruta
+F 3037 orientacion
+F 3086 lim_puentes
+F 3088 lim_demanda
+F 3102 f_ayuda
+F 3103 f_equidad
+G 3108 X
+G 3456 Y
+G 3510 Z
+G 3522 auxZ
+G 3534 H
+G 3590 Ayuda
+G 3591 Eq

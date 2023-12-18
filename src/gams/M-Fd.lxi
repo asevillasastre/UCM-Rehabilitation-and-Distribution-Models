@@ -1,0 +1,115 @@
+B 3 C o m p i l a t i o n
+B 143 Equation Listing    SOLVE modelo1 Using MIP From line 126
+D 146 definir_Y
+D 157 solo_arcos_buenos_mas
+D 168 solo_arcos_buenos_menos
+D 179 lim_provisiones
+D 184 flujo_nulo
+D 195 flujo_destinos
+D 206 existencia_ruta
+D 217 usabilidad_ruta
+D 228 existencia_ruta_min
+D 239 usabilidad_ruta_min
+D 250 lim_puentes
+D 255 def_insatisaux
+D 264 def_auxZ1
+D 273 def_auxZ2
+D 284 def_Z_
+D 295 f_insatis
+D 300 f_eq
+B 306 Column Listing      SOLVE modelo1 Using MIP From line 126
+E 309 Xmas
+E 337 Xmenos
+E 365 Y
+E 387 Z_
+E 403 auxZ
+E 422 H
+E 456 Insatis
+E 463 Insatisaux
+E 473 Eq
+B 481 Range Statistics    SOLVE modelo1 Using MIP From line 126
+B 492 Model Statistics    SOLVE modelo1 Using MIP From line 126
+B 505 Solution Report     SOLVE modelo1 Using MIP From line 126
+F 549 definir_Y
+F 575 solo_arcos_buenos_mas
+F 664 solo_arcos_buenos_menos
+F 755 lim_provisiones
+F 759 flujo_nulo
+F 773 flujo_destinos
+F 787 existencia_ruta
+F 939 usabilidad_ruta
+F 1091 existencia_ruta_min
+F 1243 usabilidad_ruta_min
+F 1397 lim_puentes
+F 1399 def_insatisaux
+F 1407 def_auxZ1
+F 1415 def_auxZ2
+F 1424 def_Z_
+F 1438 f_insatis
+F 1439 f_eq
+G 1444 Xmas
+G 1596 Xmenos
+G 1748 Y
+G 1774 Z_
+G 1786 auxZ
+G 1798 H
+G 1854 Insatis
+G 1855 Insatisaux
+G 1856 Eq
+B 1864 Equation Listing    SOLVE modelo1 Using MIP From line 127
+D 1867 definir_Y
+D 1878 solo_arcos_buenos_mas
+D 1889 solo_arcos_buenos_menos
+D 1900 lim_provisiones
+D 1905 flujo_nulo
+D 1916 flujo_destinos
+D 1927 existencia_ruta
+D 1938 usabilidad_ruta
+D 1949 existencia_ruta_min
+D 1960 usabilidad_ruta_min
+D 1971 lim_puentes
+D 1976 def_insatisaux
+D 1985 def_auxZ1
+D 1994 def_auxZ2
+D 2005 def_Z_
+D 2016 f_insatis
+D 2021 f_eq
+B 2027 Column Listing      SOLVE modelo1 Using MIP From line 127
+E 2030 Xmas
+E 2058 Xmenos
+E 2086 Y
+E 2108 Z_
+E 2124 auxZ
+E 2143 H
+E 2177 Insatis
+E 2184 Insatisaux
+E 2194 Eq
+B 2202 Range Statistics    SOLVE modelo1 Using MIP From line 127
+B 2213 Model Statistics    SOLVE modelo1 Using MIP From line 127
+B 2226 Solution Report     SOLVE modelo1 Using MIP From line 127
+F 2270 definir_Y
+F 2296 solo_arcos_buenos_mas
+F 2385 solo_arcos_buenos_menos
+F 2476 lim_provisiones
+F 2480 flujo_nulo
+F 2494 flujo_destinos
+F 2508 existencia_ruta
+F 2660 usabilidad_ruta
+F 2812 existencia_ruta_min
+F 2964 usabilidad_ruta_min
+F 3118 lim_puentes
+F 3120 def_insatisaux
+F 3128 def_auxZ1
+F 3136 def_auxZ2
+F 3145 def_Z_
+F 3159 f_insatis
+F 3160 f_eq
+G 3165 Xmas
+G 3317 Xmenos
+G 3469 Y
+G 3495 Z_
+G 3507 auxZ
+G 3519 H
+G 3575 Insatis
+G 3576 Insatisaux
+G 3577 Eq

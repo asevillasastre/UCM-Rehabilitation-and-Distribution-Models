@@ -1,0 +1,411 @@
+1 138 j SETS declared 4 4 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+2 138 j SETS defined 4 4 39 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+3 139 t SETS declared 5 5 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+4 139 t SETS defined 7 7 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+5 138 j SETS ref 11 11 3 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+6 140 i SETS declared 11 11 5 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+7 141 k SETS declared 11 11 7 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+8 142 dem PARAMETERS declared 15 15 4 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+9 138 j SETS ref 15 15 6 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+10 142 dem PARAMETERS defined 16 16 25 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+11 143 max_camiones PARAMETERS declared 23 23 13 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+12 143 max_camiones PARAMETERS defined 24 24 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+13 144 max_puentes PARAMETERS declared 25 25 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+14 144 max_puentes PARAMETERS defined 26 26 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+15 145 E PARAMETERS declared 29 29 8 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+16 140 i SETS ref 29 29 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+17 138 j SETS ref 29 29 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+18 145 E PARAMETERS defined 29 29 37 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+19 146 U PARAMETERS declared 40 40 8 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+20 140 i SETS ref 40 40 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+21 138 j SETS ref 40 40 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+22 146 U PARAMETERS defined 40 40 54 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+23 147 X VARIABLES declared 52 52 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+24 140 i SETS ref 52 52 4 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+25 138 j SETS ref 52 52 6 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+26 139 t SETS ref 52 52 8 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+27 148 Y VARIABLES declared 54 54 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+28 138 j SETS ref 54 54 4 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+29 139 t SETS ref 54 54 6 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+30 149 Z VARIABLES declared 56 56 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+31 138 j SETS ref 56 56 4 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+32 150 auxZ VARIABLES declared 58 58 5 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+33 138 j SETS ref 58 58 7 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+34 151 H VARIABLES declared 61 61 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+35 140 i SETS ref 61 61 4 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+36 138 j SETS ref 61 61 6 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+37 152 Ayuda VARIABLES declared 64 64 6 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+38 153 Eq VARIABLES declared 65 65 3 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+39 147 X VARIABLES ref 68 68 20 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+40 148 Y VARIABLES ref 68 68 23 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+41 149 Z VARIABLES ref 68 68 26 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+42 150 auxZ VARIABLES ref 69 69 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+43 151 H VARIABLES ref 69 69 25 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+44 154 definir_Y EQUATIONS declared 73 73 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+45 138 j SETS ref 73 73 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+46 139 t SETS ref 73 73 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+47 155 definir_Z EQUATIONS declared 75 75 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+48 138 j SETS ref 75 75 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+49 156 definir_auxZ EQUATIONS declared 77 77 13 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+50 138 j SETS ref 77 77 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+51 157 lim_salida EQUATIONS declared 80 80 11 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+52 138 j SETS ref 80 80 13 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+53 139 t SETS ref 80 80 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+54 158 flujo_ini EQUATIONS declared 81 81 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+55 138 j SETS ref 81 81 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+56 159 flujo_ini_0 EQUATIONS declared 82 82 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+57 160 existencia_ruta EQUATIONS declared 84 84 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+58 140 i SETS ref 84 84 18 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+59 138 j SETS ref 84 84 20 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+60 139 t SETS ref 84 84 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+61 161 usabilidad_ruta EQUATIONS declared 85 85 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+62 140 i SETS ref 85 85 18 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+63 138 j SETS ref 85 85 20 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+64 139 t SETS ref 85 85 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+65 162 orientacion EQUATIONS declared 86 86 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+66 140 i SETS ref 86 86 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+67 138 j SETS ref 86 86 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+68 163 lim_puentes EQUATIONS declared 87 87 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+69 164 lim_demanda EQUATIONS declared 89 89 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+70 138 j SETS ref 89 89 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+71 165 f_ayuda EQUATIONS declared 91 91 8 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+72 166 f_equidad EQUATIONS declared 92 92 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+73 138 j SETS control 95 95 13 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+74 139 t SETS control 95 95 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+75 139 t SETS ref 95 95 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+76 154 definir_Y EQUATIONS defined 95 95 30 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+77 148 Y VARIABLES ref 95 95 30 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+78 138 j SETS ref 95 95 33 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+79 139 t SETS ref 95 95 35 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+80 148 Y VARIABLES ref 96 96 30 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+81 138 j SETS ref 96 96 33 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+82 139 t SETS ref 96 96 35 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+83 140 i SETS control 96 96 46 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+84 147 X VARIABLES ref 96 96 48 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+85 140 i SETS ref 96 96 51 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+86 138 j SETS ref 96 96 53 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+87 139 t SETS ref 96 96 55 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+88 140 i SETS control 96 96 65 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+89 147 X VARIABLES ref 96 96 67 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+90 138 j SETS ref 96 96 70 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+91 140 i SETS ref 96 96 72 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+92 139 t SETS ref 96 96 74 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+93 138 j SETS control 97 97 13 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+94 155 definir_Z EQUATIONS defined 97 97 17 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+95 149 Z VARIABLES ref 97 97 17 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+96 138 j SETS ref 97 97 20 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+97 148 Y VARIABLES ref 97 97 26 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+98 138 j SETS ref 97 97 29 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+99 138 j SETS control 98 98 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+100 156 definir_auxZ EQUATIONS defined 98 98 23 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+101 150 auxZ VARIABLES ref 98 98 23 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+102 138 j SETS ref 98 98 26 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+103 149 Z VARIABLES ref 98 98 32 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+104 138 j SETS ref 98 98 35 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+105 138 j SETS control 100 100 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+106 139 t SETS control 100 100 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+107 157 lim_salida EQUATIONS defined 100 100 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+108 140 i SETS control 100 100 25 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+109 147 X VARIABLES ref 100 100 26 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+110 138 j SETS ref 100 100 29 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+111 140 i SETS ref 100 100 31 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+112 139 t SETS ref 100 100 33 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+113 148 Y VARIABLES ref 100 100 40 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+114 138 j SETS ref 100 100 43 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+115 139 t SETS ref 100 100 45 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+116 138 j SETS control 101 101 13 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+117 138 j SETS ref 101 101 20 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+118 158 flujo_ini EQUATIONS defined 101 101 28 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+119 148 Y VARIABLES ref 101 101 28 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+120 138 j SETS ref 101 101 31 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+121 159 flujo_ini_0 EQUATIONS defined 102 102 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+122 148 Y VARIABLES ref 102 102 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+123 143 max_camiones PARAMETERS ref 102 102 42 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+124 140 i SETS control 104 104 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+125 138 j SETS control 104 104 21 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+126 139 t SETS control 104 104 23 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+127 160 existencia_ruta EQUATIONS defined 104 104 27 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+128 147 X VARIABLES ref 104 104 27 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+129 140 i SETS ref 104 104 30 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+130 138 j SETS ref 104 104 32 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+131 139 t SETS ref 104 104 34 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+132 145 E PARAMETERS ref 104 104 43 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+133 140 i SETS ref 104 104 46 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+134 138 j SETS ref 104 104 48 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+135 140 i SETS control 105 105 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+136 138 j SETS control 105 105 21 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+137 139 t SETS control 105 105 23 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+138 161 usabilidad_ruta EQUATIONS defined 105 105 27 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+139 147 X VARIABLES ref 105 105 27 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+140 140 i SETS ref 105 105 30 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+141 138 j SETS ref 105 105 32 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+142 139 t SETS ref 105 105 34 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+143 146 U PARAMETERS ref 105 105 44 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+144 140 i SETS ref 105 105 47 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+145 138 j SETS ref 105 105 49 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+146 151 H VARIABLES ref 105 105 54 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+147 140 i SETS ref 105 105 57 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+148 138 j SETS ref 105 105 59 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+149 140 i SETS control 106 106 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+150 138 j SETS control 106 106 17 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+151 162 orientacion EQUATIONS defined 106 106 21 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+152 151 H VARIABLES ref 106 106 21 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+153 140 i SETS ref 106 106 24 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+154 138 j SETS ref 106 106 26 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+155 151 H VARIABLES ref 106 106 32 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+156 138 j SETS ref 106 106 35 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+157 140 i SETS ref 106 106 37 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+158 163 lim_puentes EQUATIONS defined 107 107 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+159 140 i SETS control 107 107 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+160 138 j SETS control 107 107 29 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+161 151 H VARIABLES ref 107 107 31 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+162 140 i SETS ref 107 107 34 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+163 138 j SETS ref 107 107 36 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+164 144 max_puentes PARAMETERS ref 107 107 54 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+165 138 j SETS control 109 109 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+166 164 lim_demanda EQUATIONS defined 109 109 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+167 149 Z VARIABLES ref 109 109 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+168 138 j SETS ref 109 109 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+169 142 dem PARAMETERS ref 109 109 30 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+170 138 j SETS ref 109 109 33 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+171 165 f_ayuda EQUATIONS defined 111 111 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+172 152 Ayuda VARIABLES ref 111 111 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+173 138 j SETS control 111 111 27 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+174 149 Z VARIABLES ref 111 111 29 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+175 138 j SETS ref 111 111 32 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+176 142 dem PARAMETERS ref 111 111 36 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+177 138 j SETS ref 111 111 39 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+178 166 f_equidad EQUATIONS defined 112 112 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+179 153 Eq VARIABLES ref 112 112 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+180 138 j SETS control 112 112 26 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+181 150 auxZ VARIABLES ref 112 112 31 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+182 138 j SETS ref 112 112 34 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+183 167 modelo1 MODELS declared 115 115 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+184 167 modelo1 MODELS defined 115 115 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+185 154 definir_Y EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+186 155 definir_Z EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+187 156 definir_auxZ EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+188 157 lim_salida EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+189 158 flujo_ini EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+190 159 flujo_ini_0 EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+191 160 existencia_ruta EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+192 161 usabilidad_ruta EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+193 162 orientacion EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+194 163 lim_puentes EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+195 164 lim_demanda EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+196 165 f_ayuda EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+197 166 f_equidad EQUATIONS ref 115 115 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+198 167 modelo1 MODELS ref 117 117 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+199 152 Ayuda VARIABLES ref 117 117 41 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+200 153 Eq VARIABLES impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+201 166 f_equidad EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+202 152 Ayuda VARIABLES impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+203 165 f_ayuda EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+204 164 lim_demanda EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+205 163 lim_puentes EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+206 162 orientacion EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+207 151 H VARIABLES impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+208 161 usabilidad_ruta EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+209 160 existencia_ruta EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+210 159 flujo_ini_0 EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+211 158 flujo_ini EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+212 157 lim_salida EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+213 150 auxZ VARIABLES impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+214 156 definir_auxZ EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+215 149 Z VARIABLES impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+216 155 definir_Z EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+217 147 X VARIABLES impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+218 148 Y VARIABLES impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+219 154 definir_Y EQUATIONS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+220 167 modelo1 MODELS impl-asn 118 118 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+221 167 modelo1 MODELS ref 119 119 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+222 153 Eq VARIABLES ref 119 119 38 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+223 153 Eq VARIABLES impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+224 166 f_equidad EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+225 152 Ayuda VARIABLES impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+226 165 f_ayuda EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+227 164 lim_demanda EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+228 163 lim_puentes EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+229 162 orientacion EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+230 151 H VARIABLES impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+231 161 usabilidad_ruta EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+232 160 existencia_ruta EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+233 159 flujo_ini_0 EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+234 158 flujo_ini EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+235 157 lim_salida EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+236 150 auxZ VARIABLES impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+237 156 definir_auxZ EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+238 149 Z VARIABLES impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+239 155 definir_Z EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+240 147 X VARIABLES impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+241 148 Y VARIABLES impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+242 154 definir_Y EQUATIONS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+243 167 modelo1 MODELS impl-asn 120 120 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+0 167 size of symboltable
+1 mapval 1 FUNCT 0 0 
+2 ceil 1 FUNCT 0 0 
+3 floor 1 FUNCT 0 0 
+4 round 1 FUNCT 0 0 
+5 mod 1 FUNCT 0 0 
+6 trunc 1 FUNCT 0 0 
+7 sign 1 FUNCT 0 0 
+8 min 1 FUNCT 0 0 
+9 max 1 FUNCT 0 0 
+10 sqr 1 FUNCT 0 0 
+11 exp 1 FUNCT 0 0 
+12 log 1 FUNCT 0 0 
+13 log10 1 FUNCT 0 0 
+14 sqrt 1 FUNCT 0 0 
+15 abs 1 FUNCT 0 0 
+16 cos 1 FUNCT 0 0 
+17 sin 1 FUNCT 0 0 
+18 arctan 1 FUNCT 0 0 
+19 errorf 1 FUNCT 0 0 
+20 uniform 1 FUNCT 0 0 
+21 normal 1 FUNCT 0 0 
+22 power 1 FUNCT 0 0 
+23 jdate 1 FUNCT 0 0 
+24 jtime 1 FUNCT 0 0 
+25 jstart 1 FUNCT 0 0 
+26 jnow 1 FUNCT 0 0 
+27 execerror 1 FUNCT 0 0 
+28 gyear 1 FUNCT 0 0 
+29 gmonth 1 FUNCT 0 0 
+30 gday 1 FUNCT 0 0 
+31 gdow 1 FUNCT 0 0 
+32 gleap 1 FUNCT 0 0 
+33 ghour 1 FUNCT 0 0 
+34 gminute 1 FUNCT 0 0 
+35 gsecond 1 FUNCT 0 0 
+36 execseed 1 FUNCT 0 0 
+37 timestart 1 FUNCT 0 0 
+38 timecomp 1 FUNCT 0 0 
+39 timeexec 1 FUNCT 0 0 
+40 timeclose 1 FUNCT 0 0 
+41 frac 1 FUNCT 0 0 
+42 ErrorLevel 1 FUNCT 0 0 
+43 HeapSize 1 FUNCT 0 0 
+44 Fact 1 FUNCT 0 0 
+45 UniformInt 1 FUNCT 0 0 
+46 PI 1 FUNCT 0 0 
+47 NcpF 1 FUNCT 0 0 
+48 NcpCM 1 FUNCT 0 0 
+49 Entropy 1 FUNCT 0 0 
+50 Sigmoid 1 FUNCT 0 0 
+51 log2 1 FUNCT 0 0 
+52 bool_not 1 FUNCT 0 0 
+53 bool_and 1 FUNCT 0 0 
+54 bool_or 1 FUNCT 0 0 
+55 bool_xor 1 FUNCT 0 0 
+56 bool_imp 1 FUNCT 0 0 
+57 bool_eqv 1 FUNCT 0 0 
+58 rel_eq 1 FUNCT 0 0 
+59 rel_gt 1 FUNCT 0 0 
+60 rel_ge 1 FUNCT 0 0 
+61 rel_lt 1 FUNCT 0 0 
+62 rel_le 1 FUNCT 0 0 
+63 rel_ne 1 FUNCT 0 0 
+64 IfThen 1 FUNCT 0 0 
+65 rPower 1 FUNCT 0 0 
+66 EDist 1 FUNCT 0 0 
+67 div 1 FUNCT 0 0 
+68 div0 1 FUNCT 0 0 
+69 sllog10 1 FUNCT 0 0 
+70 sqlog10 1 FUNCT 0 0 
+71 slexp 1 FUNCT 0 0 
+72 sqexp 1 FUNCT 0 0 
+73 slrec 1 FUNCT 0 0 
+74 sqrec 1 FUNCT 0 0 
+75 cvPower 1 FUNCT 0 0 
+76 vcPower 1 FUNCT 0 0 
+77 Centropy 1 FUNCT 0 0 
+78 Gmillisec 1 FUNCT 0 0 
+79 MaxExecError 1 FUNCT 0 0 
+80 TimeElapsed 1 FUNCT 0 0 
+81 Gamma 1 FUNCT 0 0 
+82 LogGamma 1 FUNCT 0 0 
+83 Beta 1 FUNCT 0 0 
+84 LogBeta 1 FUNCT 0 0 
+85 GammaReg 1 FUNCT 0 0 
+86 BetaReg 1 FUNCT 0 0 
+87 sinh 1 FUNCT 0 0 
+88 cosh 1 FUNCT 0 0 
+89 tanh 1 FUNCT 0 0 
+90 MathLastRC 1 FUNCT 0 0 
+91 MathLastEC 1 FUNCT 0 0 
+92 MathOVal 1 FUNCT 0 0 
+93 SignPower 1 FUNCT 0 0 
+94 HandleStatus 1 FUNCT 0 0 
+95 NcpVUsin 1 FUNCT 0 0 
+96 NcpVUpow 1 FUNCT 0 0 
+97 Binomial 1 FUNCT 0 0 
+98 HandleSubmit 1 FUNCT 0 0 
+99 GamsVersion 1 FUNCT 0 0 
+100 HandleDelete 1 FUNCT 0 0 
+101 tan 1 FUNCT 0 0 
+102 arccos 1 FUNCT 0 0 
+103 arcsin 1 FUNCT 0 0 
+104 arctan2 1 FUNCT 0 0 
+105 sleep 1 FUNCT 0 0 
+106 HeapFree 1 FUNCT 0 0 
+107 HandleCollect 1 FUNCT 0 0 
+108 GamsRelease 1 FUNCT 0 0 
+109 Poly 1 FUNCT 0 0 
+110 LicenseStatus 1 FUNCT 0 0 
+111 LicenseLevel 1 FUNCT 0 0 
+112 HeapLimit 1 FUNCT 0 0 
+113 RandLinear 1 FUNCT 0 0 
+114 RandTriangle 1 FUNCT 0 0 
+115 ForceError 1 FUNCT 0 0 
+116 ForceErrorCnt 1 FUNCT 0 0 
+117 RandBinomial 1 FUNCT 0 0 
+118 JobHandle 1 FUNCT 0 0 
+119 JobStatus 1 FUNCT 0 0 
+120 JobKill 1 FUNCT 0 0 
+121 JobTerminate 1 FUNCT 0 0 
+122 NumCores 1 FUNCT 0 0 
+123 EmbeddedHandle 1 FUNCT 0 0 
+124 PlatformCode 1 FUNCT 0 0 
+125 Logit 1 FUNCT 0 0 
+126 LSEMax 1 FUNCT 0 0 
+127 LSEMaxSc 1 FUNCT 0 0 
+128 LSEMin 1 FUNCT 0 0 
+129 LSEMinSc 1 FUNCT 0 0 
+130  unknown* 1 FUNCT 0 0 
+131 SameAs 10 PRED 2 0 0 0 
+132 Diag 10 PRED 2 0 0 0 
+133 Solvers 10 PRED 1 0 0 
+134 LicenseCodes 10 PRED 1 0 0 
+135 SolverCapabilities 10 PRED 2 0 0 0 
+136 SortedUels 10 PRED 2 0 0 0 
+137 FILE 8 FILE 0 0 Current file name for FILE.xxx use
+138 j 2 SET 1 7 0 nodos representan los asentamientos
+139 t 2 SET 1 7 0 periodos se asumen de misma duración además de que todos los arcos se pueden recorrer en uno de estos periodos
+140 i 2 SET 1 0 0 Aliased with j
+141 k 2 SET 1 0 0 Aliased with j
+142 dem 4 PARAM 1 6 138 demanda por cada asentamiento de un único recurso en cierta unidad discreta
+143 max_camiones 4 PARAM 0 1 máximo número de camiones que podemos mandar en total a la misión. se asume que cada camión transporta exactamente una unidad del recurso a repartir
+144 max_puentes 4 PARAM 0 1 máximo número de puentes que podemos reconstruir previo paso a los camiones (un puente por cada sentido consideramos un grafo orientado)
+145 E 4 PARAM 2 12 138 138 existe la ruta de i a j
+146 U 4 PARAM 2 6 138 138 al inicio es utilizable la ruta de i a j
+147 X 5 VAR 3 0 138 138 139 camiones que van de i a j en el periodo t
+148 Y 5 VAR 2 0 138 139 camiones que hay en j en el periodo t. se asume que pueden seguir su ruta o bien quedarse en j para proseguir su ruta en otro periodo o bien permanecer en j hasta el final del último periodo
+149 Z 5 VAR 1 0 138 camiones totales emplazados en j al final del último periodo. se asume que en ese momento hacen el reparto a j
+150 auxZ 5 VAR 1 0 138 variable binaria que representa si se reparte al menos una unidad de recurso a j
+151 H 5 VAR 2 0 138 138 variable binaria que determina si habilitamos el puente de i a j
+152 Ayuda 5 VAR 0 0 aa
+153 Eq 5 VAR 0 0 aa
+154 definir_Y 6 EQU 2 0 138 139 restricción de almacenamiento. en cierto nodo permanece lo almacenado en el anterior periodo más lo que entra a él en el presente menos lo que sale
+155 definir_Z 6 EQU 1 0 138 determina lo repartido como lo ubicado en cierto nodo en el último periodo
+156 definir_auxZ 6 EQU 1 0 138 
+157 lim_salida 6 EQU 2 0 138 139 limita las unidades que pueden salir de un nodo a las almacenadas en el mismo
+158 flujo_ini 6 EQU 1 0 138 no hay almacenado nada en ningun nodo no inicial
+159 flujo_ini_0 6 EQU 0 0 en el nodo inicial está almacenada la totalidad de los camiones
+160 existencia_ruta 6 EQU 3 0 138 138 139 
+161 usabilidad_ruta 6 EQU 3 0 138 138 139 
+162 orientacion 6 EQU 2 0 138 138 si se habilita un sentido se ha de habilitar el opuesto
+163 lim_puentes 6 EQU 0 0 límite de puentes que podemos reconstruir
+164 lim_demanda 6 EQU 1 0 138 no se puede superar la demanda
+165 f_ayuda 6 EQU 0 0 función objetivo 1. cantidad total del recurso repartida en cierta unidad
+166 f_equidad 6 EQU 0 0 función objetivo 2.  criterio de equidad. número de nodos a los que se les reparte al menos una unidad de recurso
+167 modelo1 7 MODEL 0 13 

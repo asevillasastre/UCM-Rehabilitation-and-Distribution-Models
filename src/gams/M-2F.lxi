@@ -1,0 +1,127 @@
+B 3 C o m p i l a t i o n
+B 183 Equation Listing    SOLVE modelo1 Using MIP From line 168
+D 186 flujo_transitorios
+D 197 flujo_destinos
+D 208 def_Y
+D 219 def_Z
+D 230 arcos_buenos_mas
+D 241 arcos_buenos_menos
+D 252 existencia_ruta_max
+D 263 existencia_ruta_min
+D 274 usabilidad_ruta_max
+D 285 usabilidad_ruta_min
+D 296 lim_coste
+D 301 lim_habilitaciones
+D 306 def_insatisaux
+D 315 def_Zaux_destinos
+D 324 def_Zaux_transitorios
+D 335 lim_demanda
+D 346 f_insatis
+D 351 f_eq
+D 356 def_coste
+B 362 Column Listing      SOLVE modelo1 Using MIP From line 168
+E 365 Xmas
+E 393 Xmenos
+E 421 Y
+E 443 Z
+E 462 Zaux
+E 481 H
+E 517 Insatisaux
+E 527 Insatis
+E 534 Eq
+E 541 Coste
+B 550 Range Statistics    SOLVE modelo1 Using MIP From line 168
+B 561 Model Statistics    SOLVE modelo1 Using MIP From line 168
+B 574 Solution Report     SOLVE modelo1 Using MIP From line 168
+F 618 flujo_transitorios
+F 632 flujo_destinos
+F 646 def_Y
+F 672 def_Z
+F 684 arcos_buenos_mas
+F 773 arcos_buenos_menos
+F 862 existencia_ruta_max
+F 1014 existencia_ruta_min
+F 1166 usabilidad_ruta_max
+F 1318 usabilidad_ruta_min
+F 1472 lim_coste
+F 1473 lim_habilitaciones
+F 1475 def_insatisaux
+F 1483 def_Zaux_destinos
+F 1491 def_Zaux_transitorios
+F 1500 lim_demanda
+F 1514 f_insatis
+F 1515 f_eq
+F 1516 def_coste
+G 1522 Xmas
+G 1674 Xmenos
+G 1826 Y
+G 1852 Z
+G 1864 Zaux
+G 1876 H
+G 1932 Insatisaux
+G 1933 Insatis
+G 1934 Eq
+G 1935 Coste
+B 1945 Equation Listing    SOLVE modelo1 Using MIP From line 169
+D 1948 flujo_transitorios
+D 1959 flujo_destinos
+D 1970 def_Y
+D 1981 def_Z
+D 1992 arcos_buenos_mas
+D 2003 arcos_buenos_menos
+D 2014 existencia_ruta_max
+D 2025 existencia_ruta_min
+D 2036 usabilidad_ruta_max
+D 2047 usabilidad_ruta_min
+D 2058 lim_coste
+D 2063 lim_habilitaciones
+D 2068 def_insatisaux
+D 2077 def_Zaux_destinos
+D 2086 def_Zaux_transitorios
+D 2097 lim_demanda
+D 2108 f_insatis
+D 2113 f_eq
+D 2118 def_coste
+B 2124 Column Listing      SOLVE modelo1 Using MIP From line 169
+E 2127 Xmas
+E 2155 Xmenos
+E 2183 Y
+E 2205 Z
+E 2224 Zaux
+E 2243 H
+E 2279 Insatisaux
+E 2289 Insatis
+E 2296 Eq
+E 2303 Coste
+B 2312 Range Statistics    SOLVE modelo1 Using MIP From line 169
+B 2323 Model Statistics    SOLVE modelo1 Using MIP From line 169
+B 2336 Solution Report     SOLVE modelo1 Using MIP From line 169
+F 2380 flujo_transitorios
+F 2394 flujo_destinos
+F 2408 def_Y
+F 2434 def_Z
+F 2446 arcos_buenos_mas
+F 2535 arcos_buenos_menos
+F 2624 existencia_ruta_max
+F 2776 existencia_ruta_min
+F 2928 usabilidad_ruta_max
+F 3080 usabilidad_ruta_min
+F 3234 lim_coste
+F 3235 lim_habilitaciones
+F 3237 def_insatisaux
+F 3245 def_Zaux_destinos
+F 3253 def_Zaux_transitorios
+F 3262 lim_demanda
+F 3276 f_insatis
+F 3277 f_eq
+F 3278 def_coste
+G 3284 Xmas
+G 3436 Xmenos
+G 3588 Y
+G 3614 Z
+G 3626 Zaux
+G 3638 H
+G 3694 Insatisaux
+G 3695 Insatis
+G 3696 Eq
+G 3697 Coste

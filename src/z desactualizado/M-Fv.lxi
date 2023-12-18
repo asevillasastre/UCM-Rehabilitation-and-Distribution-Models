@@ -1,0 +1,95 @@
+B 3 C o m p i l a t i o n
+B 121 Equation Listing    SOLVE modelo1 Using MIP From line 110
+D 124 definir_Y
+D 135 solo_arcos_buenos
+D 146 lim_provisiones
+D 151 flujo_nulo
+D 160 existencia_ruta
+D 171 usabilidad_ruta
+D 182 existencia_ruta_min
+D 193 usabilidad_ruta_min
+D 204 lim_puentes
+D 209 def_insatisaux
+D 218 def_auxZ1
+D 227 def_auxZ2
+D 238 f_insatis
+D 243 f_eq
+B 249 Column Listing      SOLVE modelo1 Using MIP From line 110
+E 252 X
+E 282 Y
+E 301 auxZ
+E 320 H
+E 342 Insatis
+E 349 Insatisaux
+E 359 Eq
+B 367 Range Statistics    SOLVE modelo1 Using MIP From line 110
+B 378 Model Statistics    SOLVE modelo1 Using MIP From line 110
+B 391 Solution Report     SOLVE modelo1 Using MIP From line 110
+F 433 definir_Y
+F 445 solo_arcos_buenos
+F 480 lim_provisiones
+F 484 flujo_nulo
+F 492 existencia_ruta
+F 546 usabilidad_ruta
+F 600 existencia_ruta_min
+F 654 usabilidad_ruta_min
+F 710 lim_puentes
+F 712 def_insatisaux
+F 720 def_auxZ1
+F 728 def_auxZ2
+F 739 f_insatis
+F 740 f_eq
+G 745 X
+G 799 Y
+G 811 auxZ
+G 823 H
+G 879 Insatis
+G 880 Insatisaux
+G 881 Eq
+B 889 Equation Listing    SOLVE modelo1 Using MIP From line 111
+D 892 definir_Y
+D 903 solo_arcos_buenos
+D 914 lim_provisiones
+D 919 flujo_nulo
+D 928 existencia_ruta
+D 939 usabilidad_ruta
+D 950 existencia_ruta_min
+D 961 usabilidad_ruta_min
+D 972 lim_puentes
+D 977 def_insatisaux
+D 986 def_auxZ1
+D 995 def_auxZ2
+D 1006 f_insatis
+D 1011 f_eq
+B 1017 Column Listing      SOLVE modelo1 Using MIP From line 111
+E 1020 X
+E 1050 Y
+E 1069 auxZ
+E 1088 H
+E 1110 Insatis
+E 1117 Insatisaux
+E 1127 Eq
+B 1135 Range Statistics    SOLVE modelo1 Using MIP From line 111
+B 1146 Model Statistics    SOLVE modelo1 Using MIP From line 111
+B 1159 Solution Report     SOLVE modelo1 Using MIP From line 111
+F 1201 definir_Y
+F 1213 solo_arcos_buenos
+F 1248 lim_provisiones
+F 1252 flujo_nulo
+F 1260 existencia_ruta
+F 1314 usabilidad_ruta
+F 1368 existencia_ruta_min
+F 1422 usabilidad_ruta_min
+F 1478 lim_puentes
+F 1480 def_insatisaux
+F 1488 def_auxZ1
+F 1496 def_auxZ2
+F 1507 f_insatis
+F 1508 f_eq
+G 1513 X
+G 1567 Y
+G 1579 auxZ
+G 1591 H
+G 1647 Insatis
+G 1648 Insatisaux
+G 1649 Eq

@@ -1,0 +1,44 @@
+B 3 C o m p i l a t i o n
+B 792 Equation Listing    SOLVE modelo1 Using MIP From line 780
+D 795 flujo_transitorios
+D 806 flujo_destinos
+D 817 def_Y
+D 828 def_Z
+D 839 arcos_buenos_mas
+D 850 arcos_buenos_menos
+D 861 existencia_ruta_max
+D 872 existencia_ruta_min
+D 883 usabilidad_ruta_max
+D 894 usabilidad_ruta_min
+D 905 lim_coste
+D 910 lim_habilitaciones
+D 921 def_insatisaux
+D 932 def_Zaux_destinos
+D 943 def_Zaux_transitorios
+D 954 lim_demanda
+D 965 f_insatis
+D 970 f_eq
+D 975 def_coste
+D 982 def_fiabilidad
+D 987 lim_fiabilidad
+D 992 arco_usado
+D 1003 tiempos_llegada
+D 1014 def_TZ
+D 1025 lim_tiempo
+B 1037 Column Listing      SOLVE modelo1 Using MIP From line 780
+E 1040 Xmas
+E 1062 Xmenos
+E 1084 Y
+E 1106 Z
+E 1125 Zaux
+E 1144 H
+E 1160 Usado
+E 1176 Insatisaux
+E 1279 Insatis
+E 1286 Eq
+E 1293 Coste
+E 1301 Fiabilidad
+E 1309 TM
+E 1353 TZ
+B 1560 Range Statistics    SOLVE modelo1 Using MIP From line 780
+B 1571 Model Statistics    SOLVE modelo1 Using MIP From line 780

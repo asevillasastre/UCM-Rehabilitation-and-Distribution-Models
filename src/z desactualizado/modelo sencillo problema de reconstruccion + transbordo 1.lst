@@ -1,0 +1,1623 @@
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/21/22 21:30:34 Page 1
+modelo sencillo reconstruccion + reparto 1
+C o m p i l a t i o n
+
+
+   2   
+   3  Set
+   4  j nodos de llegada /0*3/
+   5  t periodos (cota superior) /0*4/
+   6  ;
+   7   
+   8  Alias
+   9  (j,i,k)
+  10  ;
+  11   
+  12  Parameters
+  13  dem(j) demanda por nodo /0 0,
+  14                           1 4,
+  15                           2 1,
+  16                           3 1/
+  17  max_camiones máximo número de camiones que podemos mandar /3/
+  18  max_puentes máximo número de puentes que podemos reconstruir /2/
+  19  * un puente por cada sentido, grafo orientado
+  20  ;
+  21   
+  22  Table E(i,j) existe la ruta de i a j
+  23           0       1       2       3
+  24  0        0       1       1       0
+  25  1        1       0       0       0
+  26  2        1       0       0       1
+  27  3        0       0       1       0
+  28  ;
+  29   
+  30  Table U(i,j) al inicio es utilizable la ruta de i a j
+  31           0       1       2       3
+  32  0        0       0       0       0
+  33  1        0       0       0       0
+  34  2        0       0       0       1
+  35  3        0       0       1       0
+  36  ;
+  37   
+  38  Variables
+  39  X(i,j,t) camiones que van de i a j en el periodo t
+  40  Y(j,t) camiones que hay en j en el periodo t
+  41  Z(j) camiones totales repartidos a j al final del ultimo periodo
+  42  auxZ(j) se reparte algun camion a j al final del ultimo periodo
+  43   
+  44  H(i,j) habilitamos el puente de i a j
+  45   
+  46  Ayuda ayuda total repartida
+  47  Eq criterio de equidad = numero de nodos a los que se les reparte algun camion
+  48  ;
+  49   
+  50  Integer variables X, Y, Z;
+  51  Binary variables auxZ, H;
+  52   
+  53  Equations
+  54   
+  55  definir_Y(j,t) ecuacion de flujo
+  56  definir_Z(j) ultimo valor del almacenaje Y
+  57  definir_auxZ(j) nulidad de Z
+  58   
+  59  lim_salida(j,t) de un nodo como mucho sale lo almacenado en el periodo anterior
+  60  flujo_ini(j) no hay almacenado nada en ningun nodo no inicial
+  61  flujo_ini_0 en el nodo inicial esta almacenada la totalidad de camiones
+  62   
+  63  existencia_ruta(i,j,t)
+  64  usabilidad_ruta(i,j,t)
+  65  orientacion(i,j) si se habilita un sentido se ha de habilitar el opuesto
+  66  lim_puentes
+  67   
+  68  lim_demanda(j)
+  69   
+  70  f_ayuda funcion objetivo 1
+  71  f_equidad funcion objetivo 2
+  72  ;
+  73   
+  74  definir_Y(j,t)$(ord(t)>1).. Y(j,t) =E=
+  75                              Y(j,t-1) + sum(i, X(i,j,t)) - sum(i, X(j,i,t));
+  76  definir_Z(j).. Z(j) =E= Y(j,"3");
+  77  * "4" porque es el numero de periodos
+  78  definir_auxZ(j).. auxZ(j) =L= Z(j);
+  79   
+  80  lim_salida(j,t).. sum(i,X(j,i,t)) =L= Y(j,t-1);
+  81  flujo_ini(j)$(ord(j)>1).. Y(j,"0") =E= 0;
+  82  flujo_ini_0.. Y("0","0") =E= max_camiones;
+  83   
+  84  existencia_ruta(i,j,t).. X(i,j,t) =L= 99*E(i,j);
+  85  usabilidad_ruta(i,j,t).. X(i,j,t) =L= 99*(U(i,j) +  H(i,j));
+  86  orientacion(i,j).. H(i,j) =E= H(j,i);
+  87  lim_puentes..  sum(i, sum(j, H(i,j))) =L= max_puentes;
+  88   
+  89  lim_demanda(j).. Z(j) =L= dem(j);
+  90   
+  91  f_ayuda.. Ayuda =E= sum(j, Z(j)-dem(j));
+  92  f_equidad.. Eq =E= sum(j, auxZ(j));
+  93  ;
+  94   
+  95  model modelo1 /all - lim_demanda/;
+  96   
+  97  solve modelo1 using MIP maximizing Ayuda;
+  98  solve modelo1 using MIP maximizing Eq;
+  99   
+ 100   
+ 101   
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  41.2.0 5110e5ff WEX-WEI
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/21/22 21:30:34 Page 2
+modelo sencillo reconstruccion + reparto 1
+Equation Listing    SOLVE modelo1 Using MIP From line 97
+
+
+---- definir_Y  =E=  ecuacion de flujo
+
+definir_Y(0,1)..  X(0,1,1) + X(0,2,1) + X(0,3,1) - X(1,0,1) - X(2,0,1) - X(3,0,1) - Y(0,0) + Y(0,1) =E= 0 ; (LHS = 0)
+     
+definir_Y(0,2)..  X(0,1,2) + X(0,2,2) + X(0,3,2) - X(1,0,2) - X(2,0,2) - X(3,0,2) - Y(0,1) + Y(0,2) =E= 0 ; (LHS = 0)
+     
+definir_Y(0,3)..  X(0,1,3) + X(0,2,3) + X(0,3,3) - X(1,0,3) - X(2,0,3) - X(3,0,3) - Y(0,2) + Y(0,3) =E= 0 ; (LHS = 0)
+     
+REMAINING 13 ENTRIES SKIPPED
+
+
+---- definir_Z  =E=  ultimo valor del almacenaje Y
+
+definir_Z(0)..  - Y(0,3) + Z(0) =E= 0 ; (LHS = 0)
+     
+definir_Z(1)..  - Y(1,3) + Z(1) =E= 0 ; (LHS = 0)
+     
+definir_Z(2)..  - Y(2,3) + Z(2) =E= 0 ; (LHS = 0)
+     
+REMAINING ENTRY SKIPPED
+
+
+---- definir_auxZ  =L=  nulidad de Z
+
+definir_auxZ(0)..  - Z(0) + auxZ(0) =L= 0 ; (LHS = 0)
+     
+definir_auxZ(1)..  - Z(1) + auxZ(1) =L= 0 ; (LHS = 0)
+     
+definir_auxZ(2)..  - Z(2) + auxZ(2) =L= 0 ; (LHS = 0)
+     
+REMAINING ENTRY SKIPPED
+
+
+---- lim_salida  =L=  de un nodo como mucho sale lo almacenado en el periodo anterior
+
+lim_salida(0,0)..  X(0,0,0) + X(0,1,0) + X(0,2,0) + X(0,3,0) =L= 0 ; (LHS = 0)
+     
+lim_salida(0,1)..  X(0,0,1) + X(0,1,1) + X(0,2,1) + X(0,3,1) - Y(0,0) =L= 0 ; (LHS = 0)
+     
+lim_salida(0,2)..  X(0,0,2) + X(0,1,2) + X(0,2,2) + X(0,3,2) - Y(0,1) =L= 0 ; (LHS = 0)
+     
+REMAINING 17 ENTRIES SKIPPED
+
+
+---- flujo_ini  =E=  no hay almacenado nada en ningun nodo no inicial
+
+flujo_ini(1)..  Y(1,0) =E= 0 ; (LHS = 0)
+     
+flujo_ini(2)..  Y(2,0) =E= 0 ; (LHS = 0)
+     
+flujo_ini(3)..  Y(3,0) =E= 0 ; (LHS = 0)
+     
+
+---- flujo_ini_0  =E=  en el nodo inicial esta almacenada la totalidad de camiones
+
+flujo_ini_0..  Y(0,0) =E= 3 ; (LHS = 0, INFES = 3 ****)
+     
+
+---- existencia_ruta  =L=  
+
+existencia_ruta(0,0,0)..  X(0,0,0) =L= 0 ; (LHS = 0)
+     
+existencia_ruta(0,0,1)..  X(0,0,1) =L= 0 ; (LHS = 0)
+     
+existencia_ruta(0,0,2)..  X(0,0,2) =L= 0 ; (LHS = 0)
+     
+REMAINING 77 ENTRIES SKIPPED
+
+
+---- usabilidad_ruta  =L=  
+
+usabilidad_ruta(0,0,0)..  X(0,0,0) - 99*H(0,0) =L= 0 ; (LHS = 0)
+     
+usabilidad_ruta(0,0,1)..  X(0,0,1) - 99*H(0,0) =L= 0 ; (LHS = 0)
+     
+usabilidad_ruta(0,0,2)..  X(0,0,2) - 99*H(0,0) =L= 0 ; (LHS = 0)
+     
+REMAINING 77 ENTRIES SKIPPED
+
+
+---- orientacion  =E=  si se habilita un sentido se ha de habilitar el opuesto
+
+orientacion(0,1)..  H(0,1) - H(1,0) =E= 0 ; (LHS = 0)
+     
+orientacion(0,2)..  H(0,2) - H(2,0) =E= 0 ; (LHS = 0)
+     
+orientacion(0,3)..  H(0,3) - H(3,0) =E= 0 ; (LHS = 0)
+     
+REMAINING 9 ENTRIES SKIPPED
+
+
+---- lim_puentes  =L=  
+
+lim_puentes..  H(0,0) + H(0,1) + H(0,2) + H(0,3) + H(1,0) + H(1,1) + H(1,2) + H(1,3) + H(2,0) + H(2,1) + H(2,2) + H(2,3) + H(3,0) + H(3,1) + H(3,2) + H(3,3) =L= 2 ; (LHS = 0)
+     
+
+---- f_ayuda  =E=  funcion objetivo 1
+
+f_ayuda..  - Z(0) - Z(1) - Z(2) - Z(3) + Ayuda =E= -6 ; (LHS = 0, INFES = 6 ****)
+     
+
+---- f_equidad  =E=  funcion objetivo 2
+
+f_equidad..  - auxZ(0) - auxZ(1) - auxZ(2) - auxZ(3) + Eq =E= 0 ; (LHS = 0)
+     
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/21/22 21:30:34 Page 3
+modelo sencillo reconstruccion + reparto 1
+Column Listing      SOLVE modelo1 Using MIP From line 97
+
+
+---- X  camiones que van de i a j en el periodo t
+
+X(0,0,0)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       lim_salida(0,0)
+        1       existencia_ruta(0,0,0)
+        1       usabilidad_ruta(0,0,0)
+
+X(0,0,1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       lim_salida(0,1)
+        1       existencia_ruta(0,0,1)
+        1       usabilidad_ruta(0,0,1)
+
+X(0,0,2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       lim_salida(0,2)
+        1       existencia_ruta(0,0,2)
+        1       usabilidad_ruta(0,0,2)
+
+REMAINING 77 ENTRIES SKIPPED
+
+---- Y  camiones que hay en j en el periodo t
+
+Y(0,0)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       definir_Y(0,1)
+       -1       lim_salida(0,1)
+        1       flujo_ini_0
+
+Y(0,1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       definir_Y(0,1)
+       -1       definir_Y(0,2)
+       -1       lim_salida(0,2)
+
+Y(0,2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       definir_Y(0,2)
+       -1       definir_Y(0,3)
+       -1       lim_salida(0,3)
+
+REMAINING 17 ENTRIES SKIPPED
+
+---- Z  camiones totales repartidos a j al final del ultimo periodo
+
+Z(0)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       definir_Z(0)
+       -1       definir_auxZ(0)
+       -1       f_ayuda
+
+Z(1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       definir_Z(1)
+       -1       definir_auxZ(1)
+       -1       f_ayuda
+
+Z(2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       definir_Z(2)
+       -1       definir_auxZ(2)
+       -1       f_ayuda
+
+REMAINING ENTRY SKIPPED
+
+---- auxZ  se reparte algun camion a j al final del ultimo periodo
+
+auxZ(0)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       definir_auxZ(0)
+       -1       f_equidad
+
+auxZ(1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       definir_auxZ(1)
+       -1       f_equidad
+
+auxZ(2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       definir_auxZ(2)
+       -1       f_equidad
+
+REMAINING ENTRY SKIPPED
+
+---- H  habilitamos el puente de i a j
+
+H(0,0)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+      -99       usabilidad_ruta(0,0,0)
+      -99       usabilidad_ruta(0,0,1)
+      -99       usabilidad_ruta(0,0,2)
+      -99       usabilidad_ruta(0,0,3)
+      -99       usabilidad_ruta(0,0,4)
+        1       lim_puentes
+
+H(0,1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+      -99       usabilidad_ruta(0,1,0)
+      -99       usabilidad_ruta(0,1,1)
+      -99       usabilidad_ruta(0,1,2)
+      -99       usabilidad_ruta(0,1,3)
+      -99       usabilidad_ruta(0,1,4)
+        1       orientacion(0,1)
+       -1       orientacion(1,0)
+        1       lim_puentes
+
+H(0,2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+      -99       usabilidad_ruta(0,2,0)
+      -99       usabilidad_ruta(0,2,1)
+      -99       usabilidad_ruta(0,2,2)
+      -99       usabilidad_ruta(0,2,3)
+      -99       usabilidad_ruta(0,2,4)
+        1       orientacion(0,2)
+       -1       orientacion(2,0)
+        1       lim_puentes
+
+REMAINING 13 ENTRIES SKIPPED
+
+---- Ayuda  ayuda total repartida
+
+Ayuda
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       f_ayuda
+
+
+---- Eq  criterio de equidad = numero de nodos a los que se les reparte algun camion
+
+Eq
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       f_equidad
+
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/21/22 21:30:34 Page 4
+modelo sencillo reconstruccion + reparto 1
+Range Statistics    SOLVE modelo1 Using MIP From line 97
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 2.000E+00, 9.900E+01] - Zero values observed as well
+Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+Matrix    [min, max] : [ 1.000E+00, 9.900E+01]
+
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/21/22 21:30:34 Page 5
+modelo sencillo reconstruccion + reparto 1
+Model Statistics    SOLVE modelo1 Using MIP From line 97
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS          12     SINGLE EQUATIONS          223
+BLOCKS OF VARIABLES           7     SINGLE VARIABLES          126
+NON ZERO ELEMENTS           534     DISCRETE VARIABLES        124
+
+
+GENERATION TIME      =        0.343 SECONDS      4 MB  41.2.0 5110e5ff WEX-WEI
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/21/22 21:30:34 Page 6
+modelo sencillo reconstruccion + reparto 1
+Solution Report     SOLVE modelo1 Using MIP From line 97
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   modelo1             OBJECTIVE  Ayuda
+     TYPE    MIP                 DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  97
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE               -3.0000
+
+ RESOURCE USAGE, LIMIT          0.016 10000000000.000
+ ITERATION COUNT, LIMIT         1    2147483647
+--- *** This solver runs with a demo license. No commercial use.
+--- GMO setup time: 0.00s
+--- GMO memory 0.54 Mb (peak 0.54 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.0.0 link memory 0.00 Mb (peak 0.02 Mb)
+--- Starting Cplex
+
+
+--- MIP status (101): integer optimal solution.
+--- Cplex Time: 0.02sec (det. 0.48 ticks)
+
+--- Fixing integer variables and solving final LP...
+
+
+--- Fixed MIP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.15 ticks)
+
+
+Proven optimal solution
+MIP Solution:           -3.000000    (1 iterations, 0 nodes)
+Final Solve:            -3.000000    (0 iterations)
+
+Best possible:          -3.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+
+---- EQU definir_Y  ecuacion de flujo
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+0.1          .              .              .              .          
+0.2          .              .              .              .          
+0.3          .              .              .              .          
+0.4          .              .              .              .          
+1.1          .              .              .              .          
+1.2          .              .              .              .          
+1.3          .              .              .              .          
+1.4          .              .              .              .          
+2.1          .              .              .              .          
+2.2          .              .              .              .          
+2.3          .              .              .              .          
+2.4          .              .              .              .          
+3.1          .              .              .              .          
+3.2          .              .              .              .          
+3.3          .              .              .              .          
+3.4          .              .              .              .          
+
+---- EQU definir_Z  ultimo valor del almacenaje Y
+
+         LOWER          LEVEL          UPPER         MARGINAL
+
+0          .              .              .              .          
+1          .              .              .              .          
+2          .              .              .              .          
+3          .              .              .              .          
+
+---- EQU definir_auxZ  nulidad de Z
+
+         LOWER          LEVEL          UPPER         MARGINAL
+
+0        -INF             .              .              .          
+1        -INF           -3.0000          .              .          
+2        -INF             .              .              .          
+3        -INF             .              .              .          
+
+---- EQU lim_salida  de un nodo como mucho sale lo almacenado en el periodo anterior
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+0.0        -INF             .              .              .          
+0.1        -INF           -3.0000          .              .          
+0.2        -INF           -3.0000          .              .          
+0.3        -INF             .              .              .          
+0.4        -INF             .              .              .          
+1.0        -INF             .              .              .          
+1.1        -INF             .              .              .          
+1.2        -INF             .              .              .          
+1.3        -INF             .              .              .          
+1.4        -INF           -3.0000          .              .          
+2.0        -INF             .              .              .          
+2.1        -INF             .              .              .          
+2.2        -INF             .              .              .          
+2.3        -INF             .              .              .          
+2.4        -INF             .              .              .          
+3.0        -INF             .              .              .          
+3.1        -INF             .              .              .          
+3.2        -INF             .              .              .          
+3.3        -INF             .              .              .          
+3.4        -INF             .              .              .          
+
+---- EQU flujo_ini  no hay almacenado nada en ningun nodo no inicial
+
+         LOWER          LEVEL          UPPER         MARGINAL
+
+1          .              .              .              .          
+2          .              .              .              .          
+3          .              .              .              .          
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU flujo_ini~         3.0000         3.0000         3.0000          .          
+
+  flujo_ini_0  en el nodo inicial esta almacenada la totalidad de camiones
+
+---- EQU existencia_ruta  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+0.0.0        -INF             .              .              .          
+0.0.1        -INF             .              .              .          
+0.0.2        -INF             .              .              .          
+0.0.3        -INF             .              .              .          
+0.0.4        -INF             .              .              .          
+0.1.0        -INF             .            99.0000          .          
+0.1.1        -INF             .            99.0000          .          
+0.1.2        -INF             .            99.0000          .          
+0.1.3        -INF            3.0000        99.0000          .          
+0.1.4        -INF             .            99.0000          .          
+0.2.0        -INF             .            99.0000          .          
+0.2.1        -INF             .            99.0000          .          
+0.2.2        -INF             .            99.0000          .          
+0.2.3        -INF             .            99.0000          .          
+0.2.4        -INF             .            99.0000          .          
+0.3.0        -INF             .              .              .          
+0.3.1        -INF             .              .              .          
+0.3.2        -INF             .              .              .          
+0.3.3        -INF             .              .              .          
+0.3.4        -INF             .              .              .          
+1.0.0        -INF             .            99.0000          .          
+1.0.1        -INF             .            99.0000          .          
+1.0.2        -INF             .            99.0000          .          
+1.0.3        -INF             .            99.0000          .          
+1.0.4        -INF             .            99.0000          .          
+1.1.0        -INF             .              .              .          
+1.1.1        -INF             .              .              .          
+1.1.2        -INF             .              .              .          
+1.1.3        -INF             .              .              .          
+1.1.4        -INF             .              .              .          
+1.2.0        -INF             .              .              .          
+1.2.1        -INF             .              .              .          
+1.2.2        -INF             .              .              .          
+1.2.3        -INF             .              .              .          
+1.2.4        -INF             .              .              .          
+1.3.0        -INF             .              .              .          
+1.3.1        -INF             .              .              .          
+1.3.2        -INF             .              .              .          
+1.3.3        -INF             .              .              .          
+1.3.4        -INF             .              .              .          
+2.0.0        -INF             .            99.0000          .          
+2.0.1        -INF             .            99.0000          .          
+2.0.2        -INF             .            99.0000          .          
+2.0.3        -INF             .            99.0000          .          
+2.0.4        -INF             .            99.0000          .          
+2.1.0        -INF             .              .              .          
+2.1.1        -INF             .              .              .          
+2.1.2        -INF             .              .              .          
+2.1.3        -INF             .              .              .          
+2.1.4        -INF             .              .              .          
+2.2.0        -INF             .              .              .          
+2.2.1        -INF             .              .              .          
+2.2.2        -INF             .              .              .          
+2.2.3        -INF             .              .              .          
+2.2.4        -INF             .              .              .          
+2.3.0        -INF             .            99.0000          .          
+2.3.1        -INF             .            99.0000          .          
+2.3.2        -INF             .            99.0000          .          
+2.3.3        -INF             .            99.0000          .          
+2.3.4        -INF             .            99.0000          .          
+3.0.0        -INF             .              .              .          
+3.0.1        -INF             .              .              .          
+3.0.2        -INF             .              .              .          
+3.0.3        -INF             .              .              .          
+3.0.4        -INF             .              .              .          
+3.1.0        -INF             .              .              .          
+3.1.1        -INF             .              .              .          
+3.1.2        -INF             .              .              .          
+3.1.3        -INF             .              .              .          
+3.1.4        -INF             .              .              .          
+3.2.0        -INF             .            99.0000          .          
+3.2.1        -INF             .            99.0000          .          
+3.2.2        -INF             .            99.0000          .          
+3.2.3        -INF             .            99.0000          .          
+3.2.4        -INF             .            99.0000          .          
+3.3.0        -INF             .              .              .          
+3.3.1        -INF             .              .              .          
+3.3.2        -INF             .              .              .          
+3.3.3        -INF             .              .              .          
+3.3.4        -INF             .              .              .          
+
+---- EQU usabilidad_ruta  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+0.0.0        -INF             .              .              .          
+0.0.1        -INF             .              .              .          
+0.0.2        -INF             .              .              .          
+0.0.3        -INF             .              .              .          
+0.0.4        -INF             .              .              .          
+0.1.0        -INF          -99.0000          .              .          
+0.1.1        -INF          -99.0000          .              .          
+0.1.2        -INF          -99.0000          .              .          
+0.1.3        -INF          -96.0000          .              .          
+0.1.4        -INF          -99.0000          .              .          
+0.2.0        -INF             .              .              .          
+0.2.1        -INF             .              .              .          
+0.2.2        -INF             .              .              .          
+0.2.3        -INF             .              .              .          
+0.2.4        -INF             .              .              .          
+0.3.0        -INF             .              .              .          
+0.3.1        -INF             .              .              .          
+0.3.2        -INF             .              .              .          
+0.3.3        -INF             .              .              .          
+0.3.4        -INF             .              .              .          
+1.0.0        -INF          -99.0000          .              .          
+1.0.1        -INF          -99.0000          .              .          
+1.0.2        -INF          -99.0000          .              .          
+1.0.3        -INF          -99.0000          .              .          
+1.0.4        -INF          -99.0000          .              .          
+1.1.0        -INF             .              .              .          
+1.1.1        -INF             .              .              .          
+1.1.2        -INF             .              .              .          
+1.1.3        -INF             .              .              .          
+1.1.4        -INF             .              .              .          
+1.2.0        -INF             .              .              .          
+1.2.1        -INF             .              .              .          
+1.2.2        -INF             .              .              .          
+1.2.3        -INF             .              .              .          
+1.2.4        -INF             .              .              .          
+1.3.0        -INF             .              .              .          
+1.3.1        -INF             .              .              .          
+1.3.2        -INF             .              .              .          
+1.3.3        -INF             .              .              .          
+1.3.4        -INF             .              .              .          
+2.0.0        -INF             .              .              .          
+2.0.1        -INF             .              .              .          
+2.0.2        -INF             .              .              .          
+2.0.3        -INF             .              .              .          
+2.0.4        -INF             .              .              .          
+2.1.0        -INF             .              .              .          
+2.1.1        -INF             .              .              .          
+2.1.2        -INF             .              .              .          
+2.1.3        -INF             .              .              .          
+2.1.4        -INF             .              .              .          
+2.2.0        -INF             .              .              .          
+2.2.1        -INF             .              .              .          
+2.2.2        -INF             .              .              .          
+2.2.3        -INF             .              .              .          
+2.2.4        -INF             .              .              .          
+2.3.0        -INF             .            99.0000          .          
+2.3.1        -INF             .            99.0000          .          
+2.3.2        -INF             .            99.0000          .          
+2.3.3        -INF             .            99.0000          .          
+2.3.4        -INF             .            99.0000          .          
+3.0.0        -INF             .              .              .          
+3.0.1        -INF             .              .              .          
+3.0.2        -INF             .              .              .          
+3.0.3        -INF             .              .              .          
+3.0.4        -INF             .              .              .          
+3.1.0        -INF             .              .              .          
+3.1.1        -INF             .              .              .          
+3.1.2        -INF             .              .              .          
+3.1.3        -INF             .              .              .          
+3.1.4        -INF             .              .              .          
+3.2.0        -INF             .            99.0000          .          
+3.2.1        -INF             .            99.0000          .          
+3.2.2        -INF             .            99.0000          .          
+3.2.3        -INF             .            99.0000          .          
+3.2.4        -INF             .            99.0000          .          
+3.3.0        -INF             .              .              .          
+3.3.1        -INF             .              .              .          
+3.3.2        -INF             .              .              .          
+3.3.3        -INF             .              .              .          
+3.3.4        -INF             .              .              .          
+
+---- EQU orientacion  si se habilita un sentido se ha de habilitar el opuesto
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+0.1          .              .              .              .          
+0.2          .              .              .              .          
+0.3          .              .              .              .          
+1.0          .              .              .              .          
+1.2          .              .              .              .          
+1.3          .              .              .              .          
+2.0          .              .              .              .          
+2.1          .              .              .              .          
+2.3          .              .              .              .          
+3.0          .              .              .              .          
+3.1          .              .              .              .          
+3.2          .              .              .              .          
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU lim_puent~        -INF            2.0000         2.0000          .          
+---- EQU f_ayuda           -6.0000        -6.0000        -6.0000         1.0000      
+---- EQU f_equidad           .              .              .             EPS         
+
+  f_ayuda  funcion objetivo 1
+  f_equidad  funcion objetivo 2
+
+---- VAR X  camiones que van de i a j en el periodo t
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+0.0.0          .              .            +INF            EPS         
+0.0.1          .              .            +INF            EPS         
+0.0.2          .              .            +INF            EPS         
+0.0.3          .              .            +INF            EPS         
+0.0.4          .              .            +INF            EPS         
+0.1.0          .              .            +INF            EPS         
+0.1.1          .              .            +INF            EPS         
+0.1.2          .              .            +INF            EPS         
+0.1.3          .             3.0000        +INF            EPS         
+0.1.4          .              .            +INF            EPS         
+0.2.0          .              .            +INF            EPS         
+0.2.1          .              .            +INF            EPS         
+0.2.2          .              .            +INF            EPS         
+0.2.3          .              .            +INF            EPS         
+0.2.4          .              .            +INF            EPS         
+0.3.0          .              .            +INF            EPS         
+0.3.1          .              .            +INF            EPS         
+0.3.2          .              .            +INF            EPS         
+0.3.3          .              .            +INF            EPS         
+0.3.4          .              .            +INF            EPS         
+1.0.0          .              .            +INF            EPS         
+1.0.1          .              .            +INF            EPS         
+1.0.2          .              .            +INF            EPS         
+1.0.3          .              .            +INF            EPS         
+1.0.4          .              .            +INF            EPS         
+1.1.0          .              .            +INF            EPS         
+1.1.1          .              .            +INF            EPS         
+1.1.2          .              .            +INF            EPS         
+1.1.3          .              .            +INF            EPS         
+1.1.4          .              .            +INF            EPS         
+1.2.0          .              .            +INF            EPS         
+1.2.1          .              .            +INF            EPS         
+1.2.2          .              .            +INF            EPS         
+1.2.3          .              .            +INF            EPS         
+1.2.4          .              .            +INF            EPS         
+1.3.0          .              .            +INF            EPS         
+1.3.1          .              .            +INF            EPS         
+1.3.2          .              .            +INF            EPS         
+1.3.3          .              .            +INF            EPS         
+1.3.4          .              .            +INF            EPS         
+2.0.0          .              .            +INF            EPS         
+2.0.1          .              .            +INF            EPS         
+2.0.2          .              .            +INF            EPS         
+2.0.3          .              .            +INF            EPS         
+2.0.4          .              .            +INF            EPS         
+2.1.0          .              .            +INF            EPS         
+2.1.1          .              .            +INF            EPS         
+2.1.2          .              .            +INF            EPS         
+2.1.3          .              .            +INF            EPS         
+2.1.4          .              .            +INF            EPS         
+2.2.0          .              .            +INF            EPS         
+2.2.1          .              .            +INF            EPS         
+2.2.2          .              .            +INF            EPS         
+2.2.3          .              .            +INF            EPS         
+2.2.4          .              .            +INF            EPS         
+2.3.0          .              .            +INF            EPS         
+2.3.1          .              .            +INF            EPS         
+2.3.2          .              .            +INF            EPS         
+2.3.3          .              .            +INF            EPS         
+2.3.4          .              .            +INF            EPS         
+3.0.0          .              .            +INF            EPS         
+3.0.1          .              .            +INF            EPS         
+3.0.2          .              .            +INF            EPS         
+3.0.3          .              .            +INF            EPS         
+3.0.4          .              .            +INF            EPS         
+3.1.0          .              .            +INF            EPS         
+3.1.1          .              .            +INF            EPS         
+3.1.2          .              .            +INF            EPS         
+3.1.3          .              .            +INF            EPS         
+3.1.4          .              .            +INF            EPS         
+3.2.0          .              .            +INF            EPS         
+3.2.1          .              .            +INF            EPS         
+3.2.2          .              .            +INF            EPS         
+3.2.3          .              .            +INF            EPS         
+3.2.4          .              .            +INF            EPS         
+3.3.0          .              .            +INF            EPS         
+3.3.1          .              .            +INF            EPS         
+3.3.2          .              .            +INF            EPS         
+3.3.3          .              .            +INF            EPS         
+3.3.4          .              .            +INF            EPS         
+
+---- VAR Y  camiones que hay en j en el periodo t
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+0.0          .             3.0000        +INF            EPS         
+0.1          .             3.0000        +INF            EPS         
+0.2          .             3.0000        +INF            EPS         
+0.3          .              .            +INF            EPS         
+0.4          .              .            +INF            EPS         
+1.0          .              .            +INF            EPS         
+1.1          .              .            +INF            EPS         
+1.2          .              .            +INF            EPS         
+1.3          .             3.0000        +INF            EPS         
+1.4          .             3.0000        +INF            EPS         
+2.0          .              .            +INF            EPS         
+2.1          .              .            +INF            EPS         
+2.2          .              .            +INF            EPS         
+2.3          .              .            +INF            EPS         
+2.4          .              .            +INF            EPS         
+3.0          .              .            +INF            EPS         
+3.1          .              .            +INF            EPS         
+3.2          .              .            +INF            EPS         
+3.3          .              .            +INF            EPS         
+3.4          .              .            +INF            EPS         
+
+---- VAR Z  camiones totales repartidos a j al final del ultimo periodo
+
+         LOWER          LEVEL          UPPER         MARGINAL
+
+0          .              .            +INF            1.0000      
+1          .             3.0000        +INF            1.0000      
+2          .              .            +INF            1.0000      
+3          .              .            +INF            1.0000      
+
+---- VAR auxZ  se reparte algun camion a j al final del ultimo periodo
+
+         LOWER          LEVEL          UPPER         MARGINAL
+
+0          .              .             1.0000         EPS         
+1          .              .             1.0000         EPS         
+2          .              .             1.0000         EPS         
+3          .              .             1.0000         EPS         
+
+---- VAR H  habilitamos el puente de i a j
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+0.0          .              .             1.0000         EPS         
+0.1          .             1.0000         1.0000         EPS         
+0.2          .              .             1.0000         EPS         
+0.3          .              .             1.0000         EPS         
+1.0          .             1.0000         1.0000         EPS         
+1.1          .              .             1.0000         EPS         
+1.2          .              .             1.0000         EPS         
+1.3          .              .             1.0000         EPS         
+2.0          .              .             1.0000         EPS         
+2.1          .              .             1.0000         EPS         
+2.2          .              .             1.0000         EPS         
+2.3          .              .             1.0000         EPS         
+3.0          .              .             1.0000         EPS         
+3.1          .              .             1.0000         EPS         
+3.2          .              .             1.0000         EPS         
+3.3          .              .             1.0000         EPS         
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR Ayuda             -INF           -3.0000        +INF             .          
+---- VAR Eq                -INF             .            +INF             .          
+
+  Ayuda  ayuda total repartida
+  Eq  criterio de equidad = numero de nodos a los que se les reparte algun camion
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/21/22 21:30:34 Page 7
+modelo sencillo reconstruccion + reparto 1
+Equation Listing    SOLVE modelo1 Using MIP From line 98
+
+
+---- definir_Y  =E=  ecuacion de flujo
+
+definir_Y(0,1)..  X(0,1,1) + X(0,2,1) + X(0,3,1) - X(1,0,1) - X(2,0,1) - X(3,0,1) - Y(0,0) + Y(0,1) =E= 0 ; (LHS = 0)
+     
+definir_Y(0,2)..  X(0,1,2) + X(0,2,2) + X(0,3,2) - X(1,0,2) - X(2,0,2) - X(3,0,2) - Y(0,1) + Y(0,2) =E= 0 ; (LHS = 0)
+     
+definir_Y(0,3)..  X(0,1,3) + X(0,2,3) + X(0,3,3) - X(1,0,3) - X(2,0,3) - X(3,0,3) - Y(0,2) + Y(0,3) =E= 0 ; (LHS = 0)
+     
+REMAINING 13 ENTRIES SKIPPED
+
+
+---- definir_Z  =E=  ultimo valor del almacenaje Y
+
+definir_Z(0)..  - Y(0,3) + Z(0) =E= 0 ; (LHS = 0)
+     
+definir_Z(1)..  - Y(1,3) + Z(1) =E= 0 ; (LHS = 0)
+     
+definir_Z(2)..  - Y(2,3) + Z(2) =E= 0 ; (LHS = 0)
+     
+REMAINING ENTRY SKIPPED
+
+
+---- definir_auxZ  =L=  nulidad de Z
+
+definir_auxZ(0)..  - Z(0) + auxZ(0) =L= 0 ; (LHS = 0)
+     
+definir_auxZ(1)..  - Z(1) + auxZ(1) =L= 0 ; (LHS = -3)
+     
+definir_auxZ(2)..  - Z(2) + auxZ(2) =L= 0 ; (LHS = 0)
+     
+REMAINING ENTRY SKIPPED
+
+
+---- lim_salida  =L=  de un nodo como mucho sale lo almacenado en el periodo anterior
+
+lim_salida(0,0)..  X(0,0,0) + X(0,1,0) + X(0,2,0) + X(0,3,0) =L= 0 ; (LHS = 0)
+     
+lim_salida(0,1)..  X(0,0,1) + X(0,1,1) + X(0,2,1) + X(0,3,1) - Y(0,0) =L= 0 ; (LHS = -3)
+     
+lim_salida(0,2)..  X(0,0,2) + X(0,1,2) + X(0,2,2) + X(0,3,2) - Y(0,1) =L= 0 ; (LHS = -3)
+     
+REMAINING 17 ENTRIES SKIPPED
+
+
+---- flujo_ini  =E=  no hay almacenado nada en ningun nodo no inicial
+
+flujo_ini(1)..  Y(1,0) =E= 0 ; (LHS = 0)
+     
+flujo_ini(2)..  Y(2,0) =E= 0 ; (LHS = 0)
+     
+flujo_ini(3)..  Y(3,0) =E= 0 ; (LHS = 0)
+     
+
+---- flujo_ini_0  =E=  en el nodo inicial esta almacenada la totalidad de camiones
+
+flujo_ini_0..  Y(0,0) =E= 3 ; (LHS = 3)
+     
+
+---- existencia_ruta  =L=  
+
+existencia_ruta(0,0,0)..  X(0,0,0) =L= 0 ; (LHS = 0)
+     
+existencia_ruta(0,0,1)..  X(0,0,1) =L= 0 ; (LHS = 0)
+     
+existencia_ruta(0,0,2)..  X(0,0,2) =L= 0 ; (LHS = 0)
+     
+REMAINING 77 ENTRIES SKIPPED
+
+
+---- usabilidad_ruta  =L=  
+
+usabilidad_ruta(0,0,0)..  X(0,0,0) - 99*H(0,0) =L= 0 ; (LHS = 0)
+     
+usabilidad_ruta(0,0,1)..  X(0,0,1) - 99*H(0,0) =L= 0 ; (LHS = 0)
+     
+usabilidad_ruta(0,0,2)..  X(0,0,2) - 99*H(0,0) =L= 0 ; (LHS = 0)
+     
+REMAINING 77 ENTRIES SKIPPED
+
+
+---- orientacion  =E=  si se habilita un sentido se ha de habilitar el opuesto
+
+orientacion(0,1)..  H(0,1) - H(1,0) =E= 0 ; (LHS = 0)
+     
+orientacion(0,2)..  H(0,2) - H(2,0) =E= 0 ; (LHS = 0)
+     
+orientacion(0,3)..  H(0,3) - H(3,0) =E= 0 ; (LHS = 0)
+     
+REMAINING 9 ENTRIES SKIPPED
+
+
+---- lim_puentes  =L=  
+
+lim_puentes..  H(0,0) + H(0,1) + H(0,2) + H(0,3) + H(1,0) + H(1,1) + H(1,2) + H(1,3) + H(2,0) + H(2,1) + H(2,2) + H(2,3) + H(3,0) + H(3,1) + H(3,2) + H(3,3) =L= 2 ; (LHS = 2)
+     
+
+---- f_ayuda  =E=  funcion objetivo 1
+
+f_ayuda..  - Z(0) - Z(1) - Z(2) - Z(3) + Ayuda =E= -6 ; (LHS = -6)
+     
+
+---- f_equidad  =E=  funcion objetivo 2
+
+f_equidad..  - auxZ(0) - auxZ(1) - auxZ(2) - auxZ(3) + Eq =E= 0 ; (LHS = 0)
+     
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/21/22 21:30:34 Page 8
+modelo sencillo reconstruccion + reparto 1
+Column Listing      SOLVE modelo1 Using MIP From line 98
+
+
+---- X  camiones que van de i a j en el periodo t
+
+X(0,0,0)
+                (.LO, .L, .UP, .M = 0, 0, +INF, EPS)
+        1       lim_salida(0,0)
+        1       existencia_ruta(0,0,0)
+        1       usabilidad_ruta(0,0,0)
+
+X(0,0,1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, EPS)
+        1       lim_salida(0,1)
+        1       existencia_ruta(0,0,1)
+        1       usabilidad_ruta(0,0,1)
+
+X(0,0,2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, EPS)
+        1       lim_salida(0,2)
+        1       existencia_ruta(0,0,2)
+        1       usabilidad_ruta(0,0,2)
+
+REMAINING 77 ENTRIES SKIPPED
+
+---- Y  camiones que hay en j en el periodo t
+
+Y(0,0)
+                (.LO, .L, .UP, .M = 0, 3, +INF, EPS)
+       -1       definir_Y(0,1)
+       -1       lim_salida(0,1)
+        1       flujo_ini_0
+
+Y(0,1)
+                (.LO, .L, .UP, .M = 0, 3, +INF, EPS)
+        1       definir_Y(0,1)
+       -1       definir_Y(0,2)
+       -1       lim_salida(0,2)
+
+Y(0,2)
+                (.LO, .L, .UP, .M = 0, 3, +INF, EPS)
+        1       definir_Y(0,2)
+       -1       definir_Y(0,3)
+       -1       lim_salida(0,3)
+
+REMAINING 17 ENTRIES SKIPPED
+
+---- Z  camiones totales repartidos a j al final del ultimo periodo
+
+Z(0)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 1)
+        1       definir_Z(0)
+       -1       definir_auxZ(0)
+       -1       f_ayuda
+
+Z(1)
+                (.LO, .L, .UP, .M = 0, 3, +INF, 1)
+        1       definir_Z(1)
+       -1       definir_auxZ(1)
+       -1       f_ayuda
+
+Z(2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 1)
+        1       definir_Z(2)
+       -1       definir_auxZ(2)
+       -1       f_ayuda
+
+REMAINING ENTRY SKIPPED
+
+---- auxZ  se reparte algun camion a j al final del ultimo periodo
+
+auxZ(0)
+                (.LO, .L, .UP, .M = 0, 0, 1, EPS)
+        1       definir_auxZ(0)
+       -1       f_equidad
+
+auxZ(1)
+                (.LO, .L, .UP, .M = 0, 0, 1, EPS)
+        1       definir_auxZ(1)
+       -1       f_equidad
+
+auxZ(2)
+                (.LO, .L, .UP, .M = 0, 0, 1, EPS)
+        1       definir_auxZ(2)
+       -1       f_equidad
+
+REMAINING ENTRY SKIPPED
+
+---- H  habilitamos el puente de i a j
+
+H(0,0)
+                (.LO, .L, .UP, .M = 0, 0, 1, EPS)
+      -99       usabilidad_ruta(0,0,0)
+      -99       usabilidad_ruta(0,0,1)
+      -99       usabilidad_ruta(0,0,2)
+      -99       usabilidad_ruta(0,0,3)
+      -99       usabilidad_ruta(0,0,4)
+        1       lim_puentes
+
+H(0,1)
+                (.LO, .L, .UP, .M = 0, 1, 1, EPS)
+      -99       usabilidad_ruta(0,1,0)
+      -99       usabilidad_ruta(0,1,1)
+      -99       usabilidad_ruta(0,1,2)
+      -99       usabilidad_ruta(0,1,3)
+      -99       usabilidad_ruta(0,1,4)
+        1       orientacion(0,1)
+       -1       orientacion(1,0)
+        1       lim_puentes
+
+H(0,2)
+                (.LO, .L, .UP, .M = 0, 0, 1, EPS)
+      -99       usabilidad_ruta(0,2,0)
+      -99       usabilidad_ruta(0,2,1)
+      -99       usabilidad_ruta(0,2,2)
+      -99       usabilidad_ruta(0,2,3)
+      -99       usabilidad_ruta(0,2,4)
+        1       orientacion(0,2)
+       -1       orientacion(2,0)
+        1       lim_puentes
+
+REMAINING 13 ENTRIES SKIPPED
+
+---- Ayuda  ayuda total repartida
+
+Ayuda
+                (.LO, .L, .UP, .M = -INF, -3, +INF, 0)
+        1       f_ayuda
+
+
+---- Eq  criterio de equidad = numero de nodos a los que se les reparte algun camion
+
+Eq
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       f_equidad
+
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/21/22 21:30:34 Page 9
+modelo sencillo reconstruccion + reparto 1
+Range Statistics    SOLVE modelo1 Using MIP From line 98
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 2.000E+00, 9.900E+01] - Zero values observed as well
+Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+Matrix    [min, max] : [ 1.000E+00, 9.900E+01]
+
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/21/22 21:30:34 Page 10
+modelo sencillo reconstruccion + reparto 1
+Model Statistics    SOLVE modelo1 Using MIP From line 98
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS          12     SINGLE EQUATIONS          223
+BLOCKS OF VARIABLES           7     SINGLE VARIABLES          126
+NON ZERO ELEMENTS           534     DISCRETE VARIABLES        124
+
+
+GENERATION TIME      =        0.109 SECONDS      4 MB  41.2.0 5110e5ff WEX-WEI
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/21/22 21:30:34 Page 11
+modelo sencillo reconstruccion + reparto 1
+Solution Report     SOLVE modelo1 Using MIP From line 98
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   modelo1             OBJECTIVE  Eq
+     TYPE    MIP                 DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  98
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE                3.0000
+
+ RESOURCE USAGE, LIMIT          0.015 10000000000.000
+ ITERATION COUNT, LIMIT         8    2147483647
+--- *** This solver runs with a demo license. No commercial use.
+--- GMO setup time: 0.00s
+--- GMO memory 0.54 Mb (peak 0.54 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.0.0 link memory 0.00 Mb (peak 0.02 Mb)
+--- Starting Cplex
+
+
+--- MIP status (101): integer optimal solution.
+--- Cplex Time: 0.01sec (det. 0.70 ticks)
+
+--- Fixing integer variables and solving final LP...
+
+
+--- Fixed MIP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.15 ticks)
+
+
+Proven optimal solution
+MIP Solution:            3.000000    (8 iterations, 0 nodes)
+Final Solve:             3.000000    (0 iterations)
+
+Best possible:           3.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+
+---- EQU definir_Y  ecuacion de flujo
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+0.1          .              .              .              .          
+0.2          .              .              .              .          
+0.3          .              .              .              .          
+0.4          .              .              .              .          
+1.1          .              .              .              .          
+1.2          .              .              .              .          
+1.3          .              .              .              .          
+1.4          .              .              .              .          
+2.1          .              .              .              .          
+2.2          .              .              .              .          
+2.3          .              .              .              .          
+2.4          .              .              .              .          
+3.1          .              .              .              .          
+3.2          .              .              .              .          
+3.3          .              .              .              .          
+3.4          .              .              .              .          
+
+---- EQU definir_Z  ultimo valor del almacenaje Y
+
+         LOWER          LEVEL          UPPER         MARGINAL
+
+0          .              .              .              .          
+1          .              .              .              .          
+2          .              .              .              .          
+3          .              .              .              .          
+
+---- EQU definir_auxZ  nulidad de Z
+
+         LOWER          LEVEL          UPPER         MARGINAL
+
+0        -INF             .              .              .          
+1        -INF             .              .              .          
+2        -INF             .              .              .          
+3        -INF             .              .              .          
+
+---- EQU lim_salida  de un nodo como mucho sale lo almacenado en el periodo anterior
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+0.0        -INF             .              .              .          
+0.1        -INF           -3.0000          .              .          
+0.2        -INF           -2.0000          .              .          
+0.3        -INF           -1.0000          .              .          
+0.4        -INF           -1.0000          .              .          
+1.0        -INF             .              .              .          
+1.1        -INF             .              .              .          
+1.2        -INF             .              .              .          
+1.3        -INF             .              .              .          
+1.4        -INF             .              .              .          
+2.0        -INF             .              .              .          
+2.1        -INF             .              .              .          
+2.2        -INF             .              .              .          
+2.3        -INF             .              .              .          
+2.4        -INF           -1.0000          .              .          
+3.0        -INF             .              .              .          
+3.1        -INF             .              .              .          
+3.2        -INF             .              .              .          
+3.3        -INF             .              .              .          
+3.4        -INF           -1.0000          .              .          
+
+---- EQU flujo_ini  no hay almacenado nada en ningun nodo no inicial
+
+         LOWER          LEVEL          UPPER         MARGINAL
+
+1          .              .              .              .          
+2          .              .              .              .          
+3          .              .              .              .          
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU flujo_ini~         3.0000         3.0000         3.0000          .          
+
+  flujo_ini_0  en el nodo inicial esta almacenada la totalidad de camiones
+
+---- EQU existencia_ruta  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+0.0.0        -INF             .              .              .          
+0.0.1        -INF             .              .              .          
+0.0.2        -INF             .              .              .          
+0.0.3        -INF             .              .              .          
+0.0.4        -INF             .              .              .          
+0.1.0        -INF             .            99.0000          .          
+0.1.1        -INF             .            99.0000          .          
+0.1.2        -INF             .            99.0000          .          
+0.1.3        -INF             .            99.0000          .          
+0.1.4        -INF             .            99.0000          .          
+0.2.0        -INF             .            99.0000          .          
+0.2.1        -INF             .            99.0000          .          
+0.2.2        -INF            1.0000        99.0000          .          
+0.2.3        -INF            1.0000        99.0000          .          
+0.2.4        -INF             .            99.0000          .          
+0.3.0        -INF             .              .              .          
+0.3.1        -INF             .              .              .          
+0.3.2        -INF             .              .              .          
+0.3.3        -INF             .              .              .          
+0.3.4        -INF             .              .              .          
+1.0.0        -INF             .            99.0000          .          
+1.0.1        -INF             .            99.0000          .          
+1.0.2        -INF             .            99.0000          .          
+1.0.3        -INF             .            99.0000          .          
+1.0.4        -INF             .            99.0000          .          
+1.1.0        -INF             .              .              .          
+1.1.1        -INF             .              .              .          
+1.1.2        -INF             .              .              .          
+1.1.3        -INF             .              .              .          
+1.1.4        -INF             .              .              .          
+1.2.0        -INF             .              .              .          
+1.2.1        -INF             .              .              .          
+1.2.2        -INF             .              .              .          
+1.2.3        -INF             .              .              .          
+1.2.4        -INF             .              .              .          
+1.3.0        -INF             .              .              .          
+1.3.1        -INF             .              .              .          
+1.3.2        -INF             .              .              .          
+1.3.3        -INF             .              .              .          
+1.3.4        -INF             .              .              .          
+2.0.0        -INF             .            99.0000          .          
+2.0.1        -INF             .            99.0000          .          
+2.0.2        -INF             .            99.0000          .          
+2.0.3        -INF             .            99.0000          .          
+2.0.4        -INF             .            99.0000          .          
+2.1.0        -INF             .              .              .          
+2.1.1        -INF             .              .              .          
+2.1.2        -INF             .              .              .          
+2.1.3        -INF             .              .              .          
+2.1.4        -INF             .              .              .          
+2.2.0        -INF             .              .              .          
+2.2.1        -INF             .              .              .          
+2.2.2        -INF             .              .              .          
+2.2.3        -INF             .              .              .          
+2.2.4        -INF             .              .              .          
+2.3.0        -INF             .            99.0000          .          
+2.3.1        -INF             .            99.0000          .          
+2.3.2        -INF             .            99.0000          .          
+2.3.3        -INF            1.0000        99.0000          .          
+2.3.4        -INF             .            99.0000          .          
+3.0.0        -INF             .              .              .          
+3.0.1        -INF             .              .              .          
+3.0.2        -INF             .              .              .          
+3.0.3        -INF             .              .              .          
+3.0.4        -INF             .              .              .          
+3.1.0        -INF             .              .              .          
+3.1.1        -INF             .              .              .          
+3.1.2        -INF             .              .              .          
+3.1.3        -INF             .              .              .          
+3.1.4        -INF             .              .              .          
+3.2.0        -INF             .            99.0000          .          
+3.2.1        -INF             .            99.0000          .          
+3.2.2        -INF             .            99.0000          .          
+3.2.3        -INF             .            99.0000          .          
+3.2.4        -INF             .            99.0000          .          
+3.3.0        -INF             .              .              .          
+3.3.1        -INF             .              .              .          
+3.3.2        -INF             .              .              .          
+3.3.3        -INF             .              .              .          
+3.3.4        -INF             .              .              .          
+
+---- EQU usabilidad_ruta  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+0.0.0        -INF             .              .              .          
+0.0.1        -INF             .              .              .          
+0.0.2        -INF             .              .              .          
+0.0.3        -INF             .              .              .          
+0.0.4        -INF             .              .              .          
+0.1.0        -INF             .              .              .          
+0.1.1        -INF             .              .              .          
+0.1.2        -INF             .              .              .          
+0.1.3        -INF             .              .              .          
+0.1.4        -INF             .              .              .          
+0.2.0        -INF          -99.0000          .              .          
+0.2.1        -INF          -99.0000          .              .          
+0.2.2        -INF          -98.0000          .              .          
+0.2.3        -INF          -98.0000          .              .          
+0.2.4        -INF          -99.0000          .              .          
+0.3.0        -INF             .              .              .          
+0.3.1        -INF             .              .              .          
+0.3.2        -INF             .              .              .          
+0.3.3        -INF             .              .              .          
+0.3.4        -INF             .              .              .          
+1.0.0        -INF             .              .              .          
+1.0.1        -INF             .              .              .          
+1.0.2        -INF             .              .              .          
+1.0.3        -INF             .              .              .          
+1.0.4        -INF             .              .              .          
+1.1.0        -INF             .              .              .          
+1.1.1        -INF             .              .              .          
+1.1.2        -INF             .              .              .          
+1.1.3        -INF             .              .              .          
+1.1.4        -INF             .              .              .          
+1.2.0        -INF             .              .              .          
+1.2.1        -INF             .              .              .          
+1.2.2        -INF             .              .              .          
+1.2.3        -INF             .              .              .          
+1.2.4        -INF             .              .              .          
+1.3.0        -INF             .              .              .          
+1.3.1        -INF             .              .              .          
+1.3.2        -INF             .              .              .          
+1.3.3        -INF             .              .              .          
+1.3.4        -INF             .              .              .          
+2.0.0        -INF          -99.0000          .              .          
+2.0.1        -INF          -99.0000          .              .          
+2.0.2        -INF          -99.0000          .              .          
+2.0.3        -INF          -99.0000          .              .          
+2.0.4        -INF          -99.0000          .              .          
+2.1.0        -INF             .              .              .          
+2.1.1        -INF             .              .              .          
+2.1.2        -INF             .              .              .          
+2.1.3        -INF             .              .              .          
+2.1.4        -INF             .              .              .          
+2.2.0        -INF             .              .              .          
+2.2.1        -INF             .              .              .          
+2.2.2        -INF             .              .              .          
+2.2.3        -INF             .              .              .          
+2.2.4        -INF             .              .              .          
+2.3.0        -INF             .            99.0000          .          
+2.3.1        -INF             .            99.0000          .          
+2.3.2        -INF             .            99.0000          .          
+2.3.3        -INF            1.0000        99.0000          .          
+2.3.4        -INF             .            99.0000          .          
+3.0.0        -INF             .              .              .          
+3.0.1        -INF             .              .              .          
+3.0.2        -INF             .              .              .          
+3.0.3        -INF             .              .              .          
+3.0.4        -INF             .              .              .          
+3.1.0        -INF             .              .              .          
+3.1.1        -INF             .              .              .          
+3.1.2        -INF             .              .              .          
+3.1.3        -INF             .              .              .          
+3.1.4        -INF             .              .              .          
+3.2.0        -INF             .            99.0000          .          
+3.2.1        -INF             .            99.0000          .          
+3.2.2        -INF             .            99.0000          .          
+3.2.3        -INF             .            99.0000          .          
+3.2.4        -INF             .            99.0000          .          
+3.3.0        -INF             .              .              .          
+3.3.1        -INF             .              .              .          
+3.3.2        -INF             .              .              .          
+3.3.3        -INF             .              .              .          
+3.3.4        -INF             .              .              .          
+
+---- EQU orientacion  si se habilita un sentido se ha de habilitar el opuesto
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+0.1          .              .              .              .          
+0.2          .              .              .              .          
+0.3          .              .              .              .          
+1.0          .              .              .              .          
+1.2          .              .              .              .          
+1.3          .              .              .              .          
+2.0          .              .              .              .          
+2.1          .              .              .              .          
+2.3          .              .              .              .          
+3.0          .              .              .              .          
+3.1          .              .              .              .          
+3.2          .              .              .              .          
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU lim_puent~        -INF            2.0000         2.0000          .          
+---- EQU f_ayuda           -6.0000        -6.0000        -6.0000         EPS         
+---- EQU f_equidad           .              .              .             1.0000      
+
+  f_ayuda  funcion objetivo 1
+  f_equidad  funcion objetivo 2
+
+---- VAR X  camiones que van de i a j en el periodo t
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+0.0.0          .              .            +INF            EPS         
+0.0.1          .              .            +INF            EPS         
+0.0.2          .              .            +INF            EPS         
+0.0.3          .              .            +INF            EPS         
+0.0.4          .              .            +INF            EPS         
+0.1.0          .              .            +INF            EPS         
+0.1.1          .              .            +INF            EPS         
+0.1.2          .              .            +INF            EPS         
+0.1.3          .              .            +INF            EPS         
+0.1.4          .              .            +INF            EPS         
+0.2.0          .              .            +INF            EPS         
+0.2.1          .              .            +INF            EPS         
+0.2.2          .             1.0000        +INF            EPS         
+0.2.3          .             1.0000        +INF            EPS         
+0.2.4          .              .            +INF            EPS         
+0.3.0          .              .            +INF            EPS         
+0.3.1          .              .            +INF            EPS         
+0.3.2          .              .            +INF            EPS         
+0.3.3          .              .            +INF            EPS         
+0.3.4          .              .            +INF            EPS         
+1.0.0          .              .            +INF            EPS         
+1.0.1          .              .            +INF            EPS         
+1.0.2          .              .            +INF            EPS         
+1.0.3          .              .            +INF            EPS         
+1.0.4          .              .            +INF            EPS         
+1.1.0          .              .            +INF            EPS         
+1.1.1          .              .            +INF            EPS         
+1.1.2          .              .            +INF            EPS         
+1.1.3          .              .            +INF            EPS         
+1.1.4          .              .            +INF            EPS         
+1.2.0          .              .            +INF            EPS         
+1.2.1          .              .            +INF            EPS         
+1.2.2          .              .            +INF            EPS         
+1.2.3          .              .            +INF            EPS         
+1.2.4          .              .            +INF            EPS         
+1.3.0          .              .            +INF            EPS         
+1.3.1          .              .            +INF            EPS         
+1.3.2          .              .            +INF            EPS         
+1.3.3          .              .            +INF            EPS         
+1.3.4          .              .            +INF            EPS         
+2.0.0          .              .            +INF            EPS         
+2.0.1          .              .            +INF            EPS         
+2.0.2          .              .            +INF            EPS         
+2.0.3          .              .            +INF            EPS         
+2.0.4          .              .            +INF            EPS         
+2.1.0          .              .            +INF            EPS         
+2.1.1          .              .            +INF            EPS         
+2.1.2          .              .            +INF            EPS         
+2.1.3          .              .            +INF            EPS         
+2.1.4          .              .            +INF            EPS         
+2.2.0          .              .            +INF            EPS         
+2.2.1          .              .            +INF            EPS         
+2.2.2          .              .            +INF            EPS         
+2.2.3          .              .            +INF            EPS         
+2.2.4          .              .            +INF            EPS         
+2.3.0          .              .            +INF            EPS         
+2.3.1          .              .            +INF            EPS         
+2.3.2          .              .            +INF            EPS         
+2.3.3          .             1.0000        +INF            EPS         
+2.3.4          .              .            +INF            EPS         
+3.0.0          .              .            +INF            EPS         
+3.0.1          .              .            +INF            EPS         
+3.0.2          .              .            +INF            EPS         
+3.0.3          .              .            +INF            EPS         
+3.0.4          .              .            +INF            EPS         
+3.1.0          .              .            +INF            EPS         
+3.1.1          .              .            +INF            EPS         
+3.1.2          .              .            +INF            EPS         
+3.1.3          .              .            +INF            EPS         
+3.1.4          .              .            +INF            EPS         
+3.2.0          .              .            +INF            EPS         
+3.2.1          .              .            +INF            EPS         
+3.2.2          .              .            +INF            EPS         
+3.2.3          .              .            +INF            EPS         
+3.2.4          .              .            +INF            EPS         
+3.3.0          .              .            +INF            EPS         
+3.3.1          .              .            +INF            EPS         
+3.3.2          .              .            +INF            EPS         
+3.3.3          .              .            +INF            EPS         
+3.3.4          .              .            +INF            EPS         
+
+---- VAR Y  camiones que hay en j en el periodo t
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+0.0          .             3.0000        +INF            EPS         
+0.1          .             3.0000        +INF            EPS         
+0.2          .             2.0000        +INF            EPS         
+0.3          .             1.0000        +INF            EPS         
+0.4          .             1.0000        +INF            EPS         
+1.0          .              .            +INF            EPS         
+1.1          .              .            +INF            EPS         
+1.2          .              .            +INF            EPS         
+1.3          .              .            +INF            EPS         
+1.4          .              .            +INF            EPS         
+2.0          .              .            +INF            EPS         
+2.1          .              .            +INF            EPS         
+2.2          .             1.0000        +INF            EPS         
+2.3          .             1.0000        +INF            EPS         
+2.4          .             1.0000        +INF            EPS         
+3.0          .              .            +INF            EPS         
+3.1          .              .            +INF            EPS         
+3.2          .              .            +INF            EPS         
+3.3          .             1.0000        +INF            EPS         
+3.4          .             1.0000        +INF            EPS         
+
+---- VAR Z  camiones totales repartidos a j al final del ultimo periodo
+
+         LOWER          LEVEL          UPPER         MARGINAL
+
+0          .             1.0000        +INF            EPS         
+1          .              .            +INF            EPS         
+2          .             1.0000        +INF            EPS         
+3          .             1.0000        +INF            EPS         
+
+---- VAR auxZ  se reparte algun camion a j al final del ultimo periodo
+
+         LOWER          LEVEL          UPPER         MARGINAL
+
+0          .             1.0000         1.0000         1.0000      
+1          .              .             1.0000         1.0000      
+2          .             1.0000         1.0000         1.0000      
+3          .             1.0000         1.0000         1.0000      
+
+---- VAR H  habilitamos el puente de i a j
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+0.0          .              .             1.0000         EPS         
+0.1          .              .             1.0000         EPS         
+0.2          .             1.0000         1.0000         EPS         
+0.3          .              .             1.0000         EPS         
+1.0          .              .             1.0000         EPS         
+1.1          .              .             1.0000         EPS         
+1.2          .              .             1.0000         EPS         
+1.3          .              .             1.0000         EPS         
+2.0          .             1.0000         1.0000         EPS         
+2.1          .              .             1.0000         EPS         
+2.2          .              .             1.0000         EPS         
+2.3          .              .             1.0000         EPS         
+3.0          .              .             1.0000         EPS         
+3.1          .              .             1.0000         EPS         
+3.2          .              .             1.0000         EPS         
+3.3          .              .             1.0000         EPS         
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR Ayuda             -INF           -3.0000        +INF             .          
+---- VAR Eq                -INF            3.0000        +INF             .          
+
+  Ayuda  ayuda total repartida
+  Eq  criterio de equidad = numero de nodos a los que se les reparte algun camion
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        2.140 SECONDS      4 MB  41.2.0 5110e5ff WEX-WEI
+
+
+USER: GAMS Demo license for Antonio Sevilla Sastre   G221121|0002CO-GEN
+      UCM, Spain                                               DL079880
+
+
+**** FILE SUMMARY
+
+Input      G:\Mi unidad\TFG\src\modelo sencillo problema de reconstruccion + transbordo 1.gms
+Output     G:\Mi unidad\TFG\src\modelo sencillo problema de reconstruccion + transbordo 1.lst

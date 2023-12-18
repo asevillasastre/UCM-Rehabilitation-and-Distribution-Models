@@ -1,0 +1,99 @@
+B 3 C o m p i l a t i o n
+B 155 Equation Listing    SOLVE modelo1 Using MIP From line 143
+D 158 definir_Y
+D 169 solo_arcos_buenos
+D 180 lim_provisiones
+D 185 flujo_nulo
+D 196 flujo_destinos
+D 205 existencia_ruta
+D 216 usabilidad_ruta
+D 227 existencia_ruta_min
+D 238 usabilidad_ruta_min
+D 249 lim_puentes
+D 254 def_insatisaux
+D 263 def_auxZ1
+D 272 def_auxZ2
+D 283 f_insatis
+D 288 f_eq
+B 294 Column Listing      SOLVE modelo1 Using MIP From line 143
+E 297 X
+E 327 Y
+E 346 auxZ
+E 365 H
+E 387 Insatis
+E 394 Insatisaux
+E 404 Eq
+B 412 Range Statistics    SOLVE modelo1 Using MIP From line 143
+B 423 Model Statistics    SOLVE modelo1 Using MIP From line 143
+B 436 Solution Report     SOLVE modelo1 Using MIP From line 143
+F 480 definir_Y
+F 501 solo_arcos_buenos
+F 644 lim_provisiones
+F 648 flujo_nulo
+F 665 flujo_destinos
+F 673 existencia_ruta
+F 934 usabilidad_ruta
+F 1195 existencia_ruta_min
+F 1456 usabilidad_ruta_min
+F 1719 lim_puentes
+F 1721 def_insatisaux
+F 1729 def_auxZ1
+F 1737 def_auxZ2
+F 1757 f_insatis
+F 1758 f_eq
+G 1763 X
+G 2024 Y
+G 2045 auxZ
+G 2066 H
+G 2329 Insatis
+G 2330 Insatisaux
+G 2331 Eq
+B 2339 Equation Listing    SOLVE modelo1 Using MIP From line 144
+D 2342 definir_Y
+D 2353 solo_arcos_buenos
+D 2364 lim_provisiones
+D 2369 flujo_nulo
+D 2380 flujo_destinos
+D 2389 existencia_ruta
+D 2400 usabilidad_ruta
+D 2411 existencia_ruta_min
+D 2422 usabilidad_ruta_min
+D 2433 lim_puentes
+D 2438 def_insatisaux
+D 2447 def_auxZ1
+D 2456 def_auxZ2
+D 2467 f_insatis
+D 2472 f_eq
+B 2478 Column Listing      SOLVE modelo1 Using MIP From line 144
+E 2481 X
+E 2511 Y
+E 2530 auxZ
+E 2549 H
+E 2571 Insatis
+E 2578 Insatisaux
+E 2588 Eq
+B 2596 Range Statistics    SOLVE modelo1 Using MIP From line 144
+B 2607 Model Statistics    SOLVE modelo1 Using MIP From line 144
+B 2620 Solution Report     SOLVE modelo1 Using MIP From line 144
+F 2664 definir_Y
+F 2685 solo_arcos_buenos
+F 2828 lim_provisiones
+F 2832 flujo_nulo
+F 2849 flujo_destinos
+F 2857 existencia_ruta
+F 3118 usabilidad_ruta
+F 3379 existencia_ruta_min
+F 3640 usabilidad_ruta_min
+F 3903 lim_puentes
+F 3905 def_insatisaux
+F 3913 def_auxZ1
+F 3921 def_auxZ2
+F 3941 f_insatis
+F 3942 f_eq
+G 3947 X
+G 4208 Y
+G 4229 auxZ
+G 4250 H
+G 4513 Insatis
+G 4514 Insatisaux
+G 4515 Eq

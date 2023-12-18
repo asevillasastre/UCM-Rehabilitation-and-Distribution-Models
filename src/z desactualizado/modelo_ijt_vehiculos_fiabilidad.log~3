@@ -1,0 +1,247 @@
+
+--- Job modelo_ijt_vehiculos_fiabilidad.gms Start 01/21/23 17:39:13 41.2.0 5110e5ff WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\41\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "G:\Mi unidad\TFG\src\modelo_ijt_vehiculos_fiabilidad.gms"
+    PageSize 0
+    ScrDir "G:\Mi unidad\TFG\src\225a\"
+    SysDir C:\GAMS\41\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    GDX "G:\Mi unidad\TFG\src\modelo_ijt_vehiculos_fiabilidad.gdx"
+    LstTitleLeftAligned 1
+Licensee: GAMS Demo license for Antonio Sevilla Sastre   G221121|0002CO-GEN
+          UCM, Spain                                               DL079880
+          C:\Users\Antonio\Documents\GAMS\gamslice.txt
+          antsev01@ucm.es, Antonio Sevilla Sastre                          
+          Demo license for demonstration and instructional purposes only
+Processor information: 1 socket(s), 14 core(s), and 20 thread(s) available
+GAMS 41.2.0   Copyright (C) 1987-2022 GAMS Development. All rights reserved
+--- Starting compilation
+--- modelo_ijt_vehiculos_fiabilidad.gms(161) 3 Mb
+--- Starting execution: elapsed 0:00:00.014
+--- Generating MIP model modelo1
+--- modelo_ijt_vehiculos_fiabilidad.gms(146) 5 Mb
+---   1,739 rows  912 columns  5,068 non-zeroes
+---   903 discrete-columns
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 1.000E+00, 9.900E+01] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.520E-01, 9.900E+01]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.064
+
+IBM ILOG CPLEX   41.2.0 5110e5ff Nov 14, 2022          WEI x86 64bit/MS Window
+
+--- *** This solver runs with a demo license. No commercial use.
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.07 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 0.80 Mb (peak 0.81 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.0.0 link memory 0.04 Mb (peak 0.18 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+Generic callback                                 0x50
+Found incumbent of value -19.000000 after 0.00 sec. (0.03 ticks)
+Tried aggregator 3 times.
+MIP Presolve eliminated 1589 rows and 754 columns.
+MIP Presolve added 2 rows and 0 columns.
+MIP Presolve modified 126 coefficients.
+Aggregator did 114 substitutions.
+Reduced MIP has 37 rows, 44 columns, and 177 nonzeros.
+Reduced MIP has 3 binaries, 39 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.66 ticks)
+Probing fixed 0 vars, tightened 20 bounds.
+Probing time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 15 rows and 13 columns.
+Reduced MIP has 22 rows, 31 columns, and 94 nonzeros.
+Reduced MIP has 2 binaries, 29 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.06 ticks)
+Probing time = 0.00 sec. (0.00 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 22 rows, 31 columns, and 94 nonzeros.
+Reduced MIP has 2 binaries, 29 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.05 ticks)
+Probing time = 0.00 sec. (0.00 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Tried aggregator 1 time.
+No LP presolve or aggregator reductions.
+Presolve time = 0.00 sec. (0.01 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =           -14.000000
+Root relaxation solution time = 0.00 sec. (0.03 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                          -19.0000      -14.0000            26.32%
+Found incumbent of value -19.000000 after 0.00 sec. (2.99 ticks)
+*     0     0      integral     0      -14.0000      -14.0000        1    0.00%
+Elapsed time = 0.00 sec. (2.99 ticks, tree = 0.00 MB)
+Found incumbent of value -14.000000 after 0.00 sec. (2.99 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.00 sec. (3.01 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.00 sec. (3.01 ticks)
+
+--- MIP status (101): integer optimal solution.
+--- Cplex Time: 0.00sec (det. 3.01 ticks)
+
+--- Fixing integer variables and solving final LP...
+
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+Tried aggregator 1 time.
+LP Presolve eliminated 1738 rows and 912 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.66 ticks)
+
+--- Fixed MIP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 1.23 ticks)
+
+
+Proven optimal solution
+MIP Solution:          -14.000000    (1 iterations, 0 nodes)
+Final Solve:           -14.000000    (0 iterations)
+
+Best possible:         -14.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model modelo1
+--- Executing after solve: elapsed 0:00:00.116
+--- Generating MIP model modelo1
+--- modelo_ijt_vehiculos_fiabilidad.gms(148) 5 Mb
+---   1,739 rows  912 columns  5,068 non-zeroes
+---   903 discrete-columns
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 1.000E+00, 9.900E+01] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.520E-01, 9.900E+01]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.158
+
+IBM ILOG CPLEX   41.2.0 5110e5ff Nov 14, 2022          WEI x86 64bit/MS Window
+
+--- *** This solver runs with a demo license. No commercial use.
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.07 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 0.80 Mb (peak 0.81 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.0.0 link memory 0.04 Mb (peak 0.18 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+Generic callback                                 0x50
+Found incumbent of value 0.000000 after 0.00 sec. (0.09 ticks)
+Tried aggregator 3 times.
+MIP Presolve eliminated 1583 rows and 748 columns.
+MIP Presolve added 2 rows and 0 columns.
+MIP Presolve modified 126 coefficients.
+Aggregator did 118 substitutions.
+Reduced MIP has 39 rows, 46 columns, and 181 nonzeros.
+Reduced MIP has 5 binaries, 39 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.69 ticks)
+Probing fixed 1 vars, tightened 20 bounds.
+Probing time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 16 rows and 14 columns.
+Reduced MIP has 23 rows, 32 columns, and 96 nonzeros.
+Reduced MIP has 3 binaries, 29 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.06 ticks)
+Probing time = 0.00 sec. (0.00 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 23 rows, 32 columns, and 96 nonzeros.
+Reduced MIP has 3 binaries, 29 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.06 ticks)
+Probing time = 0.00 sec. (0.00 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Tried aggregator 1 time.
+No LP presolve or aggregator reductions.
+Presolve time = 0.00 sec. (0.01 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =             2.000000
+Root relaxation solution time = 0.00 sec. (0.03 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000        2.0000              --- 
+Found incumbent of value 0.000000 after 0.00 sec. (3.09 ticks)
+      0     0        2.0000     2        0.0000        2.0000        1     --- 
+*     0+    0                            2.0000        2.0000             0.00%
+Found incumbent of value 2.000000 after 0.00 sec. (3.13 ticks)
+      0     0        cutoff              2.0000        2.0000        1    0.00%
+Elapsed time = 0.00 sec. (3.13 ticks, tree = 0.01 MB)
+
+Root node processing (before b&c):
+  Real time             =    0.00 sec. (3.14 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.00 sec. (3.14 ticks)
+
+--- MIP status (101): integer optimal solution.
+--- Cplex Time: 0.00sec (det. 3.14 ticks)
+
+--- Fixing integer variables and solving final LP...
+
+Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+Tried aggregator 1 time.
+LP Presolve eliminated 1738 rows and 912 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.66 ticks)
+
+--- Fixed MIP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 1.24 ticks)
+
+
+Proven optimal solution
+MIP Solution:            2.000000    (1 iterations, 0 nodes)
+Final Solve:             2.000000    (0 iterations)
+
+Best possible:           2.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model modelo1
+--- GDX File G:\Mi unidad\TFG\src\modelo_ijt_vehiculos_fiabilidad.gdx
+*** Status: Normal completion
+--- Job modelo_ijt_vehiculos_fiabilidad.gms Stop 01/21/23 17:39:13 elapsed 0:00:00.225
