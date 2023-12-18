@@ -17,5 +17,6 @@ It is used the situation of West Bank as a relevant case study.
 #### Author
 Antonio Sevilla Sastre; directed by Mᵃ Teresa Ortuño Sánchez, from Complutense University of Madrid.
 
-- Check [my other projects](https://github.com/asevillasastre)
-- Follow me on [LinkedIn](https://www.linkedin.com/in/asevillasastre/)
+Check [my other projects](https://github.com/asevillasastre)
+
+Follow me on [LinkedIn](https://www.linkedin.com/in/asevillasastre/)
