@@ -1,0 +1,191 @@
+\documentclass[11pt]{article}
+\usepackage{a4wide}
+
+\usepackage[american]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\keepXColumns
+\usepackage{xcolor}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\section*{Symbols}
+\subsection*{Sets}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Name} & \textbf{Domains} & \textbf{Description}\\ 
+\hline 
+\endhead 
+j, i & * & nodos. representan los asentamientos. en este modelo hemos de distinguir entre transitorios-destino-origen \\ 
+\hline 
+\end{tabularx}
+\subsection*{Parameters}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Name} & \textbf{Domains} & \textbf{Description}\\ 
+\hline 
+\endhead 
+dem & j & demanda por cada asentamiento de un unico recurso en cierta unidad continua \\ 
+max\_ayuda &  & maximo numero de ayuda que podemos mandar en total a la mision. se asume que se puede transportar cualquier cantidad sin coste temporal o economico alguno \\ 
+max\_puentes &  & maximo numero de puentes que podemos reconstruir previo paso a los camiones \\ 
+E & i, j & existe la ruta de i a j \\ 
+U & i, j & al inicio es utilizable la ruta de i a j \\ 
+\hline 
+\end{tabularx}
+\subsection*{Variables}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Name} & \textbf{Domains} & \textbf{Description}\\ 
+\hline 
+\endhead 
+X & i, j & flujo de i a j. es continuo. puede ser negativo si el de j a a i es positivo \\ 
+Y & j & flujo que se queda en j \\ 
+auxZ & j & variable binaria que determina si llega alguna ayuda a j \\ 
+H & i, j & variable binaria que determina si habilitamos el puente de i a j \\ 
+Insatis &  &  \\ 
+Insatisaux &  &  \\ 
+Eq &  &  \\ 
+\hline 
+\end{tabularx}
+\subsection*{Equations}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Name} & \textbf{Domains} & \textbf{Description}\\ 
+\hline 
+\endhead 
+\hyperref[definir_Y]{definir\_Y}  & j & ecuacion de flujo \\ 
+\hyperref[solo_arcos_buenos]{solo\_arcos\_buenos}  & i, j & consideramos de flujo nulo la mitad de los nodos. asi consideramos un grafo no orientado \\ 
+\hyperref[lim_provisiones]{lim\_provisiones}  &  & restriccion que fija la cantidad de ayuda que podemos enviar \\ 
+\hyperref[flujo_nulo]{flujo\_nulo}  & j & en los nodos transitorios el flujo es nulo \\ 
+\hyperref[existencia_ruta]{existencia\_ruta}  & i, j &  \\ 
+\hyperref[usabilidad_ruta]{usabilidad\_ruta}  & i, j &  \\ 
+\hyperref[existencia_ruta_min]{existencia\_ruta\_min}  & i, j & en este modelo son necesarias 2 restricciones para que el flujo sea nulo y no negativo en los arcos no existentes \\ 
+\hyperref[usabilidad_ruta_min]{usabilidad\_ruta\_min}  & i, j & ídem con los no usables \\ 
+\hyperref[lim_puentes]{lim\_puentes}  &  &  \\ 
+\hyperref[def_insatisaux]{def\_insatisaux}  & * & definimos la demanda insatisfecha \\ 
+\hyperref[def_auxZ1]{def\_auxZ1}  & j & definimos los nodos a los que llega alguna ayuda \\ 
+\hyperref[def_auxZ2]{def\_auxZ2}  & j & a los nodos transitorios no puede llegar ninguna ayuda por lo que no cuentan \\ 
+\hyperref[f_insatis]{f\_insatis}  &  & funcion objetivo 1. demanda insatisfecha total \\ 
+\hyperref[f_eq]{f\_eq}  &  & funcion objetivo 2. criterio de equidad. numero de nodos a los que se les reparte alguna cantidad de ayuda \\ 
+\hline 
+\end{tabularx}
+\section*{Equation Definitions}
+\subsubsection*{$\text{definir\_Y}_{j}$} \label{definir_Y}
+$
+\textcolor{black}{\text{Y}}_{j} = \displaystyle \sum_{i}\textcolor{black}{\text{X}}_{i, j} - \displaystyle \sum_{i}\textcolor{black}{\text{X}}_{j, i}
+$
+\hfill
+$
+\forall{ j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{solo\_arcos\_buenos}_{i, j}$} \label{solo_arcos_buenos}
+$
+\textcolor{black}{\text{X}}_{j, i} = 0
+$
+\hfill
+$
+\forall{ i, j}  ~ | ~ (  \text{ord}( \textcolor{black}{\text{i}} )   \leq   \text{ord}( \textcolor{black}{\text{j}} )  ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{lim\_provisiones}$} \label{lim_provisiones}
+$
+\textcolor{black}{\text{Y}}_{\texttt{0}} \geq -\textcolor{black}{\text{max\_ayuda}}
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{flujo\_nulo}_{j}$} \label{flujo_nulo}
+$
+\textcolor{black}{\text{Y}}_{j} = 0
+$
+\hfill
+$
+\forall{ j}  ~ | ~ (  (  \text{ord}( \textcolor{black}{\text{j}} )   >  1 )  \wedge  (  \text{ord}( \textcolor{black}{\text{j}} )   \leq  4 )  )
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{existencia\_ruta}_{i, j}$} \label{existencia_ruta}
+$
+\textcolor{black}{\text{X}}_{i, j} \leq 99 \cdot \textcolor{black}{\text{E}}_{i, j}
+$
+\hfill
+$
+\forall{ i, j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{usabilidad\_ruta}_{i, j}$} \label{usabilidad_ruta}
+$
+\textcolor{black}{\text{X}}_{i, j} \leq 99 \cdot  ( \textcolor{black}{\text{U}}_{i, j} + \textcolor{black}{\text{H}}_{i, j} ) 
+$
+\hfill
+$
+\forall{ i, j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{existencia\_ruta\_min}_{i, j}$} \label{existencia_ruta_min}
+$
+\textcolor{black}{\text{X}}_{i, j} \geq - ( 99 \cdot \textcolor{black}{\text{E}}_{i, j} ) 
+$
+\hfill
+$
+\forall{ i, j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{usabilidad\_ruta\_min}_{i, j}$} \label{usabilidad_ruta_min}
+$
+\textcolor{black}{\text{X}}_{i, j} \geq - ( 99 \cdot  ( \textcolor{black}{\text{U}}_{i, j} + \textcolor{black}{\text{H}}_{i, j} )  ) 
+$
+\hfill
+$
+\forall{ i, j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{lim\_puentes}$} \label{lim_puentes}
+$
+\displaystyle \sum_{i} ( \displaystyle \sum_{j}\textcolor{black}{\text{H}}_{i, j} )  \leq \textcolor{black}{\text{max\_puentes}}
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{def\_insatisaux}_{j}$} \label{def_insatisaux}
+$
+\textcolor{black}{\text{Insatisaux}} \geq \textcolor{black}{\text{dem}}_{j} - \textcolor{black}{\text{Y}}_{j}
+$
+\hfill
+$
+\forall{ j}  ~ | ~ (  \text{ord}( \textcolor{black}{\text{j}} )   \geq  5 ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{def\_auxZ1}_{j}$} \label{def_auxZ1}
+$
+\textcolor{black}{\text{auxZ}}_{j} \leq 99 \cdot \textcolor{black}{\text{Y}}_{j}
+$
+\hfill
+$
+\forall{ j}  ~ | ~ (  \text{ord}( \textcolor{black}{\text{j}} )   \geq  5 ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{def\_auxZ2}_{j}$} \label{def_auxZ2}
+$
+\textcolor{black}{\text{auxZ}}_{j} = 0
+$
+\hfill
+$
+\forall{ j}  ~ | ~ (  \text{ord}( \textcolor{black}{\text{j}} )   \leq  4 ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{f\_eq}$} \label{f_eq}
+$
+\textcolor{black}{\text{Eq}} = \displaystyle \sum_{j}\textcolor{black}{\text{auxZ}}_{j}
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{f\_insatis}$} \label{f_insatis}
+$
+\textcolor{black}{\text{Insatis}} = \displaystyle \sum_{j}\textcolor{black}{\text{Insatisaux}}
+$ \vspace{5pt}
+\hrule 
+\bigskip
+$\text{H}_{i, j}\in \{0,1\} ~ \forall i, j$ \newline 
+$\text{Insatisaux}\geq 0 ~ \forall $ \newline 
+$\text{auxZ}_{j}\in \{0,1\} ~ \forall j$ \newline
+\bigskip
+\end{document}

@@ -1,0 +1,790 @@
+1 138 j SETS declared 9 9 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+2 138 j SETS defined 10 10 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+3 139 v SETS declared 11 11 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+4 139 v SETS defined 12 12 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+5 140 w SETS declared 13 13 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+6 140 w SETS defined 14 14 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+7 138 j SETS ref 18 18 3 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+8 141 i SETS declared 18 18 5 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+9 142 k SETS declared 18 18 7 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+10 143 dem PARAMETERS declared 22 22 4 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+11 138 j SETS ref 22 22 6 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+12 143 dem PARAMETERS defined 23 23 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+13 144 capacidad_vehiculo PARAMETERS declared 31 31 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+14 139 v SETS ref 31 31 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+15 144 capacidad_vehiculo PARAMETERS defined 32 32 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+16 145 coste_fijo PARAMETERS declared 37 37 11 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+17 139 v SETS ref 37 37 13 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+18 145 coste_fijo PARAMETERS defined 38 38 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+19 146 coste_variable PARAMETERS declared 43 43 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+20 146 coste_variable PARAMETERS defined 44 44 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+21 147 max_coste PARAMETERS declared 45 45 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+22 147 max_coste PARAMETERS defined 46 46 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+23 148 max_habilitaciones PARAMETERS declared 47 47 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+24 148 max_habilitaciones PARAMETERS defined 48 48 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+25 149 M PARAMETERS declared 49 49 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+26 149 M PARAMETERS defined 50 50 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+27 150 P_total PARAMETERS declared 51 51 8 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+28 150 P_total PARAMETERS defined 52 52 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+29 151 T_max PARAMETERS declared 53 53 6 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+30 151 T_max PARAMETERS defined 54 54 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+31 152 velocidad_vehiculo PARAMETERS declared 55 55 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+32 139 v SETS ref 55 55 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+33 152 velocidad_vehiculo PARAMETERS defined 56 56 1 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+34 153 E PARAMETERS declared 65 65 8 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+35 141 i SETS ref 65 65 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+36 138 j SETS ref 65 65 12 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+37 153 E PARAMETERS defined 65 65 38 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+38 154 U PARAMETERS declared 74 74 8 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+39 141 i SETS ref 74 74 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+40 138 j SETS ref 74 74 12 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+41 154 U PARAMETERS defined 74 74 55 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+42 155 dist PARAMETERS declared 83 83 11 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+43 141 i SETS ref 83 83 13 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+44 138 j SETS ref 83 83 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+45 155 dist PARAMETERS defined 83 83 55 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+46 156 coste_rehabilitacion PARAMETERS declared 92 92 27 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+47 141 i SETS ref 92 92 29 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+48 138 j SETS ref 92 92 31 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+49 156 coste_rehabilitacion PARAMETERS defined 92 92 71 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+50 157 P PARAMETERS declared 102 102 8 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+51 141 i SETS ref 102 102 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+52 138 j SETS ref 102 102 12 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+53 157 P PARAMETERS defined 102 102 69 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+54 141 i SETS control 112 112 8 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+55 138 j SETS control 113 113 12 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+56 141 i SETS ref 114 114 13 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+57 138 j SETS ref 114 114 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+58 157 P PARAMETERS assigned 114 114 24 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+59 51 log2 FUNCTIONS ref 114 114 25 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+60 157 P PARAMETERS ref 114 114 26 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+61 141 i SETS ref 114 114 29 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+62 138 j SETS ref 114 114 31 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+63 150 P_total PARAMETERS assigned 118 118 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+64 51 log2 FUNCTIONS ref 118 118 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+65 150 P_total PARAMETERS ref 118 118 23 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+66 158 X VARIABLES declared 122 122 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+67 141 i SETS ref 122 122 4 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+68 138 j SETS ref 122 122 6 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+69 139 v SETS ref 122 122 8 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+70 140 w SETS ref 122 122 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+71 159 Z VARIABLES declared 123 123 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+72 138 j SETS ref 123 123 4 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+73 139 v SETS ref 123 123 6 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+74 140 w SETS ref 123 123 8 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+75 160 Ayuda VARIABLES declared 124 124 6 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+76 138 j SETS ref 124 124 8 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+77 161 H VARIABLES declared 125 125 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+78 141 i SETS ref 125 125 4 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+79 138 j SETS ref 125 125 6 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+80 162 Insatis VARIABLES declared 126 126 8 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+81 163 Coste VARIABLES declared 127 127 6 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+82 164 Salio VARIABLES declared 128 128 6 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+83 139 v SETS ref 128 128 8 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+84 140 w SETS ref 128 128 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+85 165 t VARIABLES declared 130 130 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+86 139 v SETS ref 130 130 4 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+87 140 w SETS ref 130 130 6 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+88 166 Usado VARIABLES declared 132 132 6 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+89 141 i SETS ref 132 132 8 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+90 138 j SETS ref 132 132 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+91 167 Fiabilidad VARIABLES declared 133 133 11 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+92 168 Y VARIABLES declared 135 135 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+93 141 i SETS ref 135 135 4 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+94 138 j SETS ref 135 135 6 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+95 139 v SETS ref 135 135 8 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+96 140 w SETS ref 135 135 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+97 165 t VARIABLES ref 140 140 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+98 160 Ayuda VARIABLES ref 141 141 24 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+99 158 X VARIABLES ref 142 142 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+100 159 Z VARIABLES ref 142 142 22 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+101 161 H VARIABLES ref 142 142 25 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+102 166 Usado VARIABLES ref 142 142 32 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+103 164 Salio VARIABLES ref 142 142 39 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+104 168 Y VARIABLES ref 142 142 42 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+105 169 conexion_ruta EQUATIONS declared 146 146 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+106 138 j SETS ref 146 146 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+107 139 v SETS ref 146 146 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+108 140 w SETS ref 146 146 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+109 170 destino_unico EQUATIONS declared 147 147 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+110 141 i SETS ref 147 147 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+111 139 v SETS ref 147 147 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+112 140 w SETS ref 147 147 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+113 171 consistencia_reparto_llegada EQUATIONS declared 148 148 29 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+114 138 j SETS ref 148 148 31 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+115 139 v SETS ref 148 148 33 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+116 140 w SETS ref 148 148 35 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+117 172 consistencia_reparto_salida EQUATIONS declared 149 149 28 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+118 138 j SETS ref 149 149 30 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+119 139 v SETS ref 149 149 32 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+120 140 w SETS ref 149 149 34 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+121 173 reparto_unico EQUATIONS declared 150 150 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+122 139 v SETS ref 150 150 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+123 140 w SETS ref 150 150 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+124 174 def_salio EQUATIONS declared 151 151 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+125 139 v SETS ref 151 151 12 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+126 140 w SETS ref 151 151 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+127 175 existencia EQUATIONS declared 152 152 11 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+128 141 i SETS ref 152 152 13 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+129 138 j SETS ref 152 152 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+130 139 v SETS ref 152 152 17 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+131 140 w SETS ref 152 152 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+132 176 usabilidad EQUATIONS declared 153 153 11 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+133 141 i SETS ref 153 153 13 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+134 138 j SETS ref 153 153 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+135 139 v SETS ref 153 153 17 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+136 140 w SETS ref 153 153 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+137 177 lim_coste EQUATIONS declared 154 154 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+138 178 lim_habilitaciones EQUATIONS declared 155 155 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+139 179 def_Ayuda EQUATIONS declared 156 156 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+140 138 j SETS ref 156 156 12 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+141 180 lim_demanda EQUATIONS declared 157 157 12 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+142 138 j SETS ref 157 157 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+143 181 f_Insatis EQUATIONS declared 158 158 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+144 182 def_Coste EQUATIONS declared 159 159 10 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+145 183 def_tiempos EQUATIONS declared 161 161 12 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+146 139 v SETS ref 161 161 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+147 140 w SETS ref 161 161 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+148 184 lim_tiempo EQUATIONS declared 162 162 11 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+149 139 v SETS ref 162 162 13 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+150 140 w SETS ref 162 162 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+151 185 def_fiabilidad EQUATIONS declared 164 164 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+152 186 lim_fiabilidad EQUATIONS declared 165 165 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+153 187 arco_usado EQUATIONS declared 166 166 11 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+154 141 i SETS ref 166 166 13 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+155 138 j SETS ref 166 166 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+156 188 Y_conexion_ruta EQUATIONS declared 168 168 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+157 138 j SETS ref 168 168 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+158 139 v SETS ref 168 168 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+159 140 w SETS ref 168 168 22 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+160 189 Y_destino_unico EQUATIONS declared 169 169 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+161 141 i SETS ref 169 169 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+162 139 v SETS ref 169 169 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+163 140 w SETS ref 169 169 22 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+164 190 Y_usabilidad EQUATIONS declared 170 170 13 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+165 141 i SETS ref 170 170 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+166 138 j SETS ref 170 170 17 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+167 139 v SETS ref 170 170 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+168 140 w SETS ref 170 170 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+169 191 Y_existencia EQUATIONS declared 171 171 13 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+170 141 i SETS ref 171 171 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+171 138 j SETS ref 171 171 17 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+172 139 v SETS ref 171 171 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+173 140 w SETS ref 171 171 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+174 192 vuelta_inicio EQUATIONS declared 172 172 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+175 141 i SETS ref 172 172 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+176 139 v SETS ref 172 172 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+177 140 w SETS ref 172 172 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+178 193 vuelta_consistente_inicial EQUATIONS declared 173 173 27 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+179 138 j SETS ref 173 173 29 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+180 139 v SETS ref 173 173 31 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+181 140 w SETS ref 173 173 33 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+182 194 vuelta_final EQUATIONS declared 174 174 13 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+183 139 v SETS ref 174 174 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+184 140 w SETS ref 174 174 17 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+185 138 j SETS control 180 180 17 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+186 139 v SETS control 180 180 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+187 140 w SETS control 180 180 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+188 138 j SETS ref 180 180 28 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+189 169 conexion_ruta EQUATIONS defined 180 180 38 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+190 141 i SETS control 180 180 41 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+191 158 X VARIABLES ref 180 180 43 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+192 141 i SETS ref 180 180 46 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+193 138 j SETS ref 180 180 48 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+194 139 v SETS ref 180 180 50 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+195 140 w SETS ref 180 180 52 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+196 141 i SETS control 180 180 64 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+197 158 X VARIABLES ref 180 180 66 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+198 138 j SETS ref 180 180 69 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+199 141 i SETS ref 180 180 71 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+200 139 v SETS ref 180 180 73 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+201 140 w SETS ref 180 180 75 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+202 138 j SETS control 181 181 32 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+203 139 v SETS control 181 181 34 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+204 140 w SETS control 181 181 36 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+205 171 consistencia_reparto_llegada EQUATIONS defined 181 181 40 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+206 159 Z VARIABLES ref 181 181 40 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+207 138 j SETS ref 181 181 43 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+208 139 v SETS ref 181 181 45 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+209 140 w SETS ref 181 181 47 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+210 141 i SETS control 181 181 58 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+211 158 X VARIABLES ref 181 181 60 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+212 141 i SETS ref 181 181 63 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+213 138 j SETS ref 181 181 65 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+214 139 v SETS ref 181 181 67 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+215 140 w SETS ref 181 181 69 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+216 138 j SETS control 182 182 31 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+217 139 v SETS control 182 182 33 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+218 140 w SETS control 182 182 35 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+219 172 consistencia_reparto_salida EQUATIONS defined 182 182 39 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+220 159 Z VARIABLES ref 182 182 39 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+221 138 j SETS ref 182 182 42 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+222 139 v SETS ref 182 182 44 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+223 140 w SETS ref 182 182 46 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+224 141 i SETS control 182 182 61 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+225 158 X VARIABLES ref 182 182 63 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+226 138 j SETS ref 182 182 66 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+227 141 i SETS ref 182 182 68 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+228 139 v SETS ref 182 182 70 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+229 140 w SETS ref 182 182 72 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+230 141 i SETS control 183 183 17 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+231 139 v SETS control 183 183 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+232 140 w SETS control 183 183 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+233 170 destino_unico EQUATIONS defined 183 183 27 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+234 138 j SETS control 183 183 30 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+235 158 X VARIABLES ref 183 183 32 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+236 141 i SETS ref 183 183 35 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+237 138 j SETS ref 183 183 37 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+238 139 v SETS ref 183 183 39 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+239 140 w SETS ref 183 183 41 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+240 139 v SETS control 184 184 17 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+241 140 w SETS control 184 184 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+242 173 reparto_unico EQUATIONS defined 184 184 27 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+243 164 Salio VARIABLES ref 184 184 27 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+244 139 v SETS ref 184 184 30 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+245 140 w SETS ref 184 184 32 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+246 138 j SETS control 184 184 43 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+247 159 Z VARIABLES ref 184 184 45 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+248 138 j SETS ref 184 184 48 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+249 139 v SETS ref 184 184 50 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+250 140 w SETS ref 184 184 52 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+251 139 v SETS control 185 185 13 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+252 140 w SETS control 185 185 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+253 174 def_salio EQUATIONS defined 185 185 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+254 138 j SETS control 185 185 24 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+255 158 X VARIABLES ref 185 185 26 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+256 138 j SETS ref 185 185 33 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+257 139 v SETS ref 185 185 35 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+258 140 w SETS ref 185 185 37 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+259 164 Salio VARIABLES ref 185 185 48 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+260 139 v SETS ref 185 185 51 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+261 140 w SETS ref 185 185 53 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+262 141 i SETS control 186 186 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+263 138 j SETS control 186 186 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+264 139 v SETS control 186 186 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+265 140 w SETS control 186 186 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+266 175 existencia EQUATIONS defined 186 186 24 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+267 158 X VARIABLES ref 186 186 24 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+268 141 i SETS ref 186 186 27 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+269 138 j SETS ref 186 186 29 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+270 139 v SETS ref 186 186 31 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+271 140 w SETS ref 186 186 33 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+272 153 E PARAMETERS ref 186 186 39 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+273 141 i SETS ref 186 186 42 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+274 138 j SETS ref 186 186 44 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+275 141 i SETS control 187 187 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+276 138 j SETS control 187 187 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+277 139 v SETS control 187 187 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+278 140 w SETS control 187 187 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+279 153 E PARAMETERS ref 187 187 23 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+280 141 i SETS ref 187 187 26 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+281 138 j SETS ref 187 187 28 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+282 176 usabilidad EQUATIONS defined 187 187 37 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+283 158 X VARIABLES ref 187 187 37 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+284 141 i SETS ref 187 187 40 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+285 138 j SETS ref 187 187 42 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+286 139 v SETS ref 187 187 44 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+287 140 w SETS ref 187 187 46 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+288 154 U PARAMETERS ref 187 187 52 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+289 141 i SETS ref 187 187 55 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+290 138 j SETS ref 187 187 57 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+291 161 H VARIABLES ref 187 187 61 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+292 141 i SETS ref 187 187 64 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+293 138 j SETS ref 187 187 66 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+294 177 lim_coste EQUATIONS defined 188 188 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+295 163 Coste VARIABLES ref 188 188 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+296 147 max_coste PARAMETERS ref 188 188 32 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+297 178 lim_habilitaciones EQUATIONS defined 189 189 25 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+298 141 i SETS control 189 189 28 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+299 138 j SETS control 189 189 35 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+300 161 H VARIABLES ref 189 189 37 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+301 141 i SETS ref 189 189 40 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+302 138 j SETS ref 189 189 42 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+303 148 max_habilitaciones PARAMETERS ref 189 189 67 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+304 138 j SETS control 190 190 13 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+305 179 def_Ayuda EQUATIONS defined 190 190 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+306 160 Ayuda VARIABLES ref 190 190 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+307 138 j SETS ref 190 190 24 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+308 139 v SETS control 190 190 35 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+309 140 w SETS control 190 190 42 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+310 159 Z VARIABLES ref 190 190 44 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+311 138 j SETS ref 190 190 47 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+312 139 v SETS ref 190 190 49 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+313 140 w SETS ref 190 190 51 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+314 144 capacidad_vehiculo PARAMETERS ref 190 190 70 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+315 139 v SETS ref 190 190 73 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+316 138 j SETS control 191 191 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+317 180 lim_demanda EQUATIONS defined 191 191 23 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+318 160 Ayuda VARIABLES ref 191 191 23 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+319 138 j SETS ref 191 191 26 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+320 143 dem PARAMETERS ref 191 191 34 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+321 138 j SETS ref 191 191 37 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+322 181 f_Insatis EQUATIONS defined 192 192 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+323 162 Insatis VARIABLES ref 192 192 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+324 138 j SETS control 192 192 31 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+325 143 dem PARAMETERS ref 192 192 35 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+326 138 j SETS ref 192 192 38 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+327 160 Ayuda VARIABLES ref 192 192 46 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+328 138 j SETS ref 192 192 49 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+329 182 def_Coste EQUATIONS defined 193 193 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+330 163 Coste VARIABLES ref 193 193 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+331 141 i SETS control 193 193 29 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+332 138 j SETS control 193 193 36 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+333 139 v SETS control 193 193 43 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+334 140 w SETS control 193 193 50 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+335 158 X VARIABLES ref 193 193 53 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+336 141 i SETS ref 193 193 56 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+337 138 j SETS ref 193 193 58 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+338 139 v SETS ref 193 193 60 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+339 140 w SETS ref 193 193 62 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+340 168 Y VARIABLES ref 193 193 66 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+341 141 i SETS ref 193 193 69 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+342 138 j SETS ref 193 193 71 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+343 139 v SETS ref 193 193 73 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+344 140 w SETS ref 193 193 75 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+345 146 coste_variable PARAMETERS ref 193 193 91 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+346 155 dist PARAMETERS ref 193 193 96 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+347 141 i SETS ref 193 193 99 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+348 138 j SETS ref 193 193 101 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+349 141 i SETS control 194 194 29 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+350 138 j SETS control 194 194 36 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+351 161 H VARIABLES ref 194 194 38 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+352 141 i SETS ref 194 194 41 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+353 138 j SETS ref 194 194 43 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+354 156 coste_rehabilitacion PARAMETERS ref 194 194 64 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+355 141 i SETS ref 194 194 67 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+356 138 j SETS ref 194 194 69 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+357 139 v SETS control 195 195 29 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+358 140 w SETS control 195 195 36 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+359 164 Salio VARIABLES ref 195 195 42 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+360 139 v SETS ref 195 195 45 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+361 140 w SETS ref 195 195 47 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+362 145 coste_fijo PARAMETERS ref 195 195 58 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+363 139 v SETS ref 195 195 61 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+364 139 v SETS control 197 197 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+365 140 w SETS control 197 197 17 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+366 183 def_tiempos EQUATIONS defined 197 197 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+367 165 t VARIABLES ref 197 197 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+368 139 v SETS ref 197 197 24 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+369 140 w SETS ref 197 197 26 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+370 141 i SETS control 197 197 37 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+371 138 j SETS control 197 197 43 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+372 158 X VARIABLES ref 197 197 46 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+373 141 i SETS ref 197 197 49 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+374 138 j SETS ref 197 197 51 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+375 139 v SETS ref 197 197 53 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+376 140 w SETS ref 197 197 55 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+377 168 Y VARIABLES ref 197 197 59 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+378 141 i SETS ref 197 197 62 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+379 138 j SETS ref 197 197 64 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+380 139 v SETS ref 197 197 66 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+381 140 w SETS ref 197 197 68 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+382 155 dist PARAMETERS ref 197 197 74 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+383 141 i SETS ref 197 197 77 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+384 138 j SETS ref 197 197 79 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+385 152 velocidad_vehiculo PARAMETERS ref 197 197 98 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+386 139 v SETS ref 197 197 101 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+387 139 v SETS control 198 198 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+388 140 w SETS control 198 198 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+389 184 lim_tiempo EQUATIONS defined 198 198 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+390 165 t VARIABLES ref 198 198 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+391 139 v SETS ref 198 198 23 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+392 140 w SETS ref 198 198 25 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+393 151 T_max PARAMETERS ref 198 198 35 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+394 141 i SETS control 200 200 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+395 138 j SETS control 200 200 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+396 153 E PARAMETERS ref 200 200 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+397 141 i SETS ref 200 200 22 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+398 138 j SETS ref 200 200 24 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+399 187 arco_usado EQUATIONS defined 200 200 33 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+400 149 M PARAMETERS ref 200 200 33 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+401 166 Usado VARIABLES ref 200 200 39 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+402 141 i SETS ref 200 200 42 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+403 138 j SETS ref 200 200 44 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+404 139 v SETS control 200 200 55 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+405 140 w SETS control 200 200 62 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+406 158 X VARIABLES ref 200 200 64 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+407 141 i SETS ref 200 200 67 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+408 138 j SETS ref 200 200 69 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+409 139 v SETS ref 200 200 71 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+410 140 w SETS ref 200 200 73 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+411 168 Y VARIABLES ref 200 200 77 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+412 141 i SETS ref 200 200 80 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+413 138 j SETS ref 200 200 82 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+414 139 v SETS ref 200 200 84 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+415 140 w SETS ref 200 200 86 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+416 185 def_fiabilidad EQUATIONS defined 201 201 28 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+417 167 Fiabilidad VARIABLES ref 201 201 28 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+418 141 i SETS control 201 201 39 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+419 138 j SETS control 201 201 46 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+420 166 Usado VARIABLES ref 201 201 52 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+421 141 i SETS ref 201 201 55 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+422 138 j SETS ref 201 201 57 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+423 157 P PARAMETERS ref 201 201 59 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+424 141 i SETS ref 201 201 62 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+425 138 j SETS ref 201 201 64 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+426 186 lim_fiabilidad EQUATIONS defined 202 202 29 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+427 167 Fiabilidad VARIABLES ref 202 202 29 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+428 150 P_total PARAMETERS ref 202 202 41 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+429 138 j SETS control 204 204 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+430 139 v SETS control 204 204 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+431 140 w SETS control 204 204 23 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+432 188 Y_conexion_ruta EQUATIONS defined 204 204 29 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+433 141 i SETS control 204 204 32 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+434 168 Y VARIABLES ref 204 204 34 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+435 141 i SETS ref 204 204 37 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+436 138 j SETS ref 204 204 39 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+437 139 v SETS ref 204 204 41 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+438 140 w SETS ref 204 204 43 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+439 159 Z VARIABLES ref 204 204 48 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+440 138 j SETS ref 204 204 51 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+441 139 v SETS ref 204 204 53 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+442 140 w SETS ref 204 204 55 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+443 141 i SETS control 204 204 66 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+444 168 Y VARIABLES ref 204 204 68 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+445 138 j SETS ref 204 204 71 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+446 141 i SETS ref 204 204 73 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+447 139 v SETS ref 204 204 75 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+448 140 w SETS ref 204 204 77 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+449 141 i SETS control 205 205 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+450 139 v SETS control 205 205 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+451 140 w SETS control 205 205 23 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+452 189 Y_destino_unico EQUATIONS defined 205 205 28 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+453 138 j SETS control 205 205 31 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+454 168 Y VARIABLES ref 205 205 33 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+455 141 i SETS ref 205 205 36 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+456 138 j SETS ref 205 205 38 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+457 139 v SETS ref 205 205 40 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+458 140 w SETS ref 205 205 42 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+459 141 i SETS control 206 206 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+460 138 j SETS control 206 206 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+461 139 v SETS control 206 206 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+462 140 w SETS control 206 206 22 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+463 153 E PARAMETERS ref 206 206 25 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+464 141 i SETS ref 206 206 28 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+465 138 j SETS ref 206 206 30 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+466 190 Y_usabilidad EQUATIONS defined 206 206 39 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+467 168 Y VARIABLES ref 206 206 39 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+468 141 i SETS ref 206 206 42 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+469 138 j SETS ref 206 206 44 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+470 139 v SETS ref 206 206 46 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+471 140 w SETS ref 206 206 48 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+472 154 U PARAMETERS ref 206 206 54 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+473 141 i SETS ref 206 206 57 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+474 138 j SETS ref 206 206 59 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+475 161 H VARIABLES ref 206 206 63 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+476 141 i SETS ref 206 206 66 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+477 138 j SETS ref 206 206 68 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+478 141 i SETS control 207 207 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+479 138 j SETS control 207 207 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+480 139 v SETS control 207 207 20 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+481 140 w SETS control 207 207 22 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+482 153 E PARAMETERS ref 207 207 25 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+483 141 i SETS ref 207 207 28 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+484 138 j SETS ref 207 207 30 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+485 191 Y_existencia EQUATIONS defined 207 207 39 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+486 168 Y VARIABLES ref 207 207 39 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+487 141 i SETS ref 207 207 42 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+488 138 j SETS ref 207 207 44 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+489 139 v SETS ref 207 207 46 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+490 140 w SETS ref 207 207 48 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+491 153 E PARAMETERS ref 207 207 54 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+492 141 i SETS ref 207 207 57 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+493 138 j SETS ref 207 207 59 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+494 141 i SETS control 208 208 17 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+495 139 v SETS control 208 208 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+496 140 w SETS control 208 208 21 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+497 192 vuelta_inicio EQUATIONS defined 208 208 25 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+498 159 Z VARIABLES ref 208 208 25 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+499 141 i SETS ref 208 208 28 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+500 139 v SETS ref 208 208 30 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+501 140 w SETS ref 208 208 32 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+502 138 j SETS control 208 208 43 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+503 168 Y VARIABLES ref 208 208 44 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+504 141 i SETS ref 208 208 47 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+505 138 j SETS ref 208 208 49 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+506 139 v SETS ref 208 208 51 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+507 140 w SETS ref 208 208 53 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+508 138 j SETS control 209 209 30 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+509 139 v SETS control 209 209 32 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+510 140 w SETS control 209 209 34 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+511 193 vuelta_consistente_inicial EQUATIONS defined 209 209 38 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+512 168 Y VARIABLES ref 209 209 38 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+513 138 j SETS ref 209 209 45 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+514 139 v SETS ref 209 209 47 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+515 140 w SETS ref 209 209 49 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+516 139 v SETS control 210 210 16 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+517 140 w SETS control 210 210 18 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+518 194 vuelta_final EQUATIONS defined 210 210 26 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+519 164 Salio VARIABLES ref 210 210 26 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+520 139 v SETS ref 210 210 29 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+521 140 w SETS ref 210 210 31 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+522 141 i SETS control 210 210 42 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+523 168 Y VARIABLES ref 210 210 44 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+524 141 i SETS ref 210 210 47 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+525 139 v SETS ref 210 210 53 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+526 140 w SETS ref 210 210 55 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+527 195 modelo1 MODELS declared 215 215 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+528 195 modelo1 MODELS defined 215 215 15 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+529 169 conexion_ruta EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+530 170 destino_unico EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+531 171 consistencia_reparto_llegada EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+532 172 consistencia_reparto_salida EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+533 173 reparto_unico EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+534 174 def_salio EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+535 175 existencia EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+536 176 usabilidad EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+537 177 lim_coste EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+538 178 lim_habilitaciones EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+539 179 def_Ayuda EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+540 180 lim_demanda EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+541 181 f_Insatis EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+542 182 def_Coste EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+543 183 def_tiempos EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+544 184 lim_tiempo EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+545 185 def_fiabilidad EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+546 186 lim_fiabilidad EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+547 187 arco_usado EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+548 188 Y_conexion_ruta EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+549 189 Y_destino_unico EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+550 190 Y_usabilidad EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+551 191 Y_existencia EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+552 192 vuelta_inicio EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+553 193 vuelta_consistente_inicial EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+554 194 vuelta_final EQUATIONS ref 215 215 19 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+555 195 modelo1 MODELS ref 217 217 14 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+556 162 Insatis VARIABLES ref 217 217 43 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+557 194 vuelta_final EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+558 193 vuelta_consistente_inicial EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+559 192 vuelta_inicio EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+560 191 Y_existencia EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+561 190 Y_usabilidad EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+562 189 Y_destino_unico EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+563 188 Y_conexion_ruta EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+564 187 arco_usado EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+565 186 lim_fiabilidad EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+566 166 Usado VARIABLES impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+567 167 Fiabilidad VARIABLES impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+568 185 def_fiabilidad EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+569 184 lim_tiempo EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+570 165 t VARIABLES impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+571 183 def_tiempos EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+572 168 Y VARIABLES impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+573 182 def_Coste EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+574 162 Insatis VARIABLES impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+575 181 f_Insatis EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+576 180 lim_demanda EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+577 160 Ayuda VARIABLES impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+578 179 def_Ayuda EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+579 178 lim_habilitaciones EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+580 163 Coste VARIABLES impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+581 177 lim_coste EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+582 161 H VARIABLES impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+583 176 usabilidad EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+584 175 existencia EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+585 174 def_salio EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+586 164 Salio VARIABLES impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+587 173 reparto_unico EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+588 172 consistencia_reparto_salida EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+589 159 Z VARIABLES impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+590 171 consistencia_reparto_llegada EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+591 170 destino_unico EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+592 158 X VARIABLES impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+593 169 conexion_ruta EQUATIONS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+594 195 modelo1 MODELS impl-asn 219 219 2 0 1 G:\Mi unidad\5. TFG\src\gams\M-RV_definitivo.gms
+0 195 size of symboltable
+1 mapval 1 FUNCT 0 0 
+2 ceil 1 FUNCT 0 0 
+3 floor 1 FUNCT 0 0 
+4 round 1 FUNCT 0 0 
+5 mod 1 FUNCT 0 0 
+6 trunc 1 FUNCT 0 0 
+7 sign 1 FUNCT 0 0 
+8 min 1 FUNCT 0 0 
+9 max 1 FUNCT 0 0 
+10 sqr 1 FUNCT 0 0 
+11 exp 1 FUNCT 0 0 
+12 log 1 FUNCT 0 0 
+13 log10 1 FUNCT 0 0 
+14 sqrt 1 FUNCT 0 0 
+15 abs 1 FUNCT 0 0 
+16 cos 1 FUNCT 0 0 
+17 sin 1 FUNCT 0 0 
+18 arctan 1 FUNCT 0 0 
+19 errorf 1 FUNCT 0 0 
+20 uniform 1 FUNCT 0 0 
+21 normal 1 FUNCT 0 0 
+22 power 1 FUNCT 0 0 
+23 jdate 1 FUNCT 0 0 
+24 jtime 1 FUNCT 0 0 
+25 jstart 1 FUNCT 0 0 
+26 jnow 1 FUNCT 0 0 
+27 execerror 1 FUNCT 0 0 
+28 gyear 1 FUNCT 0 0 
+29 gmonth 1 FUNCT 0 0 
+30 gday 1 FUNCT 0 0 
+31 gdow 1 FUNCT 0 0 
+32 gleap 1 FUNCT 0 0 
+33 ghour 1 FUNCT 0 0 
+34 gminute 1 FUNCT 0 0 
+35 gsecond 1 FUNCT 0 0 
+36 execseed 1 FUNCT 0 0 
+37 timestart 1 FUNCT 0 0 
+38 timecomp 1 FUNCT 0 0 
+39 timeexec 1 FUNCT 0 0 
+40 timeclose 1 FUNCT 0 0 
+41 frac 1 FUNCT 0 0 
+42 ErrorLevel 1 FUNCT 0 0 
+43 HeapSize 1 FUNCT 0 0 
+44 Fact 1 FUNCT 0 0 
+45 UniformInt 1 FUNCT 0 0 
+46 PI 1 FUNCT 0 0 
+47 NcpF 1 FUNCT 0 0 
+48 NcpCM 1 FUNCT 0 0 
+49 Entropy 1 FUNCT 0 0 
+50 Sigmoid 1 FUNCT 0 0 
+51 log2 1 FUNCT 0 0 
+52 bool_not 1 FUNCT 0 0 
+53 bool_and 1 FUNCT 0 0 
+54 bool_or 1 FUNCT 0 0 
+55 bool_xor 1 FUNCT 0 0 
+56 bool_imp 1 FUNCT 0 0 
+57 bool_eqv 1 FUNCT 0 0 
+58 rel_eq 1 FUNCT 0 0 
+59 rel_gt 1 FUNCT 0 0 
+60 rel_ge 1 FUNCT 0 0 
+61 rel_lt 1 FUNCT 0 0 
+62 rel_le 1 FUNCT 0 0 
+63 rel_ne 1 FUNCT 0 0 
+64 IfThen 1 FUNCT 0 0 
+65 rPower 1 FUNCT 0 0 
+66 EDist 1 FUNCT 0 0 
+67 div 1 FUNCT 0 0 
+68 div0 1 FUNCT 0 0 
+69 sllog10 1 FUNCT 0 0 
+70 sqlog10 1 FUNCT 0 0 
+71 slexp 1 FUNCT 0 0 
+72 sqexp 1 FUNCT 0 0 
+73 slrec 1 FUNCT 0 0 
+74 sqrec 1 FUNCT 0 0 
+75 cvPower 1 FUNCT 0 0 
+76 vcPower 1 FUNCT 0 0 
+77 Centropy 1 FUNCT 0 0 
+78 Gmillisec 1 FUNCT 0 0 
+79 MaxExecError 1 FUNCT 0 0 
+80 TimeElapsed 1 FUNCT 0 0 
+81 Gamma 1 FUNCT 0 0 
+82 LogGamma 1 FUNCT 0 0 
+83 Beta 1 FUNCT 0 0 
+84 LogBeta 1 FUNCT 0 0 
+85 GammaReg 1 FUNCT 0 0 
+86 BetaReg 1 FUNCT 0 0 
+87 sinh 1 FUNCT 0 0 
+88 cosh 1 FUNCT 0 0 
+89 tanh 1 FUNCT 0 0 
+90 MathLastRC 1 FUNCT 0 0 
+91 MathLastEC 1 FUNCT 0 0 
+92 MathOVal 1 FUNCT 0 0 
+93 SignPower 1 FUNCT 0 0 
+94 HandleStatus 1 FUNCT 0 0 
+95 NcpVUsin 1 FUNCT 0 0 
+96 NcpVUpow 1 FUNCT 0 0 
+97 Binomial 1 FUNCT 0 0 
+98 HandleSubmit 1 FUNCT 0 0 
+99 GamsVersion 1 FUNCT 0 0 
+100 HandleDelete 1 FUNCT 0 0 
+101 tan 1 FUNCT 0 0 
+102 arccos 1 FUNCT 0 0 
+103 arcsin 1 FUNCT 0 0 
+104 arctan2 1 FUNCT 0 0 
+105 sleep 1 FUNCT 0 0 
+106 HeapFree 1 FUNCT 0 0 
+107 HandleCollect 1 FUNCT 0 0 
+108 GamsRelease 1 FUNCT 0 0 
+109 Poly 1 FUNCT 0 0 
+110 LicenseStatus 1 FUNCT 0 0 
+111 LicenseLevel 1 FUNCT 0 0 
+112 HeapLimit 1 FUNCT 0 0 
+113 RandLinear 1 FUNCT 0 0 
+114 RandTriangle 1 FUNCT 0 0 
+115 ForceError 1 FUNCT 0 0 
+116 ForceErrorCnt 1 FUNCT 0 0 
+117 RandBinomial 1 FUNCT 0 0 
+118 JobHandle 1 FUNCT 0 0 
+119 JobStatus 1 FUNCT 0 0 
+120 JobKill 1 FUNCT 0 0 
+121 JobTerminate 1 FUNCT 0 0 
+122 NumCores 1 FUNCT 0 0 
+123 EmbeddedHandle 1 FUNCT 0 0 
+124 PlatformCode 1 FUNCT 0 0 
+125 Logit 1 FUNCT 0 0 
+126 LSEMax 1 FUNCT 0 0 
+127 LSEMaxSc 1 FUNCT 0 0 
+128 LSEMin 1 FUNCT 0 0 
+129 LSEMinSc 1 FUNCT 0 0 
+130  unknown* 1 FUNCT 0 0 
+131 SameAs 10 PRED 2 0 0 0 
+132 Diag 10 PRED 2 0 0 0 
+133 Solvers 10 PRED 1 0 0 
+134 LicenseCodes 10 PRED 1 0 0 
+135 SolverCapabilities 10 PRED 2 0 0 0 
+136 SortedUels 10 PRED 2 0 0 0 
+137 FILE 8 FILE 0 0 Current file name for FILE.xxx use
+138 j 2 SET 1 6 0 Nodos.
+139 v 2 SET 1 3 0 Tipos de vehiculo.
+140 w 2 SET 1 3 0 Vehiculos posibles de tipo v.
+141 i 2 SET 1 0 0 Aliased with j
+142 k 2 SET 1 0 0 Aliased with j
+143 dem 4 PARAM 1 2 138 Demanda de cada nodo en toneladas de paquetes de ayuda.
+144 capacidad_vehiculo 4 PARAM 1 3 139 Capacidad en toneladas de una unidad vehicular de tipo v.
+145 coste_fijo 4 PARAM 1 3 139 Coste fijo en euros de hacer partir un vehiculo de tipo v.
+146 coste_variable 4 PARAM 0 1 Coste variable en euros por km recorrido por cualquier vehiculo.
+147 max_coste 4 PARAM 0 1 Maximo presupuesto que se puede invertir en total en la mision.
+148 max_habilitaciones 4 PARAM 0 1 Maximo numero de arcos que se pueden rehabilitar previo paso a los vehiculos.
+149 M 4 PARAM 0 1 Cota de vehiculos maximos.
+150 P_total 4 PARAM 0 1 Probabilidad aceptable de que todos los convoys puedan pasar por todas las rutas elegidas.
+151 T_max 4 PARAM 0 1 Tiempo maximo asumible en horas para el reparto de toda la ayuda.
+152 velocidad_vehiculo 4 PARAM 1 3 139 Inversa de la velocidad en h por km que recorre un vehiculo de tipo v.
+153 E 4 PARAM 2 10 138 138 Existe el arco de i a j.
+154 U 4 PARAM 2 6 138 138 El inicio es utilizable el arco de i a j.
+155 dist 4 PARAM 2 6 138 138 Distancia de las rutas de i a j en km.
+156 coste_rehabilitacion 4 PARAM 2 6 138 138 Coste de rehabilitar el arco de i a j.
+157 P 4 PARAM 2 36 138 138 Probabilidad de que se pueda utilizar el arco de i a j.
+158 X 5 VAR 4 0 138 138 139 140 El vehiculo de tipo v w-esimo va de i a j.
+159 Z 5 VAR 3 0 138 139 140 El vehiculo de tipo v w-esimo reparte a j.
+160 Ayuda 5 VAR 1 0 138 Ayuda total repartida a j.
+161 H 5 VAR 2 0 138 138 Habilitamos el arco de i a j.
+162 Insatis 5 VAR 0 0 Total demanda insatisfecha.
+163 Coste 5 VAR 0 0 Coste total del proyecto.
+164 Salio 5 VAR 2 0 139 140 Variable binaria que determina si un vehiculo partio a la mision.
+165 t 5 VAR 2 0 139 140 Tiempo de servicio del vehiculo w-esimo de tipo v.
+166 Usado 5 VAR 2 0 138 138 Variable binaria que determina si se usa el arco de i a j.
+167 Fiabilidad 5 VAR 0 0 Logaritmo de la robabilidad de que todos los convoys puedan pasar por todos los arcos elegidos.
+168 Y 5 VAR 4 0 138 138 139 140 El vehiculo v wesimo va de i a j volviendo.
+169 conexion_ruta 6 EQU 3 0 138 139 140 Un vehiculo solo puede salir de un nodo al que ha entrado.
+170 destino_unico 6 EQU 3 0 138 139 140 Un vehiculo que sale de un nodo puede llegar a un unico contiguo.
+171 consistencia_reparto_llegada 6 EQU 3 0 138 139 140 Se reparte en un nodo al que se llega.
+172 consistencia_reparto_salida 6 EQU 3 0 138 139 140 No se puede salir de un nodo al que se reparte.
+173 reparto_unico 6 EQU 2 0 139 140 Obliga a los vehiculos que han partido a repartir en un nodo y a los que se detienen a haber partido.
+174 def_salio 6 EQU 2 0 139 140 Define la variable binaria que determina si un vehiculo partio a la mision.
+175 existencia 6 EQU 4 0 138 138 139 140 Impide el paso por arcos no existentes.
+176 usabilidad 6 EQU 4 0 138 138 139 140 Impide el paso por arcos no usables ni rehabilitados.
+177 lim_coste 6 EQU 0 0 
+178 lim_habilitaciones 6 EQU 0 0 
+179 def_Ayuda 6 EQU 1 0 138 Ayuda total en toneladas que llega al nodo j.
+180 lim_demanda 6 EQU 1 0 138 Impide superar la demanda de cada nodo.
+181 f_Insatis 6 EQU 0 0 
+182 def_Coste 6 EQU 0 0 Definicion del coste.
+183 def_tiempos 6 EQU 2 0 139 140 Define los tiempos de servicio de los vehiculos.
+184 lim_tiempo 6 EQU 2 0 139 140 Establece el limite temporal de la mision.
+185 def_fiabilidad 6 EQU 0 0 Define el valor de la fiabilidad.
+186 lim_fiabilidad 6 EQU 0 0 Obliga a la solucion a contemplar una fiabilidad minima.
+187 arco_usado 6 EQU 2 0 138 138 Determina si el arco de i a j se ha utilizado.
+188 Y_conexion_ruta 6 EQU 3 0 138 139 140 
+189 Y_destino_unico 6 EQU 3 0 138 139 140 
+190 Y_usabilidad 6 EQU 4 0 138 138 139 140 
+191 Y_existencia 6 EQU 4 0 138 138 139 140 
+192 vuelta_inicio 6 EQU 3 0 138 139 140 Un vehiculo debe volver desde donde reparte.
+193 vuelta_consistente_inicial 6 EQU 3 0 138 139 140 No pueden volver vehiculos desde el nodo inicial.
+194 vuelta_final 6 EQU 2 0 139 140 El vehiculo que sale debe volver al nodo inicial.
+195 modelo1 7 MODEL 0 26 

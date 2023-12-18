@@ -1,0 +1,198 @@
+\documentclass[11pt]{article}
+\usepackage{a4wide}
+
+\usepackage[american]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\keepXColumns
+\usepackage{xcolor}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\section*{Symbols}
+\subsection*{Sets}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Name} & \textbf{Domains} & \textbf{Description}\\ 
+\hline 
+\endhead 
+j, i & * & Nodos. Representan los asentamientos. \\ 
+t & * & Periodos. Se asumen de misma duracion ademas de que todos los arcos se pueden recorrer en uno de estos periodos \\ 
+v & * & Tipos de vehiculo \\ 
+\hline 
+\end{tabularx}
+\subsection*{Parameters}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Name} & \textbf{Domains} & \textbf{Description}\\ 
+\hline 
+\endhead 
+dem & j & Demanda por cada asentamiento de un  unico recurso en toneladas \\ 
+max\_coste &  & Maximo presupuesto que se puede invertir \\ 
+max\_puentes &  & Maximo numero de puentes que podemos reconstruir previo paso (un puente por cada sentido consideramos un grafo orientado) \\ 
+capacidad\_vehiculo & v & Capacidad de hacer partir 1 vehiculo de tipo v \\ 
+coste\_vehiculo & v & Coste total y fijo de hacer partir 1 vehiculo de tipo v \\ 
+E & i, j & Existe la ruta de i a j \\ 
+U & i, j & Al inicio es utilizable la ruta de i a j \\ 
+\hline 
+\end{tabularx}
+\subsection*{Variables}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Name} & \textbf{Domains} & \textbf{Description}\\ 
+\hline 
+\endhead 
+X & i, j, t, v & Vehiculos de tipo v que van de i a j en el periodo t \\ 
+Y & j, t, v & Vehiculos de tipo v que hay en j en el periodo t. Pueden seguir su ruta o bien quedarse en j para proseguir su ruta en otro periodo o bien permanecer en j hasta el final del ultimo periodo \\ 
+Z & j, v & Vehiculos de tipo v totales emplazados en j al final del ultimo periodo. se asume que en ese momento hacen el reparto a j \\ 
+Z\_ & j & Ayuda total repartida a j \\ 
+auxZ & j & Variable binaria que representa si se reparte al menos un vehiculo de recurso a j \\ 
+H & i, j & variable binaria que determina si habilitamos el puente de i a j \\ 
+Ayuda &  & Total demanda satisfecha \\ 
+Eq &  & Criterio de equidad. Numero de nodos a los que se reparte al menos un vehiculo \\ 
+\hline 
+\end{tabularx}
+\subsection*{Equations}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Name} & \textbf{Domains} & \textbf{Description}\\ 
+\hline 
+\endhead 
+\hyperref[definir_Y]{definir\_Y}  & j, t, v & Restriccion de almacenamiento. Rn cierto nodo permanece lo almacenado en el anterior periodo mas lo que entra a el en el presente menos lo que sale \\ 
+\hyperref[definir_Z]{definir\_Z}  & j, v & Determina lo repartido como lo ubicado en cierto nodo en el ultimo periodo \\ 
+\hyperref[definir_Z_]{definir\_Z\_}  & j & Lo repartido a j en toneladas \\ 
+\hyperref[definir_auxZ]{definir\_auxZ}  & j &  \\ 
+\hyperref[lim_salida]{lim\_salida}  & j, t, v & Limita los vehiculos que pueden salir de un nodo a las almacenados en el mismo \\ 
+\hyperref[flujo_ini]{flujo\_ini}  & j, v & No hay almacenado nada en ningun nodo no inicial \\ 
+\hyperref[flujo_ini_0]{flujo\_ini\_0}  &  & En el nodo inicial esta almacenada la totalidad de los camiones \\ 
+\hyperref[existencia_ruta]{existencia\_ruta}  & i, j, t, v &  \\ 
+\hyperref[usabilidad_ruta]{usabilidad\_ruta}  & i, j, t, v &  \\ 
+\hyperref[orientacion]{orientacion}  & i, j & Si se habilita un sentido se ha de habilitar el opuesto \\ 
+\hyperref[lim_puentes]{lim\_puentes}  &  & Limite de puentes que podemos reconstruir \\ 
+\hyperref[lim_demanda]{lim\_demanda}  & j & No se puede superar la demanda \\ 
+\hyperref[f_ayuda]{f\_ayuda}  &  & Funcion objetivo 1. Cantidad total del recurso repartida en cierta unidad \\ 
+\hyperref[f_equidad]{f\_equidad}  &  & Funcion objetivo 2.  Criterio de equidad. Numero de nodos a los que se les reparte al menos una unidad de recurso \\ 
+\hline 
+\end{tabularx}
+\section*{Equation Definitions}
+\subsubsection*{$\text{definir\_Y}_{j, t, v}$} \label{definir_Y}
+$
+\textcolor{black}{\text{Y}}_{j, t, v} = \textcolor{black}{\text{Y}}_{j, t-1, v} + \displaystyle \sum_{i}\textcolor{black}{\text{X}}_{i, j, t, v} - \displaystyle \sum_{i}\textcolor{black}{\text{X}}_{j, i, t, v}
+$
+\hfill
+$
+\forall{ j, t, v}  ~ | ~ (  \text{ord}( \textcolor{black}{\text{t}} )   >  1 ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{definir\_Z}_{j, v}$} \label{definir_Z}
+$
+\textcolor{black}{\text{Z}}_{j, v} = \textcolor{black}{\text{Y}}_{j, \texttt{3}, v}
+$
+\hfill
+$
+\forall{ j, v} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{definir\_Z\_}_{j}$} \label{definir_Z_}
+$
+\textcolor{black}{\text{Z\_}}_{j} = \displaystyle \sum_{v} ( \textcolor{black}{\text{Z}}_{j, v} \cdot \textcolor{black}{\text{capacidad\_vehiculo}}_{v} ) 
+$
+\hfill
+$
+\forall{ j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{definir\_auxZ}_{j}$} \label{definir_auxZ}
+$
+\textcolor{black}{\text{auxZ}}_{j} \leq \textcolor{black}{\text{Z\_}}_{j}
+$
+\hfill
+$
+\forall{ j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{lim\_salida}_{j, t, v}$} \label{lim_salida}
+$
+\displaystyle \sum_{i}\textcolor{black}{\text{X}}_{j, i, t, v} \leq \textcolor{black}{\text{Y}}_{j, t-1, v}
+$
+\hfill
+$
+\forall{ j, t, v} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{flujo\_ini}_{j, v}$} \label{flujo_ini}
+$
+\textcolor{black}{\text{Y}}_{j, \texttt{0}, v} = 0
+$
+\hfill
+$
+\forall{ j, v}  ~ | ~ (  \text{ord}( \textcolor{black}{\text{j}} )   >  1 ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{flujo\_ini\_0}$} \label{flujo_ini_0}
+$
+\displaystyle \sum_{v} ( \textcolor{black}{\text{Y}}_{\texttt{0}, \texttt{0}, v} \cdot \textcolor{black}{\text{coste\_vehiculo}}_{v} )  \leq \textcolor{black}{\text{max\_coste}}
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{existencia\_ruta}_{i, j, t, v}$} \label{existencia_ruta}
+$
+\textcolor{black}{\text{X}}_{i, j, t, v} \leq 99 \cdot \textcolor{black}{\text{E}}_{i, j}
+$
+\hfill
+$
+\forall{ i, j, t, v} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{usabilidad\_ruta}_{i, j, t, v}$} \label{usabilidad_ruta}
+$
+\textcolor{black}{\text{X}}_{i, j, t, v} \leq 99 \cdot  ( \textcolor{black}{\text{U}}_{i, j} + \textcolor{black}{\text{H}}_{i, j} ) 
+$
+\hfill
+$
+\forall{ i, j, t, v} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{orientacion}_{i, j}$} \label{orientacion}
+$
+\textcolor{black}{\text{H}}_{i, j} = \textcolor{black}{\text{H}}_{j, i}
+$
+\hfill
+$
+\forall{ i, j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{lim\_puentes}$} \label{lim_puentes}
+$
+\displaystyle \sum_{i} ( \displaystyle \sum_{j}\textcolor{black}{\text{H}}_{i, j} )  \leq \textcolor{black}{\text{max\_puentes}}
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{lim\_demanda}_{j}$} \label{lim_demanda}
+$
+\textcolor{black}{\text{Z\_}}_{j} \leq \textcolor{black}{\text{dem}}_{j}
+$
+\hfill
+$
+\forall{ j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{f\_ayuda}$} \label{f_ayuda}
+$
+\textcolor{black}{\text{Ayuda}} = \displaystyle \sum_{j} ( \textcolor{black}{\text{Z\_}}_{j} - \textcolor{black}{\text{dem}}_{j} ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{f\_equidad}$} \label{f_equidad}
+$
+\textcolor{black}{\text{Eq}} = \displaystyle \sum_{j}\textcolor{black}{\text{auxZ}}_{j}
+$ \vspace{5pt}
+\hrule 
+\bigskip
+$\text{Y}_{j, t, v}\in \mathbb{Z}_{+} \forall j, t, v$ \newline 
+$\text{X}_{i, j, t, v}\in \mathbb{Z}_{+} \forall i, j, t, v$ \newline 
+$\text{Z}_{j, v}\in \mathbb{Z}_{+} \forall j, v$ \newline 
+$\text{auxZ}_{j}\in \{0,1\} ~ \forall j$ \newline 
+$\text{H}_{i, j}\in \{0,1\} ~ \forall i, j$ \newline
+\bigskip
+\end{document}

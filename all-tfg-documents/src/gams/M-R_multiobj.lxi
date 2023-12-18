@@ -1,0 +1,56 @@
+B 3 C o m p i l a t i o n
+B 613 Equation Listing    SOLVE modelo1 Using MIP From line 595
+D 616 conexion_ruta
+D 627 destino_unico
+D 638 consistencia_reparto_llegada
+D 649 consistencia_reparto_salida
+D 660 reparto_unico
+D 671 def_salio
+D 682 existencia
+D 693 usabilidad
+D 704 lim_demanda
+D 715 Y_conexion_ruta
+D 726 Y_destino_unico
+D 737 Y_existencia
+D 748 Y_usabilidad
+D 759 vuelta_inicio
+D 770 vuelta_consistente_inicial
+D 781 vuelta_final
+D 792 def_ayuda
+D 803 def_insatis
+D 808 def_eq
+D 819 def_prop
+D 830 def_insatisaux
+D 841 def_coste_rehab
+D 846 lim_coste_rehab
+D 851 def_coste
+D 914 lim_coste
+D 919 lim_ayuda
+D 924 arco_usado
+D 935 def_seguridad
+D 940 lim_seguridad
+D 945 def_fiabilidad
+D 950 lim_fiabilidad
+D 955 def_tiempos
+D 966 def_TZ
+D 977 lim_tiempo
+B 989 Column Listing      SOLVE modelo1 Using MIP From line 595
+E 992 Insatis
+E 999 Eq
+E 1068 Seguridad
+E 1076 Fiabilidad
+E 1084 Coste_rehab
+E 1092 Coste
+E 1100 Ayuda
+E 1122 t
+E 1141 TZ
+E 1333 H
+E 1907 Z
+E 1938 X
+E 1966 Y
+E 1991 Usado
+E 2013 Salio
+E 2041 Insatisaux
+E 2063 Prop_insatis
+B 2082 Range Statistics    SOLVE modelo1 Using MIP From line 595
+B 2093 Model Statistics    SOLVE modelo1 Using MIP From line 595

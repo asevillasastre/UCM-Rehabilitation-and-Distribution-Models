@@ -1,0 +1,475 @@
+1 138 j SETS declared 4 4 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+2 138 j SETS defined 4 4 41 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+3 139 t SETS declared 5 5 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+4 139 t SETS defined 6 6 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+5 140 v SETS declared 7 7 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+6 140 v SETS defined 7 7 21 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+7 138 j SETS ref 11 11 3 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+8 141 i SETS declared 11 11 5 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+9 142 k SETS declared 11 11 7 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+10 143 dem PARAMETERS declared 15 15 4 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+11 138 j SETS ref 15 15 6 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+12 143 dem PARAMETERS defined 16 16 25 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+13 144 max_coste PARAMETERS declared 23 23 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+14 144 max_coste PARAMETERS defined 24 24 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+15 145 max_puentes PARAMETERS declared 25 25 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+16 145 max_puentes PARAMETERS defined 26 26 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+17 146 capacidad_vehiculo PARAMETERS declared 27 27 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+18 140 v SETS ref 27 27 21 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+19 146 capacidad_vehiculo PARAMETERS defined 27 27 70 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+20 147 coste_vehiculo PARAMETERS declared 28 28 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+21 140 v SETS ref 28 28 17 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+22 147 coste_vehiculo PARAMETERS defined 28 28 75 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+23 148 E PARAMETERS declared 31 31 8 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+24 141 i SETS ref 31 31 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+25 138 j SETS ref 31 31 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+26 148 E PARAMETERS defined 31 31 37 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+27 149 U PARAMETERS declared 42 42 8 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+28 141 i SETS ref 42 42 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+29 138 j SETS ref 42 42 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+30 149 U PARAMETERS defined 42 42 54 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+31 150 X VARIABLES declared 54 54 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+32 141 i SETS ref 54 54 4 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+33 138 j SETS ref 54 54 6 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+34 139 t SETS ref 54 54 8 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+35 140 v SETS ref 54 54 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+36 151 Y VARIABLES declared 56 56 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+37 138 j SETS ref 56 56 4 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+38 139 t SETS ref 56 56 6 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+39 140 v SETS ref 56 56 8 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+40 152 Z VARIABLES declared 58 58 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+41 138 j SETS ref 58 58 4 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+42 140 v SETS ref 58 58 6 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+43 153 Z_ VARIABLES declared 60 60 3 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+44 138 j SETS ref 60 60 5 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+45 154 auxZ VARIABLES declared 62 62 5 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+46 138 j SETS ref 62 62 7 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+47 155 H VARIABLES declared 65 65 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+48 141 i SETS ref 65 65 4 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+49 138 j SETS ref 65 65 6 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+50 156 Coste VARIABLES declared 67 67 6 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+51 157 Ayuda VARIABLES declared 69 69 6 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+52 158 Eq VARIABLES declared 70 70 3 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+53 150 X VARIABLES ref 73 73 20 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+54 151 Y VARIABLES ref 73 73 23 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+55 152 Z VARIABLES ref 73 73 26 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+56 154 auxZ VARIABLES ref 74 74 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+57 155 H VARIABLES ref 74 74 25 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+58 159 definir_Y EQUATIONS declared 78 78 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+59 138 j SETS ref 78 78 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+60 139 t SETS ref 78 78 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+61 140 v SETS ref 78 78 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+62 160 definir_Z EQUATIONS declared 80 80 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+63 138 j SETS ref 80 80 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+64 140 v SETS ref 80 80 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+65 161 definir_Z_ EQUATIONS declared 82 82 11 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+66 138 j SETS ref 82 82 13 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+67 162 definir_auxZ EQUATIONS declared 84 84 13 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+68 138 j SETS ref 84 84 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+69 163 lim_salida EQUATIONS declared 87 87 11 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+70 138 j SETS ref 87 87 13 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+71 139 t SETS ref 87 87 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+72 140 v SETS ref 87 87 17 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+73 164 flujo_ini EQUATIONS declared 88 88 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+74 138 j SETS ref 88 88 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+75 140 v SETS ref 88 88 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+76 165 flujo_ini_0 EQUATIONS declared 89 89 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+77 166 existencia_ruta EQUATIONS declared 91 91 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+78 141 i SETS ref 91 91 18 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+79 138 j SETS ref 91 91 20 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+80 139 t SETS ref 91 91 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+81 140 v SETS ref 91 91 24 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+82 167 usabilidad_ruta EQUATIONS declared 92 92 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+83 141 i SETS ref 92 92 18 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+84 138 j SETS ref 92 92 20 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+85 139 t SETS ref 92 92 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+86 140 v SETS ref 92 92 24 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+87 168 orientacion EQUATIONS declared 93 93 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+88 141 i SETS ref 93 93 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+89 138 j SETS ref 93 93 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+90 169 lim_puentes EQUATIONS declared 94 94 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+91 170 lim_demanda EQUATIONS declared 96 96 12 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+92 138 j SETS ref 96 96 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+93 171 f_ayuda EQUATIONS declared 98 98 8 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+94 172 f_equidad EQUATIONS declared 99 99 10 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+95 138 j SETS control 102 102 13 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+96 139 t SETS control 102 102 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+97 140 v SETS control 102 102 17 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+98 139 t SETS ref 102 102 24 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+99 159 definir_Y EQUATIONS defined 102 102 32 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+100 151 Y VARIABLES ref 102 102 32 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+101 138 j SETS ref 102 102 35 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+102 139 t SETS ref 102 102 37 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+103 140 v SETS ref 102 102 39 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+104 151 Y VARIABLES ref 103 103 30 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+105 138 j SETS ref 103 103 33 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+106 139 t SETS ref 103 103 35 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+107 140 v SETS ref 103 103 39 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+108 141 i SETS control 103 103 48 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+109 150 X VARIABLES ref 103 103 50 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+110 141 i SETS ref 103 103 53 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+111 138 j SETS ref 103 103 55 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+112 139 t SETS ref 103 103 57 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+113 140 v SETS ref 103 103 59 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+114 141 i SETS control 103 103 69 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+115 150 X VARIABLES ref 103 103 71 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+116 138 j SETS ref 103 103 74 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+117 141 i SETS ref 103 103 76 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+118 139 t SETS ref 103 103 78 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+119 140 v SETS ref 103 103 80 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+120 138 j SETS control 104 104 13 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+121 140 v SETS control 104 104 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+122 160 definir_Z EQUATIONS defined 104 104 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+123 152 Z VARIABLES ref 104 104 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+124 138 j SETS ref 104 104 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+125 140 v SETS ref 104 104 24 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+126 151 Y VARIABLES ref 104 104 30 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+127 138 j SETS ref 104 104 33 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+128 140 v SETS ref 104 104 39 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+129 138 j SETS control 105 105 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+130 161 definir_Z_ EQUATIONS defined 105 105 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+131 153 Z_ VARIABLES ref 105 105 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+132 138 j SETS ref 105 105 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+133 140 v SETS control 105 105 33 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+134 152 Z VARIABLES ref 105 105 35 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+135 138 j SETS ref 105 105 38 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+136 140 v SETS ref 105 105 40 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+137 146 capacidad_vehiculo PARAMETERS ref 105 105 59 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+138 140 v SETS ref 105 105 62 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+139 138 j SETS control 106 106 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+140 162 definir_auxZ EQUATIONS defined 106 106 23 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+141 154 auxZ VARIABLES ref 106 106 23 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+142 138 j SETS ref 106 106 26 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+143 153 Z_ VARIABLES ref 106 106 33 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+144 138 j SETS ref 106 106 36 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+145 138 j SETS control 108 108 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+146 139 t SETS control 108 108 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+147 140 v SETS control 108 108 18 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+148 163 lim_salida EQUATIONS defined 108 108 24 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+149 141 i SETS control 108 108 27 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+150 150 X VARIABLES ref 108 108 28 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+151 138 j SETS ref 108 108 31 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+152 141 i SETS ref 108 108 33 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+153 139 t SETS ref 108 108 35 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+154 140 v SETS ref 108 108 37 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+155 151 Y VARIABLES ref 108 108 44 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+156 138 j SETS ref 108 108 47 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+157 139 t SETS ref 108 108 49 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+158 140 v SETS ref 108 108 53 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+159 138 j SETS control 109 109 13 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+160 140 v SETS control 109 109 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+161 138 j SETS ref 109 109 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+162 164 flujo_ini EQUATIONS defined 109 109 30 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+163 151 Y VARIABLES ref 109 109 30 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+164 138 j SETS ref 109 109 33 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+165 140 v SETS ref 109 109 39 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+166 165 flujo_ini_0 EQUATIONS defined 110 110 18 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+167 140 v SETS control 110 110 21 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+168 151 Y VARIABLES ref 110 110 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+169 140 v SETS ref 110 110 33 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+170 147 coste_vehiculo PARAMETERS ref 110 110 48 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+171 140 v SETS ref 110 110 51 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+172 144 max_coste PARAMETERS ref 110 110 66 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+173 141 i SETS control 111 111 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+174 138 j SETS control 111 111 21 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+175 139 t SETS control 111 111 23 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+176 140 v SETS control 111 111 25 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+177 166 existencia_ruta EQUATIONS defined 111 111 29 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+178 150 X VARIABLES ref 111 111 29 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+179 141 i SETS ref 111 111 32 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+180 138 j SETS ref 111 111 34 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+181 139 t SETS ref 111 111 36 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+182 140 v SETS ref 111 111 38 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+183 148 E PARAMETERS ref 111 111 47 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+184 141 i SETS ref 111 111 50 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+185 138 j SETS ref 111 111 52 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+186 141 i SETS control 112 112 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+187 138 j SETS control 112 112 21 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+188 139 t SETS control 112 112 23 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+189 140 v SETS control 112 112 25 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+190 167 usabilidad_ruta EQUATIONS defined 112 112 29 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+191 150 X VARIABLES ref 112 112 29 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+192 141 i SETS ref 112 112 32 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+193 138 j SETS ref 112 112 34 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+194 139 t SETS ref 112 112 36 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+195 140 v SETS ref 112 112 38 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+196 149 U PARAMETERS ref 112 112 48 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+197 141 i SETS ref 112 112 51 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+198 138 j SETS ref 112 112 53 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+199 155 H VARIABLES ref 112 112 58 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+200 141 i SETS ref 112 112 61 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+201 138 j SETS ref 112 112 63 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+202 141 i SETS control 113 113 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+203 138 j SETS control 113 113 17 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+204 168 orientacion EQUATIONS defined 113 113 21 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+205 155 H VARIABLES ref 113 113 21 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+206 141 i SETS ref 113 113 24 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+207 138 j SETS ref 113 113 26 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+208 155 H VARIABLES ref 113 113 32 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+209 138 j SETS ref 113 113 35 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+210 141 i SETS ref 113 113 37 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+211 169 lim_puentes EQUATIONS defined 114 114 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+212 141 i SETS control 114 114 22 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+213 138 j SETS control 114 114 29 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+214 155 H VARIABLES ref 114 114 31 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+215 141 i SETS ref 114 114 34 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+216 138 j SETS ref 114 114 36 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+217 145 max_puentes PARAMETERS ref 114 114 54 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+218 138 j SETS control 116 116 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+219 170 lim_demanda EQUATIONS defined 116 116 20 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+220 153 Z_ VARIABLES ref 116 116 20 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+221 138 j SETS ref 116 116 23 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+222 143 dem PARAMETERS ref 116 116 31 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+223 138 j SETS ref 116 116 34 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+224 171 f_ayuda EQUATIONS defined 118 118 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+225 157 Ayuda VARIABLES ref 118 118 16 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+226 138 j SETS control 118 118 27 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+227 153 Z_ VARIABLES ref 118 118 30 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+228 138 j SETS ref 118 118 33 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+229 143 dem PARAMETERS ref 118 118 37 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+230 138 j SETS ref 118 118 40 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+231 172 f_equidad EQUATIONS defined 119 119 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+232 158 Eq VARIABLES ref 119 119 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+233 138 j SETS control 119 119 26 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+234 154 auxZ VARIABLES ref 119 119 31 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+235 138 j SETS ref 119 119 34 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+236 173 modelo1 MODELS declared 122 122 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+237 173 modelo1 MODELS defined 122 122 15 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+238 159 definir_Y EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+239 160 definir_Z EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+240 161 definir_Z_ EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+241 162 definir_auxZ EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+242 163 lim_salida EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+243 164 flujo_ini EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+244 165 flujo_ini_0 EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+245 166 existencia_ruta EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+246 167 usabilidad_ruta EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+247 168 orientacion EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+248 169 lim_puentes EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+249 170 lim_demanda EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+250 171 f_ayuda EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+251 172 f_equidad EQUATIONS ref 122 122 19 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+252 173 modelo1 MODELS ref 124 124 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+253 157 Ayuda VARIABLES ref 124 124 41 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+254 158 Eq VARIABLES impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+255 172 f_equidad EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+256 157 Ayuda VARIABLES impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+257 171 f_ayuda EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+258 170 lim_demanda EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+259 169 lim_puentes EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+260 168 orientacion EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+261 155 H VARIABLES impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+262 167 usabilidad_ruta EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+263 166 existencia_ruta EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+264 165 flujo_ini_0 EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+265 164 flujo_ini EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+266 163 lim_salida EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+267 154 auxZ VARIABLES impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+268 162 definir_auxZ EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+269 153 Z_ VARIABLES impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+270 161 definir_Z_ EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+271 152 Z VARIABLES impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+272 160 definir_Z EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+273 150 X VARIABLES impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+274 151 Y VARIABLES impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+275 159 definir_Y EQUATIONS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+276 173 modelo1 MODELS impl-asn 125 125 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+277 173 modelo1 MODELS ref 126 126 14 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+278 158 Eq VARIABLES ref 126 126 38 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+279 158 Eq VARIABLES impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+280 172 f_equidad EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+281 157 Ayuda VARIABLES impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+282 171 f_ayuda EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+283 170 lim_demanda EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+284 169 lim_puentes EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+285 168 orientacion EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+286 155 H VARIABLES impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+287 167 usabilidad_ruta EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+288 166 existencia_ruta EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+289 165 flujo_ini_0 EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+290 164 flujo_ini EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+291 163 lim_salida EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+292 154 auxZ VARIABLES impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+293 162 definir_auxZ EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+294 153 Z_ VARIABLES impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+295 161 definir_Z_ EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+296 152 Z VARIABLES impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+297 160 definir_Z EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+298 150 X VARIABLES impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+299 151 Y VARIABLES impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+300 159 definir_Y EQUATIONS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+301 173 modelo1 MODELS impl-asn 127 127 2 0 1 G:\Mi unidad\TFG\src\modelo_ijt_vehiculos.gms
+0 173 size of symboltable
+1 mapval 1 FUNCT 0 0 
+2 ceil 1 FUNCT 0 0 
+3 floor 1 FUNCT 0 0 
+4 round 1 FUNCT 0 0 
+5 mod 1 FUNCT 0 0 
+6 trunc 1 FUNCT 0 0 
+7 sign 1 FUNCT 0 0 
+8 min 1 FUNCT 0 0 
+9 max 1 FUNCT 0 0 
+10 sqr 1 FUNCT 0 0 
+11 exp 1 FUNCT 0 0 
+12 log 1 FUNCT 0 0 
+13 log10 1 FUNCT 0 0 
+14 sqrt 1 FUNCT 0 0 
+15 abs 1 FUNCT 0 0 
+16 cos 1 FUNCT 0 0 
+17 sin 1 FUNCT 0 0 
+18 arctan 1 FUNCT 0 0 
+19 errorf 1 FUNCT 0 0 
+20 uniform 1 FUNCT 0 0 
+21 normal 1 FUNCT 0 0 
+22 power 1 FUNCT 0 0 
+23 jdate 1 FUNCT 0 0 
+24 jtime 1 FUNCT 0 0 
+25 jstart 1 FUNCT 0 0 
+26 jnow 1 FUNCT 0 0 
+27 execerror 1 FUNCT 0 0 
+28 gyear 1 FUNCT 0 0 
+29 gmonth 1 FUNCT 0 0 
+30 gday 1 FUNCT 0 0 
+31 gdow 1 FUNCT 0 0 
+32 gleap 1 FUNCT 0 0 
+33 ghour 1 FUNCT 0 0 
+34 gminute 1 FUNCT 0 0 
+35 gsecond 1 FUNCT 0 0 
+36 execseed 1 FUNCT 0 0 
+37 timestart 1 FUNCT 0 0 
+38 timecomp 1 FUNCT 0 0 
+39 timeexec 1 FUNCT 0 0 
+40 timeclose 1 FUNCT 0 0 
+41 frac 1 FUNCT 0 0 
+42 ErrorLevel 1 FUNCT 0 0 
+43 HeapSize 1 FUNCT 0 0 
+44 Fact 1 FUNCT 0 0 
+45 UniformInt 1 FUNCT 0 0 
+46 PI 1 FUNCT 0 0 
+47 NcpF 1 FUNCT 0 0 
+48 NcpCM 1 FUNCT 0 0 
+49 Entropy 1 FUNCT 0 0 
+50 Sigmoid 1 FUNCT 0 0 
+51 log2 1 FUNCT 0 0 
+52 bool_not 1 FUNCT 0 0 
+53 bool_and 1 FUNCT 0 0 
+54 bool_or 1 FUNCT 0 0 
+55 bool_xor 1 FUNCT 0 0 
+56 bool_imp 1 FUNCT 0 0 
+57 bool_eqv 1 FUNCT 0 0 
+58 rel_eq 1 FUNCT 0 0 
+59 rel_gt 1 FUNCT 0 0 
+60 rel_ge 1 FUNCT 0 0 
+61 rel_lt 1 FUNCT 0 0 
+62 rel_le 1 FUNCT 0 0 
+63 rel_ne 1 FUNCT 0 0 
+64 IfThen 1 FUNCT 0 0 
+65 rPower 1 FUNCT 0 0 
+66 EDist 1 FUNCT 0 0 
+67 div 1 FUNCT 0 0 
+68 div0 1 FUNCT 0 0 
+69 sllog10 1 FUNCT 0 0 
+70 sqlog10 1 FUNCT 0 0 
+71 slexp 1 FUNCT 0 0 
+72 sqexp 1 FUNCT 0 0 
+73 slrec 1 FUNCT 0 0 
+74 sqrec 1 FUNCT 0 0 
+75 cvPower 1 FUNCT 0 0 
+76 vcPower 1 FUNCT 0 0 
+77 Centropy 1 FUNCT 0 0 
+78 Gmillisec 1 FUNCT 0 0 
+79 MaxExecError 1 FUNCT 0 0 
+80 TimeElapsed 1 FUNCT 0 0 
+81 Gamma 1 FUNCT 0 0 
+82 LogGamma 1 FUNCT 0 0 
+83 Beta 1 FUNCT 0 0 
+84 LogBeta 1 FUNCT 0 0 
+85 GammaReg 1 FUNCT 0 0 
+86 BetaReg 1 FUNCT 0 0 
+87 sinh 1 FUNCT 0 0 
+88 cosh 1 FUNCT 0 0 
+89 tanh 1 FUNCT 0 0 
+90 MathLastRC 1 FUNCT 0 0 
+91 MathLastEC 1 FUNCT 0 0 
+92 MathOVal 1 FUNCT 0 0 
+93 SignPower 1 FUNCT 0 0 
+94 HandleStatus 1 FUNCT 0 0 
+95 NcpVUsin 1 FUNCT 0 0 
+96 NcpVUpow 1 FUNCT 0 0 
+97 Binomial 1 FUNCT 0 0 
+98 HandleSubmit 1 FUNCT 0 0 
+99 GamsVersion 1 FUNCT 0 0 
+100 HandleDelete 1 FUNCT 0 0 
+101 tan 1 FUNCT 0 0 
+102 arccos 1 FUNCT 0 0 
+103 arcsin 1 FUNCT 0 0 
+104 arctan2 1 FUNCT 0 0 
+105 sleep 1 FUNCT 0 0 
+106 HeapFree 1 FUNCT 0 0 
+107 HandleCollect 1 FUNCT 0 0 
+108 GamsRelease 1 FUNCT 0 0 
+109 Poly 1 FUNCT 0 0 
+110 LicenseStatus 1 FUNCT 0 0 
+111 LicenseLevel 1 FUNCT 0 0 
+112 HeapLimit 1 FUNCT 0 0 
+113 RandLinear 1 FUNCT 0 0 
+114 RandTriangle 1 FUNCT 0 0 
+115 ForceError 1 FUNCT 0 0 
+116 ForceErrorCnt 1 FUNCT 0 0 
+117 RandBinomial 1 FUNCT 0 0 
+118 JobHandle 1 FUNCT 0 0 
+119 JobStatus 1 FUNCT 0 0 
+120 JobKill 1 FUNCT 0 0 
+121 JobTerminate 1 FUNCT 0 0 
+122 NumCores 1 FUNCT 0 0 
+123 EmbeddedHandle 1 FUNCT 0 0 
+124 PlatformCode 1 FUNCT 0 0 
+125 Logit 1 FUNCT 0 0 
+126 LSEMax 1 FUNCT 0 0 
+127 LSEMaxSc 1 FUNCT 0 0 
+128 LSEMin 1 FUNCT 0 0 
+129 LSEMinSc 1 FUNCT 0 0 
+130  unknown* 1 FUNCT 0 0 
+131 SameAs 10 PRED 2 0 0 0 
+132 Diag 10 PRED 2 0 0 0 
+133 Solvers 10 PRED 1 0 0 
+134 LicenseCodes 10 PRED 1 0 0 
+135 SolverCapabilities 10 PRED 2 0 0 0 
+136 SortedUels 10 PRED 2 0 0 0 
+137 FILE 8 FILE 0 0 Current file name for FILE.xxx use
+138 j 2 SET 1 7 0 Nodos. Representan los asentamientos.
+139 t 2 SET 1 7 0 Periodos. Se asumen de misma duracion ademas de que todos los arcos se pueden recorrer en uno de estos periodos
+140 v 2 SET 1 2 0 Tipos de vehiculo
+141 i 2 SET 1 0 0 Aliased with j
+142 k 2 SET 1 0 0 Aliased with j
+143 dem 4 PARAM 1 6 138 Demanda por cada asentamiento de un  unico recurso en toneladas
+144 max_coste 4 PARAM 0 1 Maximo presupuesto que se puede invertir
+145 max_puentes 4 PARAM 0 1 Maximo numero de puentes que podemos reconstruir previo paso (un puente por cada sentido consideramos un grafo orientado)
+146 capacidad_vehiculo 4 PARAM 1 2 140 Capacidad de hacer partir 1 vehiculo de tipo v
+147 coste_vehiculo 4 PARAM 1 2 140 Coste total y fijo de hacer partir 1 vehiculo de tipo v
+148 E 4 PARAM 2 12 138 138 Existe la ruta de i a j
+149 U 4 PARAM 2 6 138 138 Al inicio es utilizable la ruta de i a j
+150 X 5 VAR 4 0 138 138 139 140 Vehiculos de tipo v que van de i a j en el periodo t
+151 Y 5 VAR 3 0 138 139 140 Vehiculos de tipo v que hay en j en el periodo t. Pueden seguir su ruta o bien quedarse en j para proseguir su ruta en otro periodo o bien permanecer en j hasta el final del ultimo periodo
+152 Z 5 VAR 2 0 138 140 Vehiculos de tipo v totales emplazados en j al final del ultimo periodo. se asume que en ese momento hacen el reparto a j
+153 Z_ 5 VAR 1 0 138 Ayuda total repartida a j
+154 auxZ 5 VAR 1 0 138 Variable binaria que representa si se reparte al menos un vehiculo de recurso a j
+155 H 5 VAR 2 0 138 138 variable binaria que determina si habilitamos el puente de i a j
+156 Coste 5 VAR 0 0 Coste total del proyecto
+157 Ayuda 5 VAR 0 0 Total demanda satisfecha
+158 Eq 5 VAR 0 0 Criterio de equidad. Numero de nodos a los que se reparte al menos un vehiculo
+159 definir_Y 6 EQU 3 0 138 139 140 Restriccion de almacenamiento. Rn cierto nodo permanece lo almacenado en el anterior periodo mas lo que entra a el en el presente menos lo que sale
+160 definir_Z 6 EQU 2 0 138 140 Determina lo repartido como lo ubicado en cierto nodo en el ultimo periodo
+161 definir_Z_ 6 EQU 1 0 138 Lo repartido a j en toneladas
+162 definir_auxZ 6 EQU 1 0 138 
+163 lim_salida 6 EQU 3 0 138 139 140 Limita los vehiculos que pueden salir de un nodo a las almacenados en el mismo
+164 flujo_ini 6 EQU 2 0 138 140 No hay almacenado nada en ningun nodo no inicial
+165 flujo_ini_0 6 EQU 0 0 En el nodo inicial esta almacenada la totalidad de los camiones
+166 existencia_ruta 6 EQU 4 0 138 138 139 140 
+167 usabilidad_ruta 6 EQU 4 0 138 138 139 140 
+168 orientacion 6 EQU 2 0 138 138 Si se habilita un sentido se ha de habilitar el opuesto
+169 lim_puentes 6 EQU 0 0 Limite de puentes que podemos reconstruir
+170 lim_demanda 6 EQU 1 0 138 No se puede superar la demanda
+171 f_ayuda 6 EQU 0 0 Funcion objetivo 1. Cantidad total del recurso repartida en cierta unidad
+172 f_equidad 6 EQU 0 0 Funcion objetivo 2.  Criterio de equidad. Numero de nodos a los que se les reparte al menos una unidad de recurso
+173 modelo1 7 MODEL 0 14 

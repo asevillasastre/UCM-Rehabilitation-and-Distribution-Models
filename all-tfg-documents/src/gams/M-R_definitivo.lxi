@@ -1,0 +1,64 @@
+B 3 C o m p i l a t i o n
+B 219 Equation Listing    SOLVE modelo1 Using MIP From line 203
+D 222 conexion_ruta
+D 233 destino_unico
+D 244 consistencia_reparto_llegada
+D 255 consistencia_reparto_salida
+D 266 reparto_unico
+D 277 def_salio
+D 288 existencia
+D 299 usabilidad
+D 310 lim_coste
+D 315 lim_habilitaciones
+D 320 def_Ayuda
+D 331 lim_demanda
+D 342 f_Insatis
+D 347 def_Coste
+D 352 def_tiempos
+D 363 lim_tiempo
+D 374 def_fiabilidad
+D 379 lim_fiabilidad
+D 384 arco_usado
+B 396 Column Listing      SOLVE modelo1 Using MIP From line 203
+E 399 X
+E 427 Z
+E 452 Ayuda
+E 474 H
+E 500 Insatis
+E 507 Coste
+E 515 Salio
+E 537 t
+E 556 Usado
+E 574 Fiabilidad
+B 583 Range Statistics    SOLVE modelo1 Using MIP From line 203
+B 594 Model Statistics    SOLVE modelo1 Using MIP From line 203
+B 607 Solution Report     SOLVE modelo1 Using MIP From line 203
+F 651 conexion_ruta
+F 701 destino_unico
+F 760 consistencia_reparto_llegada
+F 819 consistencia_reparto_salida
+F 878 reparto_unico
+F 892 def_salio
+F 906 existencia
+F 1235 usabilidad
+F 1332 lim_coste
+F 1333 lim_habilitaciones
+F 1335 def_Ayuda
+F 1346 lim_demanda
+F 1359 f_Insatis
+F 1360 def_Coste
+F 1364 def_tiempos
+F 1378 lim_tiempo
+F 1394 def_fiabilidad
+F 1395 lim_fiabilidad
+F 1400 arco_usado
+G 1415 X
+G 1744 Z
+G 1803 Ayuda
+G 1814 H
+G 1857 Insatis
+G 1858 Coste
+G 1863 Salio
+G 1877 t
+G 1891 Usado
+G 1914 Fiabilidad

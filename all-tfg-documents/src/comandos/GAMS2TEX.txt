@@ -1,0 +1,2 @@
+gams miModelo docfile=miModelo
+model2tex miModelo -m MODELO -f -o SALIDA

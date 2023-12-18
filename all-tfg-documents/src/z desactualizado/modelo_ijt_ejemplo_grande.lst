@@ -1,0 +1,140 @@
+GAMS 41.2.0  5110e5ff Nov 14, 2022          WEX-WEI x86 64bit/MS Windows - 11/25/22 12:45:37 Page 1
+modelo sencillo reconstruccion + reparto 1
+C o m p i l a t i o n
+
+
+   2   
+   3  Set
+   4  j nodos representan los asentamientos /0*6/
+   5  t periodos se asumen de misma duración además de que todos los arcos se pueden recorrer en uno de estos periodos
+   6   
+   7   /0*6/
+   8  ;
+   9   
+  10  Alias
+  11  (j,i,k)
+  12  ;
+  13   
+  14  Parameters
+  15  dem(j) demanda por cada asentamiento de un único recurso en cierta unidad discreta
+  16                          /0 0,
+  17                           1 1,
+  18                           2 1,
+  19                           3 1,
+  20                           4 8,
+  21                           5 4,
+  22                           6 4/
+  23  max_camiones máximo número de camiones que podemos mandar en total a la misión. se asume que cada camión transporta exactamente una unidad del recurso a repartir
+  24   /10/
+  25  max_puentes máximo número de puentes que podemos reconstruir previo paso a los camiones (un puente por cada sentido consideramos un grafo orientado)
+  26   /2/
+  27  ;
+  28   
+  29  Table E(i,j) existe la ruta de i a j
+  30      0   1   2   3   4   5   6
+  31  0   0   1   1   1   0   1   0
+  32  1   1   0   0   0   0   0   0
+  33  2   1   0   0   0   0   0   0
+  34  3   1   0   0   0   1   0   0
+  35  4   0   0   0   1   0   0   0
+  36  5   1   0   0   0   0   0   1
+  37  6   0   0   0   0   0   1   0
+  38  ;
+  39   
+  40  Table U(i,j) al inicio es utilizable la ruta de i a j
+  41      0   1   2   3   4   5   6
+  42  0   0   1   0   1   0   0   0
+  43  1   1   0   0   0   0   0   0
+  44  2   0   0   0   0   0   0   0
+  45  3   1   0   0   0   0   0   0
+  46  4   0   0   0   0   0   0   0
+  47  5   0   0   0   0   0   0   1
+  48  6   0   0   0   0   0   1   0
+  49  ;
+  50   
+  51  Variables
+  52  X(i,j,t)  camiones que van de i a j en el periodo t
+  53   
+  54  Y(j,t) camiones que hay en j en el periodo t. se asume que pueden seguir su ruta o bien quedarse en j para proseguir su ruta en otro periodo o bien permanecer en j hasta el final del último periodo
+  55   
+  56  Z(j) camiones totales emplazados en j al final del último periodo. se asume que en ese momento hacen el reparto a j
+  57   
+  58  auxZ(j) variable binaria que representa si se reparte al menos una unidad de recurso a j
+  59   
+  60   
+  61  H(i,j) variable binaria que determina si habilitamos el puente de i a j
+  62   
+  63   
+  64  Ayuda aa
+  65  Eq aa
+  66  ;
+  67   
+  68  Integer variables X, Y, Z;
+  69  Binary variables auxZ, H;
+  70   
+  71  Equations
+  72   
+  73  definir_Y(j,t) restricción de almacenamiento. en cierto nodo permanece lo almacenado en el anterior periodo más lo que entra a él en el presente menos lo que sale
+  74   
+  75  definir_Z(j) determina lo repartido como lo ubicado en cierto nodo en el último periodo
+  76   
+  77  definir_auxZ(j)
+  78   
+  79   
+  80  lim_salida(j,t) limita las unidades que pueden salir de un nodo a las almacenadas en el mismo
+  81  flujo_ini(j) no hay almacenado nada en ningun nodo no inicial
+  82  flujo_ini_0 en el nodo inicial está almacenada la totalidad de los camiones
+  83   
+  84  existencia_ruta(i,j,t)
+  85  usabilidad_ruta(i,j,t)
+  86  orientacion(i,j) si se habilita un sentido se ha de habilitar el opuesto
+  87  lim_puentes límite de puentes que podemos reconstruir
+  88   
+  89  lim_demanda(j) no se puede superar la demanda
+  90   
+  91  f_ayuda función objetivo 1. cantidad total del recurso repartida en cierta unidad
+  92  f_equidad función objetivo 2.  criterio de equidad. número de nodos a los que se les reparte al menos una unidad de recurso
+  93  ;
+  94   
+  95  definir_Y(j,t)$(ord(t)>1).. Y(j,t) =E=
+  96                              Y(j,t-1) + sum(i, X(i,j,t)) - sum(i, X(j,i,t));
+  97  definir_Z(j).. Z(j) =E= Y(j,"3");
+  98  definir_auxZ(j).. auxZ(j) =L= Z(j);
+  99   
+ 100  lim_salida(j,t).. sum(i,X(j,i,t)) =L= Y(j,t-1);
+ 101  flujo_ini(j)$(ord(j)>1).. Y(j,"0") =E= 0;
+ 102  flujo_ini_0.. Y("0","0") =E= max_camiones;
+ 103   
+ 104  existencia_ruta(i,j,t).. X(i,j,t) =L= 99*E(i,j);
+ 105  usabilidad_ruta(i,j,t).. X(i,j,t) =L= 99*(U(i,j) +  H(i,j));
+ 106  orientacion(i,j).. H(i,j) =E= H(j,i);
+ 107  lim_puentes..  sum(i, sum(j, H(i,j))) =L= max_puentes;
+ 108   
+ 109  lim_demanda(j).. Z(j) =L= dem(j);
+ 110   
+ 111  f_ayuda.. Ayuda =E= sum(j, Z(j)-dem(j));
+ 112  f_equidad.. Eq =E= sum(j, auxZ(j));
+ 113  ;
+ 114   
+ 115  model modelo1 /all/;
+ 116   
+ 117  solve modelo1 using MIP maximizing Ayuda
+ 118  ;
+ 119  solve modelo1 using MIP maximizing Eq
+ 120  ;
+ 121   
+ 122   
+ 123   
+
+
+COMPILATION TIME     =        0.031 SECONDS      3 MB  41.2.0 5110e5ff WEX-WEI
+
+
+USER: GAMS Demo license for Antonio Sevilla Sastre   G221121|0002CO-GEN
+      UCM, Spain                                               DL079880
+
+
+**** FILE SUMMARY
+
+Input      G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.gms
+Output     G:\Mi unidad\TFG\src\modelo_ijt_ejemplo_grande.lst

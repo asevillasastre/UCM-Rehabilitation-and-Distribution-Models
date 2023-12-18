@@ -1,0 +1,599 @@
+1 138 j SETS declared 4 4 2 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+2 138 j SETS defined 4 4 110 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+3 139 v SETS declared 5 5 2 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+4 139 v SETS defined 5 5 21 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+5 138 j SETS ref 9 9 3 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+6 140 i SETS declared 9 9 5 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+7 141 k SETS declared 9 9 7 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+8 142 dem PARAMETERS declared 13 13 4 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+9 138 j SETS ref 13 13 6 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+10 142 dem PARAMETERS defined 13 13 84 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+11 143 max_coste PARAMETERS declared 20 20 10 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+12 143 max_coste PARAMETERS defined 21 21 2 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+13 144 max_puentes PARAMETERS declared 22 22 12 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+14 144 max_puentes PARAMETERS defined 22 22 89 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+15 145 capacidad_vehiculo PARAMETERS declared 23 23 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+16 139 v SETS ref 23 23 21 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+17 145 capacidad_vehiculo PARAMETERS defined 23 23 70 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+18 146 coste_vehiculo PARAMETERS declared 24 24 15 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+19 139 v SETS ref 24 24 17 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+20 146 coste_vehiculo PARAMETERS defined 24 24 75 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+21 147 P_total PARAMETERS declared 25 25 8 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+22 147 P_total PARAMETERS defined 26 26 1 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+23 148 E PARAMETERS declared 29 29 8 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+24 140 i SETS ref 29 29 10 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+25 138 j SETS ref 29 29 12 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+26 148 E PARAMETERS defined 29 29 37 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+27 149 U PARAMETERS declared 40 40 8 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+28 140 i SETS ref 40 40 10 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+29 138 j SETS ref 40 40 12 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+30 149 U PARAMETERS defined 40 40 54 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+31 150 P PARAMETERS declared 52 52 8 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+32 140 i SETS ref 52 52 10 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+33 138 j SETS ref 52 52 12 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+34 150 P PARAMETERS defined 52 52 61 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+35 151 Xmas VARIABLES declared 64 64 5 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+36 140 i SETS ref 64 64 7 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+37 138 j SETS ref 64 64 9 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+38 139 v SETS ref 64 64 11 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+39 152 Xmenos VARIABLES declared 65 65 7 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+40 140 i SETS ref 65 65 9 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+41 138 j SETS ref 65 65 11 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+42 139 v SETS ref 65 65 13 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+43 153 Y VARIABLES declared 66 66 2 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+44 138 j SETS ref 66 66 4 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+45 139 v SETS ref 66 66 6 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+46 154 Z_ VARIABLES declared 67 67 3 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+47 138 j SETS ref 67 67 5 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+48 155 auxZ VARIABLES declared 68 68 5 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+49 138 j SETS ref 68 68 7 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+50 156 H VARIABLES declared 70 70 2 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+51 140 i SETS ref 70 70 4 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+52 138 j SETS ref 70 70 6 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+53 157 Used VARIABLES declared 72 72 5 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+54 140 i SETS ref 72 72 7 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+55 138 j SETS ref 72 72 9 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+56 158 Insatis VARIABLES declared 74 74 8 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+57 159 Insatisaux VARIABLES declared 75 75 11 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+58 160 Eq VARIABLES declared 76 76 3 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+59 159 Insatisaux VARIABLES ref 79 79 30 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+60 156 H VARIABLES ref 80 80 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+61 155 auxZ VARIABLES ref 80 80 25 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+62 157 Used VARIABLES ref 80 80 31 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+63 151 Xmas VARIABLES ref 81 81 23 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+64 152 Xmenos VARIABLES ref 81 81 31 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+65 161 definir_Y EQUATIONS declared 85 85 10 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+66 138 j SETS ref 85 85 12 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+67 139 v SETS ref 85 85 14 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+68 162 solo_arcos_buenos_mas EQUATIONS declared 87 87 22 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+69 140 i SETS ref 87 87 24 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+70 138 j SETS ref 87 87 26 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+71 139 v SETS ref 87 87 28 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+72 163 solo_arcos_buenos_menos EQUATIONS declared 88 88 24 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+73 140 i SETS ref 88 88 26 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+74 138 j SETS ref 88 88 28 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+75 139 v SETS ref 88 88 30 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+76 164 lim_provisiones EQUATIONS declared 91 91 16 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+77 165 flujo_nulo EQUATIONS declared 92 92 11 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+78 138 j SETS ref 92 92 13 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+79 139 v SETS ref 92 92 15 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+80 166 flujo_destinos EQUATIONS declared 94 94 15 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+81 138 j SETS ref 94 94 17 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+82 139 v SETS ref 94 94 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+83 167 existencia_ruta EQUATIONS declared 96 96 16 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+84 140 i SETS ref 96 96 18 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+85 138 j SETS ref 96 96 20 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+86 139 v SETS ref 96 96 22 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+87 168 usabilidad_ruta EQUATIONS declared 97 97 16 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+88 140 i SETS ref 97 97 18 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+89 138 j SETS ref 97 97 20 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+90 139 v SETS ref 97 97 22 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+91 169 existencia_ruta_min EQUATIONS declared 98 98 20 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+92 140 i SETS ref 98 98 22 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+93 138 j SETS ref 98 98 24 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+94 139 v SETS ref 98 98 26 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+95 170 usabilidad_ruta_min EQUATIONS declared 99 99 20 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+96 140 i SETS ref 99 99 22 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+97 138 j SETS ref 99 99 24 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+98 139 v SETS ref 99 99 26 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+99 171 lim_puentes EQUATIONS declared 100 100 12 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+100 172 arco_usado EQUATIONS declared 102 102 11 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+101 140 i SETS ref 102 102 13 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+102 138 j SETS ref 102 102 15 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+103 173 arco_usado_orientacion EQUATIONS declared 103 103 23 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+104 140 i SETS ref 103 103 25 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+105 138 j SETS ref 103 103 27 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+106 174 fiabilidad EQUATIONS declared 104 104 11 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+107 175 def_insatisaux EQUATIONS declared 106 106 15 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+108 176 def_auxZ1 EQUATIONS declared 108 108 10 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+109 138 j SETS ref 108 108 12 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+110 177 def_auxZ2 EQUATIONS declared 109 109 10 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+111 138 j SETS ref 109 109 12 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+112 178 def_Z_ EQUATIONS declared 111 111 7 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+113 138 j SETS ref 111 111 9 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+114 179 f_insatis EQUATIONS declared 113 113 10 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+115 180 f_eq EQUATIONS declared 114 114 5 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+116 138 j SETS control 117 117 13 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+117 139 v SETS control 117 117 15 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+118 161 definir_Y EQUATIONS defined 117 117 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+119 153 Y VARIABLES ref 117 117 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+120 138 j SETS ref 117 117 22 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+121 139 v SETS ref 117 117 24 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+122 140 i SETS control 117 117 35 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+123 151 Xmas VARIABLES ref 117 117 40 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+124 140 i SETS ref 117 117 43 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+125 138 j SETS ref 117 117 45 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+126 139 v SETS ref 117 117 47 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+127 152 Xmenos VARIABLES ref 117 117 54 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+128 140 i SETS ref 117 117 57 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+129 138 j SETS ref 117 117 59 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+130 139 v SETS ref 117 117 61 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+131 140 i SETS control 117 117 71 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+132 151 Xmas VARIABLES ref 117 117 76 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+133 138 j SETS ref 117 117 79 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+134 140 i SETS ref 117 117 81 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+135 139 v SETS ref 117 117 83 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+136 152 Xmenos VARIABLES ref 117 117 90 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+137 138 j SETS ref 117 117 93 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+138 140 i SETS ref 117 117 95 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+139 139 v SETS ref 117 117 97 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+140 140 i SETS control 119 119 25 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+141 138 j SETS control 119 119 27 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+142 139 v SETS control 119 119 29 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+143 140 i SETS ref 119 119 36 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+144 138 j SETS ref 119 119 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+145 162 solo_arcos_buenos_mas EQUATIONS defined 119 119 53 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+146 151 Xmas VARIABLES ref 119 119 53 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+147 138 j SETS ref 119 119 56 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+148 140 i SETS ref 119 119 58 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+149 139 v SETS ref 119 119 60 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+150 140 i SETS control 120 120 27 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+151 138 j SETS control 120 120 29 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+152 139 v SETS control 120 120 31 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+153 140 i SETS ref 120 120 38 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+154 138 j SETS ref 120 120 46 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+155 163 solo_arcos_buenos_menos EQUATIONS defined 120 120 57 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+156 152 Xmenos VARIABLES ref 120 120 57 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+157 138 j SETS ref 120 120 60 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+158 140 i SETS ref 120 120 62 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+159 139 v SETS ref 120 120 64 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+160 164 lim_provisiones EQUATIONS defined 123 123 22 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+161 139 v SETS control 123 123 25 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+162 153 Y VARIABLES ref 123 123 26 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+163 139 v SETS ref 123 123 33 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+164 146 coste_vehiculo PARAMETERS ref 123 123 48 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+165 139 v SETS ref 123 123 51 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+166 143 max_coste PARAMETERS ref 123 123 67 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+167 138 j SETS control 124 124 14 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+168 139 v SETS control 124 124 16 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+169 138 j SETS ref 124 124 23 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+170 138 j SETS ref 124 124 36 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+171 165 flujo_nulo EQUATIONS defined 124 124 45 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+172 153 Y VARIABLES ref 124 124 45 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+173 138 j SETS ref 124 124 48 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+174 139 v SETS ref 124 124 50 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+175 138 j SETS control 126 126 18 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+176 139 v SETS control 126 126 20 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+177 138 j SETS ref 126 126 27 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+178 166 flujo_destinos EQUATIONS defined 126 126 36 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+179 153 Y VARIABLES ref 126 126 36 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+180 138 j SETS ref 126 126 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+181 139 v SETS ref 126 126 41 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+182 140 i SETS control 128 128 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+183 138 j SETS control 128 128 21 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+184 139 v SETS control 128 128 23 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+185 167 existencia_ruta EQUATIONS defined 128 128 30 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+186 151 Xmas VARIABLES ref 128 128 30 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+187 140 i SETS ref 128 128 33 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+188 138 j SETS ref 128 128 35 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+189 139 v SETS ref 128 128 37 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+190 152 Xmenos VARIABLES ref 128 128 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+191 140 i SETS ref 128 128 47 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+192 138 j SETS ref 128 128 49 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+193 139 v SETS ref 128 128 51 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+194 148 E PARAMETERS ref 128 128 60 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+195 140 i SETS ref 128 128 63 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+196 138 j SETS ref 128 128 65 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+197 140 i SETS control 129 129 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+198 138 j SETS control 129 129 21 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+199 139 v SETS control 129 129 23 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+200 168 usabilidad_ruta EQUATIONS defined 129 129 30 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+201 151 Xmas VARIABLES ref 129 129 30 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+202 140 i SETS ref 129 129 33 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+203 138 j SETS ref 129 129 35 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+204 139 v SETS ref 129 129 37 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+205 152 Xmenos VARIABLES ref 129 129 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+206 140 i SETS ref 129 129 47 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+207 138 j SETS ref 129 129 49 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+208 139 v SETS ref 129 129 51 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+209 149 U PARAMETERS ref 129 129 61 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+210 140 i SETS ref 129 129 64 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+211 138 j SETS ref 129 129 66 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+212 156 H VARIABLES ref 129 129 71 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+213 140 i SETS ref 129 129 74 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+214 138 j SETS ref 129 129 76 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+215 140 i SETS control 130 130 23 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+216 138 j SETS control 130 130 25 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+217 139 v SETS control 130 130 27 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+218 169 existencia_ruta_min EQUATIONS defined 130 130 34 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+219 151 Xmas VARIABLES ref 130 130 34 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+220 140 i SETS ref 130 130 37 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+221 138 j SETS ref 130 130 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+222 139 v SETS ref 130 130 41 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+223 152 Xmenos VARIABLES ref 130 130 48 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+224 140 i SETS ref 130 130 51 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+225 138 j SETS ref 130 130 53 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+226 139 v SETS ref 130 130 55 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+227 148 E PARAMETERS ref 130 130 65 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+228 140 i SETS ref 130 130 68 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+229 138 j SETS ref 130 130 70 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+230 140 i SETS control 131 131 23 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+231 138 j SETS control 131 131 25 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+232 139 v SETS control 131 131 27 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+233 170 usabilidad_ruta_min EQUATIONS defined 131 131 34 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+234 151 Xmas VARIABLES ref 131 131 34 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+235 140 i SETS ref 131 131 37 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+236 138 j SETS ref 131 131 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+237 139 v SETS ref 131 131 41 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+238 152 Xmenos VARIABLES ref 131 131 48 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+239 140 i SETS ref 131 131 51 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+240 138 j SETS ref 131 131 53 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+241 139 v SETS ref 131 131 55 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+242 149 U PARAMETERS ref 131 131 66 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+243 140 i SETS ref 131 131 69 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+244 138 j SETS ref 131 131 71 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+245 156 H VARIABLES ref 131 131 76 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+246 140 i SETS ref 131 131 79 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+247 138 j SETS ref 131 131 81 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+248 171 lim_puentes EQUATIONS defined 132 132 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+249 140 i SETS control 132 132 22 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+250 138 j SETS control 132 132 29 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+251 156 H VARIABLES ref 132 132 31 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+252 140 i SETS ref 132 132 34 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+253 138 j SETS ref 132 132 36 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+254 144 max_puentes PARAMETERS ref 132 132 54 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+255 140 i SETS control 134 134 14 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+256 138 j SETS control 134 134 16 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+257 172 arco_usado EQUATIONS defined 134 134 21 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+258 157 Used VARIABLES ref 134 134 26 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+259 140 i SETS ref 134 134 29 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+260 138 j SETS ref 134 134 31 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+261 139 v SETS control 134 134 42 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+262 151 Xmas VARIABLES ref 134 134 47 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+263 140 i SETS ref 134 134 50 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+264 138 j SETS ref 134 134 52 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+265 139 v SETS ref 134 134 54 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+266 152 Xmenos VARIABLES ref 134 134 61 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+267 140 i SETS ref 134 134 64 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+268 138 j SETS ref 134 134 66 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+269 139 v SETS ref 134 134 68 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+270 140 i SETS control 135 135 26 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+271 138 j SETS control 135 135 28 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+272 173 arco_usado_orientacion EQUATIONS defined 135 135 35 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+273 157 Used VARIABLES ref 135 135 35 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+274 140 i SETS ref 135 135 38 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+275 138 j SETS ref 135 135 40 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+276 157 Used VARIABLES ref 135 135 48 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+277 138 j SETS ref 135 135 51 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+278 140 i SETS ref 135 135 53 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+279 174 fiabilidad EQUATIONS defined 136 136 17 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+280 140 i SETS control 136 136 20 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+281 138 j SETS control 136 136 27 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+282 157 Used VARIABLES ref 136 136 32 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+283 140 i SETS ref 136 136 35 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+284 138 j SETS ref 136 136 37 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+285 51 log2 FUNCTIONS ref 136 136 43 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+286 150 P PARAMETERS ref 136 136 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+287 140 i SETS ref 136 136 47 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+288 138 j SETS ref 136 136 49 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+289 51 log2 FUNCTIONS ref 136 136 62 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+290 147 P_total PARAMETERS ref 136 136 69 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+291 138 j SETS control 138 138 18 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+292 138 j SETS ref 138 138 25 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+293 175 def_insatisaux EQUATIONS defined 138 138 43 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+294 159 Insatisaux VARIABLES ref 138 138 43 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+295 142 dem PARAMETERS ref 138 138 51 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+296 138 j SETS ref 138 138 54 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+297 154 Z_ VARIABLES ref 138 138 59 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+298 138 j SETS ref 138 138 62 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+299 138 j SETS control 140 140 13 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+300 138 j SETS ref 140 140 20 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+301 176 def_auxZ1 EQUATIONS defined 140 140 32 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+302 155 auxZ VARIABLES ref 140 140 32 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+303 138 j SETS ref 140 140 35 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+304 154 Z_ VARIABLES ref 140 140 45 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+305 138 j SETS ref 140 140 48 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+306 138 j SETS control 141 141 13 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+307 138 j SETS ref 141 141 20 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+308 177 def_auxZ2 EQUATIONS defined 141 141 32 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+309 155 auxZ VARIABLES ref 141 141 32 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+310 138 j SETS ref 141 141 35 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+311 138 j SETS control 143 143 10 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+312 178 def_Z_ EQUATIONS defined 143 143 15 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+313 154 Z_ VARIABLES ref 143 143 15 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+314 138 j SETS ref 143 143 18 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+315 139 v SETS control 143 143 29 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+316 153 Y VARIABLES ref 143 143 31 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+317 138 j SETS ref 143 143 34 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+318 139 v SETS ref 143 143 36 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+319 145 capacidad_vehiculo PARAMETERS ref 143 143 55 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+320 139 v SETS ref 143 143 58 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+321 180 f_eq EQUATIONS defined 145 145 10 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+322 160 Eq VARIABLES ref 145 145 10 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+323 138 j SETS control 145 145 21 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+324 155 auxZ VARIABLES ref 145 145 26 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+325 138 j SETS ref 145 145 29 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+326 179 f_insatis EQUATIONS defined 146 146 20 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+327 158 Insatis VARIABLES ref 146 146 20 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+328 138 j SETS control 146 146 31 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+329 159 Insatisaux VARIABLES ref 146 146 42 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+330 181 modelo1 MODELS declared 148 148 14 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+331 181 modelo1 MODELS defined 148 148 15 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+332 161 definir_Y EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+333 162 solo_arcos_buenos_mas EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+334 163 solo_arcos_buenos_menos EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+335 164 lim_provisiones EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+336 165 flujo_nulo EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+337 166 flujo_destinos EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+338 167 existencia_ruta EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+339 168 usabilidad_ruta EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+340 169 existencia_ruta_min EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+341 170 usabilidad_ruta_min EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+342 171 lim_puentes EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+343 172 arco_usado EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+344 173 arco_usado_orientacion EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+345 174 fiabilidad EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+346 175 def_insatisaux EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+347 176 def_auxZ1 EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+348 177 def_auxZ2 EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+349 178 def_Z_ EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+350 179 f_insatis EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+351 180 f_eq EQUATIONS ref 148 148 19 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+352 181 modelo1 MODELS ref 150 150 14 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+353 158 Insatis VARIABLES ref 150 150 43 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+354 160 Eq VARIABLES impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+355 180 f_eq EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+356 158 Insatis VARIABLES impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+357 179 f_insatis EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+358 178 def_Z_ EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+359 177 def_auxZ2 EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+360 155 auxZ VARIABLES impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+361 176 def_auxZ1 EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+362 154 Z_ VARIABLES impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+363 159 Insatisaux VARIABLES impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+364 175 def_insatisaux EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+365 174 fiabilidad EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+366 173 arco_usado_orientacion EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+367 157 Used VARIABLES impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+368 172 arco_usado EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+369 171 lim_puentes EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+370 170 usabilidad_ruta_min EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+371 169 existencia_ruta_min EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+372 156 H VARIABLES impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+373 168 usabilidad_ruta EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+374 167 existencia_ruta EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+375 166 flujo_destinos EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+376 165 flujo_nulo EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+377 164 lim_provisiones EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+378 163 solo_arcos_buenos_menos EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+379 162 solo_arcos_buenos_mas EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+380 152 Xmenos VARIABLES impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+381 151 Xmas VARIABLES impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+382 153 Y VARIABLES impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+383 161 definir_Y EQUATIONS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+384 181 modelo1 MODELS impl-asn 150 150 44 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+385 181 modelo1 MODELS ref 151 151 14 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+386 160 Eq VARIABLES ref 151 151 38 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+387 160 Eq VARIABLES impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+388 180 f_eq EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+389 158 Insatis VARIABLES impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+390 179 f_insatis EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+391 178 def_Z_ EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+392 177 def_auxZ2 EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+393 155 auxZ VARIABLES impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+394 176 def_auxZ1 EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+395 154 Z_ VARIABLES impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+396 159 Insatisaux VARIABLES impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+397 175 def_insatisaux EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+398 174 fiabilidad EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+399 173 arco_usado_orientacion EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+400 157 Used VARIABLES impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+401 172 arco_usado EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+402 171 lim_puentes EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+403 170 usabilidad_ruta_min EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+404 169 existencia_ruta_min EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+405 156 H VARIABLES impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+406 168 usabilidad_ruta EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+407 167 existencia_ruta EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+408 166 flujo_destinos EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+409 165 flujo_nulo EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+410 164 lim_provisiones EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+411 163 solo_arcos_buenos_menos EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+412 162 solo_arcos_buenos_mas EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+413 152 Xmenos VARIABLES impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+414 151 Xmas VARIABLES impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+415 153 Y VARIABLES impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+416 161 definir_Y EQUATIONS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+417 181 modelo1 MODELS impl-asn 151 151 39 0 1 G:\Mi unidad\TFG\src\gams\M-Fvf.gms
+0 181 size of symboltable
+1 mapval 1 FUNCT 0 0 
+2 ceil 1 FUNCT 0 0 
+3 floor 1 FUNCT 0 0 
+4 round 1 FUNCT 0 0 
+5 mod 1 FUNCT 0 0 
+6 trunc 1 FUNCT 0 0 
+7 sign 1 FUNCT 0 0 
+8 min 1 FUNCT 0 0 
+9 max 1 FUNCT 0 0 
+10 sqr 1 FUNCT 0 0 
+11 exp 1 FUNCT 0 0 
+12 log 1 FUNCT 0 0 
+13 log10 1 FUNCT 0 0 
+14 sqrt 1 FUNCT 0 0 
+15 abs 1 FUNCT 0 0 
+16 cos 1 FUNCT 0 0 
+17 sin 1 FUNCT 0 0 
+18 arctan 1 FUNCT 0 0 
+19 errorf 1 FUNCT 0 0 
+20 uniform 1 FUNCT 0 0 
+21 normal 1 FUNCT 0 0 
+22 power 1 FUNCT 0 0 
+23 jdate 1 FUNCT 0 0 
+24 jtime 1 FUNCT 0 0 
+25 jstart 1 FUNCT 0 0 
+26 jnow 1 FUNCT 0 0 
+27 execerror 1 FUNCT 0 0 
+28 gyear 1 FUNCT 0 0 
+29 gmonth 1 FUNCT 0 0 
+30 gday 1 FUNCT 0 0 
+31 gdow 1 FUNCT 0 0 
+32 gleap 1 FUNCT 0 0 
+33 ghour 1 FUNCT 0 0 
+34 gminute 1 FUNCT 0 0 
+35 gsecond 1 FUNCT 0 0 
+36 execseed 1 FUNCT 0 0 
+37 timestart 1 FUNCT 0 0 
+38 timecomp 1 FUNCT 0 0 
+39 timeexec 1 FUNCT 0 0 
+40 timeclose 1 FUNCT 0 0 
+41 frac 1 FUNCT 0 0 
+42 ErrorLevel 1 FUNCT 0 0 
+43 HeapSize 1 FUNCT 0 0 
+44 Fact 1 FUNCT 0 0 
+45 UniformInt 1 FUNCT 0 0 
+46 PI 1 FUNCT 0 0 
+47 NcpF 1 FUNCT 0 0 
+48 NcpCM 1 FUNCT 0 0 
+49 Entropy 1 FUNCT 0 0 
+50 Sigmoid 1 FUNCT 0 0 
+51 log2 1 FUNCT 0 0 
+52 bool_not 1 FUNCT 0 0 
+53 bool_and 1 FUNCT 0 0 
+54 bool_or 1 FUNCT 0 0 
+55 bool_xor 1 FUNCT 0 0 
+56 bool_imp 1 FUNCT 0 0 
+57 bool_eqv 1 FUNCT 0 0 
+58 rel_eq 1 FUNCT 0 0 
+59 rel_gt 1 FUNCT 0 0 
+60 rel_ge 1 FUNCT 0 0 
+61 rel_lt 1 FUNCT 0 0 
+62 rel_le 1 FUNCT 0 0 
+63 rel_ne 1 FUNCT 0 0 
+64 IfThen 1 FUNCT 0 0 
+65 rPower 1 FUNCT 0 0 
+66 EDist 1 FUNCT 0 0 
+67 div 1 FUNCT 0 0 
+68 div0 1 FUNCT 0 0 
+69 sllog10 1 FUNCT 0 0 
+70 sqlog10 1 FUNCT 0 0 
+71 slexp 1 FUNCT 0 0 
+72 sqexp 1 FUNCT 0 0 
+73 slrec 1 FUNCT 0 0 
+74 sqrec 1 FUNCT 0 0 
+75 cvPower 1 FUNCT 0 0 
+76 vcPower 1 FUNCT 0 0 
+77 Centropy 1 FUNCT 0 0 
+78 Gmillisec 1 FUNCT 0 0 
+79 MaxExecError 1 FUNCT 0 0 
+80 TimeElapsed 1 FUNCT 0 0 
+81 Gamma 1 FUNCT 0 0 
+82 LogGamma 1 FUNCT 0 0 
+83 Beta 1 FUNCT 0 0 
+84 LogBeta 1 FUNCT 0 0 
+85 GammaReg 1 FUNCT 0 0 
+86 BetaReg 1 FUNCT 0 0 
+87 sinh 1 FUNCT 0 0 
+88 cosh 1 FUNCT 0 0 
+89 tanh 1 FUNCT 0 0 
+90 MathLastRC 1 FUNCT 0 0 
+91 MathLastEC 1 FUNCT 0 0 
+92 MathOVal 1 FUNCT 0 0 
+93 SignPower 1 FUNCT 0 0 
+94 HandleStatus 1 FUNCT 0 0 
+95 NcpVUsin 1 FUNCT 0 0 
+96 NcpVUpow 1 FUNCT 0 0 
+97 Binomial 1 FUNCT 0 0 
+98 HandleSubmit 1 FUNCT 0 0 
+99 GamsVersion 1 FUNCT 0 0 
+100 HandleDelete 1 FUNCT 0 0 
+101 tan 1 FUNCT 0 0 
+102 arccos 1 FUNCT 0 0 
+103 arcsin 1 FUNCT 0 0 
+104 arctan2 1 FUNCT 0 0 
+105 sleep 1 FUNCT 0 0 
+106 HeapFree 1 FUNCT 0 0 
+107 HandleCollect 1 FUNCT 0 0 
+108 GamsRelease 1 FUNCT 0 0 
+109 Poly 1 FUNCT 0 0 
+110 LicenseStatus 1 FUNCT 0 0 
+111 LicenseLevel 1 FUNCT 0 0 
+112 HeapLimit 1 FUNCT 0 0 
+113 RandLinear 1 FUNCT 0 0 
+114 RandTriangle 1 FUNCT 0 0 
+115 ForceError 1 FUNCT 0 0 
+116 ForceErrorCnt 1 FUNCT 0 0 
+117 RandBinomial 1 FUNCT 0 0 
+118 JobHandle 1 FUNCT 0 0 
+119 JobStatus 1 FUNCT 0 0 
+120 JobKill 1 FUNCT 0 0 
+121 JobTerminate 1 FUNCT 0 0 
+122 NumCores 1 FUNCT 0 0 
+123 EmbeddedHandle 1 FUNCT 0 0 
+124 PlatformCode 1 FUNCT 0 0 
+125 Logit 1 FUNCT 0 0 
+126 LSEMax 1 FUNCT 0 0 
+127 LSEMaxSc 1 FUNCT 0 0 
+128 LSEMin 1 FUNCT 0 0 
+129 LSEMinSc 1 FUNCT 0 0 
+130  unknown* 1 FUNCT 0 0 
+131 SameAs 10 PRED 2 0 0 0 
+132 Diag 10 PRED 2 0 0 0 
+133 Solvers 10 PRED 1 0 0 
+134 LicenseCodes 10 PRED 1 0 0 
+135 SolverCapabilities 10 PRED 2 0 0 0 
+136 SortedUels 10 PRED 2 0 0 0 
+137 FILE 8 FILE 0 0 Current file name for FILE.xxx use
+138 j 2 SET 1 7 0 nodos. representan los asentamientos. en este modelo hemos de distinguir entre transitorios-destino-origen
+139 v 2 SET 1 3 0 Tipos de vehiculo
+140 i 2 SET 1 0 0 Aliased with j
+141 k 2 SET 1 0 0 Aliased with j
+142 dem 4 PARAM 1 3 138 demanda por cada asentamiento de un unico recurso en cierta unidad continua
+143 max_coste 4 PARAM 0 1 Maximo presupuesto que se puede invertir
+144 max_puentes 4 PARAM 0 1 maximo numero de puentes que podemos reconstruir previo paso a los camiones
+145 capacidad_vehiculo 4 PARAM 1 3 139 Capacidad de hacer partir 1 vehiculo de tipo v
+146 coste_vehiculo 4 PARAM 1 3 139 Coste total y fijo de hacer partir 1 vehiculo de tipo v
+147 P_total 4 PARAM 0 1 Probabilidad aceptable de que todos los convoys puedan pasar por todas las rutas elegidas
+148 E 4 PARAM 2 12 138 138 existe la ruta de i a j
+149 U 4 PARAM 2 6 138 138 al inicio es utilizable la ruta de i a j
+150 P 4 PARAM 2 49 138 138 Probabilidad de que la ruta de i a j sea usable
+151 Xmas 5 VAR 3 0 138 138 139 el flujo es discreto. esta variable sirve para denotar el flujo positivo
+152 Xmenos 5 VAR 3 0 138 138 139 esta variable sirve para denotar el flujo negativo
+153 Y 5 VAR 2 0 138 139 flujo de vehiculos que se queda en j
+154 Z_ 5 VAR 1 0 138 toneladas que se quedan en j
+155 auxZ 5 VAR 1 0 138 variable binaria que determina si llega alguna ayuda a j
+156 H 5 VAR 2 0 138 138 variable binaria que determina si habilitamos el puente de i a j
+157 Used 5 VAR 2 0 138 138 
+158 Insatis 5 VAR 0 0 
+159 Insatisaux 5 VAR 0 0 
+160 Eq 5 VAR 0 0 
+161 definir_Y 6 EQU 2 0 138 139 ecuacion de flujo
+162 solo_arcos_buenos_mas 6 EQU 3 0 138 138 139 consideramos de flujo nulo la mitad de los nodos. asi consideramos un grafo no orientado
+163 solo_arcos_buenos_menos 6 EQU 3 0 138 138 139 
+164 lim_provisiones 6 EQU 0 0 restriccion que fija la cantidad de ayuda que podemos enviar
+165 flujo_nulo 6 EQU 2 0 138 139 en los nodos transitorios el flujo es nulo
+166 flujo_destinos 6 EQU 2 0 138 139 
+167 existencia_ruta 6 EQU 3 0 138 138 139 
+168 usabilidad_ruta 6 EQU 3 0 138 138 139 
+169 existencia_ruta_min 6 EQU 3 0 138 138 139 en este modelo son necesarias 2 restricciones para que el flujo sea nulo y no negativo en los arcos no existentes
+170 usabilidad_ruta_min 6 EQU 3 0 138 138 139 ídem con los no usables
+171 lim_puentes 6 EQU 0 0 
+172 arco_usado 6 EQU 2 0 138 138 Pasa algun vehiculo por este nodo
+173 arco_usado_orientacion 6 EQU 2 0 138 138 
+174 fiabilidad 6 EQU 0 0 Restriccion que impide elegir alguna ruta que tenga mas de cierta probabilidad de no ser usable
+175 def_insatisaux 6 EQU 1 0 0 definimos la demanda insatisfecha
+176 def_auxZ1 6 EQU 1 0 138 definimos los nodos a los que llega alguna ayuda
+177 def_auxZ2 6 EQU 1 0 138 a los nodos transitorios no puede llegar ninguna ayuda por lo que no cuentan
+178 def_Z_ 6 EQU 1 0 138 
+179 f_insatis 6 EQU 0 0 funcion objetivo 1. demanda insatisfecha total
+180 f_eq 6 EQU 0 0 funcion objetivo 2. criterio de equidad. numero de nodos a los que se les reparte alguna cantidad de ayuda
+181 modelo1 7 MODEL 0 20 

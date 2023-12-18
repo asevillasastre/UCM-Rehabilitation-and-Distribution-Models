@@ -1,0 +1,50 @@
+B 3 C o m p i l a t i o n
+B 186 Equation Listing    SOLVE modelo1 Using MIP From line 172
+D 189 si_sales_entraste
+D 200 Z_entras
+D 211 Z_no_sales
+D 222 existencia
+D 233 usabilidad
+D 244 lim_coste
+D 249 lim_habilitaciones
+D 254 def_Ayuda
+D 265 lim_demanda
+D 276 f_Insatis
+D 281 def_Coste
+D 286 def_fiabilidad
+D 291 lim_fiabilidad
+D 296 arco_usado
+B 308 Column Listing      SOLVE modelo1 Using MIP From line 172
+E 311 X
+E 342 Z
+E 364 Ayuda
+E 386 H
+E 430 Insatis
+E 437 Coste
+E 445 Fiabilidad
+E 453 Usado
+B 472 Range Statistics    SOLVE modelo1 Using MIP From line 172
+B 483 Model Statistics    SOLVE modelo1 Using MIP From line 172
+B 496 Solution Report     SOLVE modelo1 Using MIP From line 172
+F 540 si_sales_entraste
+F 590 Z_entras
+F 649 Z_no_sales
+F 708 existencia
+F 1037 usabilidad
+F 1368 lim_coste
+F 1369 lim_habilitaciones
+F 1371 def_Ayuda
+F 1382 lim_demanda
+F 1395 f_Insatis
+F 1396 def_Coste
+F 1397 def_fiabilidad
+F 1398 lim_fiabilidad
+F 1404 arco_usado
+G 1445 X
+G 1774 Z
+G 1833 Ayuda
+G 1844 H
+G 1887 Insatis
+G 1888 Coste
+G 1889 Fiabilidad
+G 1895 Usado

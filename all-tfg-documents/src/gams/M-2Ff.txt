@@ -1,0 +1,645 @@
+INSTRUCTION DUMP FROM 1 TO 588
+
+  LOC    NUM INSTRUCT   SUB        FLD IDENT
+
+
+    1      0 UnitBeg       0        107
+    2     52 LoopBeg       0          0
+    3      7 CntrBeg       0        140 i
+
+    4      0 UnitBeg       0        108
+    5     52 LoopBeg       0          0
+    6      7 CntrBeg       0        138 j
+
+    7      0 UnitBeg       0        109
+    8     14 DefBeg        0        155 P
+    9     12 Index         0          1
+   10     12 Index         0          2
+   11     55 EndLhs        0          0
+   12     12 Index         0          1
+   13     12 Index         0          2
+   14      2 Push          0        155 P
+   15     28 Funct         1         50 log2
+   16     15 DefOp         0        155 P
+   17     16 DefEnd        0        155 P
+   18      1 UnitEnd       0          0
+   19      8 CntrEnd       0          2
+   20     53 LoopEnd       0          0
+   21      1 UnitEnd       0          0
+   22      8 CntrEnd       0          1
+   23     53 LoopEnd       0          0
+   24      1 UnitEnd       0          0
+
+   25      0 UnitBeg       0        113
+   26     14 DefBeg        0        150 P_total
+   27     55 EndLhs        0          0
+   28      2 Push          0        150 P_total
+   29     28 Funct         1         50 log2
+   30     15 DefOp         0        150 P_total
+   31     16 DefEnd        0        150 P_total
+   32      1 UnitEnd       0          0
+
+   33      0 UnitBeg       1        168
+   34     14 DefBeg        0        168 flujo_transitorios
+   35      7 CntrBeg       0        138 j
+   36      7 CntrBeg       0        139 v
+   37     25 Ord           0          1
+   38     21 Immed         0          9  1.00000000000000E+0000
+   39     38 RelOp         1          0
+   40     25 Ord           0          1
+   41      2 Push          0        143 num_transitorios
+   42     38 RelOp         4          0
+   43     40 AndOp         0          0
+   44      9 CntrJmp       0          0
+   45     12 Index         0          1
+   46     12 Index         0          2
+   47     55 EndLhs        0          0
+   48     12 Index         0          1
+   49     12 Index         0          2
+   50      2 Push          0        158 Y
+   51     21 Immed         0         10  0.00000000000000E+0000
+   52     42 EquOp         0          0
+   53     15 DefOp         0        168 flujo_transitorios
+   54      8 CntrEnd       0          2
+   55      8 CntrEnd       0          1
+   56     16 DefEnd        0        168 flujo_transitorios
+   57      1 UnitEnd       0          0
+
+   58      0 UnitBeg       1        169
+   59     14 DefBeg        0        169 flujo_destinos
+   60      7 CntrBeg       0        138 j
+   61      7 CntrBeg       0        139 v
+   62     25 Ord           0          1
+   63      2 Push          0        143 num_transitorios
+   64     21 Immed         0          9  1.00000000000000E+0000
+   65      6 AddOp         0          0
+   66     38 RelOp         2          0
+   67      9 CntrJmp       0          0
+   68     12 Index         0          1
+   69     12 Index         0          2
+   70     55 EndLhs        0          0
+   71     12 Index         0          1
+   72     12 Index         0          2
+   73      2 Push          0        158 Y
+   74     21 Immed         0         10  0.00000000000000E+0000
+   75     42 EquOp         1          0
+   76     15 DefOp         0        169 flujo_destinos
+   77      8 CntrEnd       0          2
+   78      8 CntrEnd       0          1
+   79     16 DefEnd        0        169 flujo_destinos
+   80      1 UnitEnd       0          0
+
+   81      0 UnitBeg       1        170
+   82     14 DefBeg        0        170 def_Y
+   83      7 CntrBeg       0        138 j
+   84      7 CntrBeg       0        139 v
+   85     12 Index         0          1
+   86     12 Index         0          2
+   87     55 EndLhs        0          0
+   88     12 Index         0          1
+   89     12 Index         0          2
+   90      2 Push          0        158 Y
+   91     29 SumBeg        0          0
+   92      7 CntrBeg       0        140 i
+   93     12 Index         0          3
+   94     12 Index         0          1
+   95     12 Index         0          2
+   96      2 Push          0        156 Xmas
+   97     12 Index         0          3
+   98     12 Index         0          1
+   99     12 Index         0          2
+  100      2 Push          0        157 Xmenos
+  101      6 AddOp         1          0
+  102     30 SumOp         0          0
+  103      8 CntrEnd       0          0
+  104     29 SumBeg        0          0
+  105      7 CntrBeg       0        140 i
+  106     12 Index         0          1
+  107     12 Index         0          3
+  108     12 Index         0          2
+  109      2 Push          0        156 Xmas
+  110     12 Index         0          1
+  111     12 Index         0          3
+  112     12 Index         0          2
+  113      2 Push          0        157 Xmenos
+  114      6 AddOp         1          0
+  115     30 SumOp         0          0
+  116      8 CntrEnd       0          0
+  117      6 AddOp         1          0
+  118     42 EquOp         0          0
+  119     15 DefOp         0        170 def_Y
+  120      8 CntrEnd       0          2
+  121      8 CntrEnd       0          1
+  122     16 DefEnd        0        170 def_Y
+  123      1 UnitEnd       0          0
+
+  124      0 UnitBeg       1        171
+  125     14 DefBeg        0        171 def_Z
+  126      7 CntrBeg       0        138 j
+  127     12 Index         0          1
+  128     55 EndLhs        0          0
+  129     12 Index         0          1
+  130      2 Push          0        159 Z
+  131     29 SumBeg        0          0
+  132      7 CntrBeg       0        139 v
+  133     12 Index         0          1
+  134     12 Index         0          2
+  135      2 Push          0        158 Y
+  136     12 Index         0          2
+  137      2 Push          0        144 capacidad_vehiculo
+  138      4 MultOp        0          0
+  139     30 SumOp         0          0
+  140      8 CntrEnd       0          0
+  141     42 EquOp         0          0
+  142     15 DefOp         0        171 def_Z
+  143      8 CntrEnd       0          1
+  144     16 DefEnd        0        171 def_Z
+  145      1 UnitEnd       0          0
+
+  146      0 UnitBeg       1        173
+  147     14 DefBeg        0        172 arcos_buenos_mas
+  148      7 CntrBeg       0        140 i
+  149      7 CntrBeg       0        138 j
+  150      7 CntrBeg       0        139 v
+  151     25 Ord           0          1
+  152     25 Ord           0          2
+  153     38 RelOp         4          0
+  154      9 CntrJmp       0          0
+  155     12 Index         0          1
+  156     12 Index         0          2
+  157     12 Index         0          3
+  158     55 EndLhs        0          0
+  159     12 Index         0          2
+  160     12 Index         0          1
+  161     12 Index         0          3
+  162      2 Push          0        156 Xmas
+  163     21 Immed         0         10  0.00000000000000E+0000
+  164     42 EquOp         0          0
+  165     15 DefOp         0        172 arcos_buenos_mas
+  166      8 CntrEnd       0          3
+  167      8 CntrEnd       0          2
+  168      8 CntrEnd       0          1
+  169     16 DefEnd        0        172 arcos_buenos_mas
+  170      1 UnitEnd       0          0
+
+  171      0 UnitBeg       1        174
+  172     14 DefBeg        0        173 arcos_buenos_menos
+  173      7 CntrBeg       0        140 i
+  174      7 CntrBeg       0        138 j
+  175      7 CntrBeg       0        139 v
+  176     25 Ord           0          1
+  177     25 Ord           0          2
+  178     38 RelOp         4          0
+  179      9 CntrJmp       0          0
+  180     12 Index         0          1
+  181     12 Index         0          2
+  182     12 Index         0          3
+  183     55 EndLhs        0          0
+  184     12 Index         0          2
+  185     12 Index         0          1
+  186     12 Index         0          3
+  187      2 Push          0        157 Xmenos
+  188     21 Immed         0         10  0.00000000000000E+0000
+  189     42 EquOp         0          0
+  190     15 DefOp         0        173 arcos_buenos_menos
+  191      8 CntrEnd       0          3
+  192      8 CntrEnd       0          2
+  193      8 CntrEnd       0          1
+  194     16 DefEnd        0        173 arcos_buenos_menos
+  195      1 UnitEnd       0          0
+
+  196      0 UnitBeg       1        175
+  197     14 DefBeg        0        174 existencia_ruta_max
+  198      7 CntrBeg       0        140 i
+  199      7 CntrBeg       0        138 j
+  200      7 CntrBeg       0        139 v
+  201     12 Index         0          1
+  202     12 Index         0          2
+  203     12 Index         0          3
+  204     55 EndLhs        0          0
+  205     12 Index         0          1
+  206     12 Index         0          2
+  207     12 Index         0          3
+  208      2 Push          0        156 Xmas
+  209     12 Index         0          1
+  210     12 Index         0          2
+  211     12 Index         0          3
+  212      2 Push          0        157 Xmenos
+  213      6 AddOp         1          0
+  214      2 Push          0        149 M
+  215     12 Index         0          1
+  216     12 Index         0          2
+  217      2 Push          0        151 E
+  218      4 MultOp        0          0
+  219     42 EquOp         2          0
+  220     15 DefOp         0        174 existencia_ruta_max
+  221      8 CntrEnd       0          3
+  222      8 CntrEnd       0          2
+  223      8 CntrEnd       0          1
+  224     16 DefEnd        0        174 existencia_ruta_max
+  225      1 UnitEnd       0          0
+
+  226      0 UnitBeg       1        176
+  227     14 DefBeg        0        175 existencia_ruta_min
+  228      7 CntrBeg       0        140 i
+  229      7 CntrBeg       0        138 j
+  230      7 CntrBeg       0        139 v
+  231     12 Index         0          1
+  232     12 Index         0          2
+  233     12 Index         0          3
+  234     55 EndLhs        0          0
+  235     12 Index         0          1
+  236     12 Index         0          2
+  237     12 Index         0          3
+  238      2 Push          0        156 Xmas
+  239     12 Index         0          1
+  240     12 Index         0          2
+  241     12 Index         0          3
+  242      2 Push          0        157 Xmenos
+  243      6 AddOp         1          0
+  244      2 Push          0        149 M
+  245     12 Index         0          1
+  246     12 Index         0          2
+  247      2 Push          0        151 E
+  248      4 MultOp        0          0
+  249      5 UnMinOp       0          0
+  250     42 EquOp         1          0
+  251     15 DefOp         0        175 existencia_ruta_min
+  252      8 CntrEnd       0          3
+  253      8 CntrEnd       0          2
+  254      8 CntrEnd       0          1
+  255     16 DefEnd        0        175 existencia_ruta_min
+  256      1 UnitEnd       0          0
+
+  257      0 UnitBeg       1        177
+  258     14 DefBeg        0        176 usabilidad_ruta_max
+  259      7 CntrBeg       0        140 i
+  260      7 CntrBeg       0        138 j
+  261      7 CntrBeg       0        139 v
+  262     12 Index         0          1
+  263     12 Index         0          2
+  264     12 Index         0          3
+  265     55 EndLhs        0          0
+  266     12 Index         0          1
+  267     12 Index         0          2
+  268     12 Index         0          3
+  269      2 Push          0        156 Xmas
+  270     12 Index         0          1
+  271     12 Index         0          2
+  272     12 Index         0          3
+  273      2 Push          0        157 Xmenos
+  274      6 AddOp         1          0
+  275      2 Push          0        149 M
+  276     12 Index         0          1
+  277     12 Index         0          2
+  278      2 Push          0        152 U
+  279     12 Index         0          1
+  280     12 Index         0          2
+  281      2 Push          0        161 H
+  282      6 AddOp         0          0
+  283      4 MultOp        0          0
+  284     42 EquOp         2          0
+  285     15 DefOp         0        176 usabilidad_ruta_max
+  286      8 CntrEnd       0          3
+  287      8 CntrEnd       0          2
+  288      8 CntrEnd       0          1
+  289     16 DefEnd        0        176 usabilidad_ruta_max
+  290      1 UnitEnd       0          0
+
+  291      0 UnitBeg       1        178
+  292     14 DefBeg        0        177 usabilidad_ruta_min
+  293      7 CntrBeg       0        140 i
+  294      7 CntrBeg       0        138 j
+  295      7 CntrBeg       0        139 v
+  296     12 Index         0          1
+  297     12 Index         0          2
+  298     12 Index         0          3
+  299     55 EndLhs        0          0
+  300     12 Index         0          1
+  301     12 Index         0          2
+  302     12 Index         0          3
+  303      2 Push          0        156 Xmas
+  304     12 Index         0          1
+  305     12 Index         0          2
+  306     12 Index         0          3
+  307      2 Push          0        157 Xmenos
+  308      6 AddOp         1          0
+  309      2 Push          0        149 M
+  310     12 Index         0          1
+  311     12 Index         0          2
+  312      2 Push          0        152 U
+  313     12 Index         0          1
+  314     12 Index         0          2
+  315      2 Push          0        161 H
+  316      6 AddOp         0          0
+  317      4 MultOp        0          0
+  318      5 UnMinOp       0          0
+  319     42 EquOp         1          0
+  320     15 DefOp         0        177 usabilidad_ruta_min
+  321      8 CntrEnd       0          3
+  322      8 CntrEnd       0          2
+  323      8 CntrEnd       0          1
+  324     16 DefEnd        0        177 usabilidad_ruta_min
+  325      1 UnitEnd       0          0
+
+  326      0 UnitBeg       1        180
+  327     14 DefBeg        0        178 lim_coste
+  328     55 EndLhs        0          0
+  329      2 Push          0        166 Coste
+  330      2 Push          0        147 max_coste
+  331     42 EquOp         2          0
+  332     15 DefOp         0        178 lim_coste
+  333     16 DefEnd        0        178 lim_coste
+  334      1 UnitEnd       0          0
+
+  335      0 UnitBeg       1        181
+  336     14 DefBeg        0        179 lim_habilitaciones
+  337     55 EndLhs        0          0
+  338     29 SumBeg        0          0
+  339      7 CntrBeg       0        140 i
+  340     29 SumBeg        0          0
+  341      7 CntrBeg       0        138 j
+  342     12 Index         0          1
+  343     12 Index         0          2
+  344      2 Push          0        161 H
+  345     30 SumOp         0          0
+  346      8 CntrEnd       0          0
+  347     30 SumOp         0          0
+  348      8 CntrEnd       0          0
+  349      2 Push          0        148 max_habilitaciones
+  350     42 EquOp         2          0
+  351     15 DefOp         0        179 lim_habilitaciones
+  352     16 DefEnd        0        179 lim_habilitaciones
+  353      1 UnitEnd       0          0
+
+  354      0 UnitBeg       1        183
+  355     14 DefBeg        0        180 def_insatisaux
+  356      7 CntrBeg       0        138 j
+  357     25 Ord           0          1
+  358      2 Push          0        143 num_transitorios
+  359     21 Immed         0          9  1.00000000000000E+0000
+  360      6 AddOp         0          0
+  361     38 RelOp         2          0
+  362      9 CntrJmp       0          0
+  363     12 Index         0          1
+  364     55 EndLhs        0          0
+  365      2 Push          0        163 Insatisaux
+  366     12 Index         0          1
+  367      2 Push          0        142 dem
+  368     12 Index         0          1
+  369      2 Push          0        159 Z
+  370      6 AddOp         1          0
+  371     42 EquOp         1          0
+  372     15 DefOp         0        180 def_insatisaux
+  373      8 CntrEnd       0          1
+  374     16 DefEnd        0        180 def_insatisaux
+  375      1 UnitEnd       0          0
+
+  376      0 UnitBeg       1        184
+  377     14 DefBeg        0        181 def_Zaux_destinos
+  378      7 CntrBeg       0        138 j
+  379     25 Ord           0          1
+  380      2 Push          0        143 num_transitorios
+  381     21 Immed         0          9  1.00000000000000E+0000
+  382      6 AddOp         0          0
+  383     38 RelOp         2          0
+  384      9 CntrJmp       0          0
+  385     12 Index         0          1
+  386     55 EndLhs        0          0
+  387     12 Index         0          1
+  388      2 Push          0        160 Zaux
+  389      2 Push          0        149 M
+  390     12 Index         0          1
+  391      2 Push          0        159 Z
+  392      4 MultOp        0          0
+  393     42 EquOp         2          0
+  394     15 DefOp         0        181 def_Zaux_destinos
+  395      8 CntrEnd       0          1
+  396     16 DefEnd        0        181 def_Zaux_destinos
+  397      1 UnitEnd       0          0
+
+  398      0 UnitBeg       1        185
+  399     14 DefBeg        0        182 def_Zaux_transitorios
+  400      7 CntrBeg       0        138 j
+  401     25 Ord           0          1
+  402      2 Push          0        143 num_transitorios
+  403     38 RelOp         4          0
+  404      9 CntrJmp       0          0
+  405     12 Index         0          1
+  406     55 EndLhs        0          0
+  407     12 Index         0          1
+  408      2 Push          0        160 Zaux
+  409     21 Immed         0         10  0.00000000000000E+0000
+  410     42 EquOp         0          0
+  411     15 DefOp         0        182 def_Zaux_transitorios
+  412      8 CntrEnd       0          1
+  413     16 DefEnd        0        182 def_Zaux_transitorios
+  414      1 UnitEnd       0          0
+
+  415      0 UnitBeg       1        186
+  416     14 DefBeg        0        183 lim_demanda
+  417      7 CntrBeg       0        138 j
+  418     12 Index         0          1
+  419     55 EndLhs        0          0
+  420     12 Index         0          1
+  421      2 Push          0        159 Z
+  422     12 Index         0          1
+  423      2 Push          0        142 dem
+  424     42 EquOp         2          0
+  425     15 DefOp         0        183 lim_demanda
+  426      8 CntrEnd       0          1
+  427     16 DefEnd        0        183 lim_demanda
+  428      1 UnitEnd       0          0
+
+  429      0 UnitBeg       1        188
+  430     14 DefBeg        0        185 f_eq
+  431     55 EndLhs        0          0
+  432      2 Push          0        165 Eq
+  433     29 SumBeg        0          0
+  434      7 CntrBeg       0        138 j
+  435     12 Index         0          1
+  436      2 Push          0        160 Zaux
+  437     30 SumOp         0          0
+  438      8 CntrEnd       0          0
+  439     42 EquOp         0          0
+  440     15 DefOp         0        185 f_eq
+  441     16 DefEnd        0        185 f_eq
+  442      1 UnitEnd       0          0
+
+  443      0 UnitBeg       1        189
+  444     14 DefBeg        0        184 f_insatis
+  445     55 EndLhs        0          0
+  446      2 Push          0        164 Insatis
+  447     29 SumBeg        0          0
+  448      7 CntrBeg       0        138 j
+  449      2 Push          0        163 Insatisaux
+  450     30 SumOp         0          0
+  451      8 CntrEnd       0          0
+  452     42 EquOp         0          0
+  453     15 DefOp         0        184 f_insatis
+  454     16 DefEnd        0        184 f_insatis
+  455      1 UnitEnd       0          0
+
+  456      0 UnitBeg       1        190
+  457     14 DefBeg        0        186 def_coste
+  458     55 EndLhs        0          0
+  459      2 Push          0        166 Coste
+  460     29 SumBeg        0          0
+  461      7 CntrBeg       0        139 v
+  462     11 String        0          1
+  463     12 Index         0          1
+  464      2 Push          0        158 Y
+  465     12 Index         0          1
+  466      2 Push          0        145 coste_fijo
+  467      4 MultOp        0          0
+  468     30 SumOp         0          0
+  469      8 CntrEnd       0          0
+  470      5 UnMinOp       0          0
+  471     29 SumBeg        0          0
+  472      7 CntrBeg       0        139 v
+  473     29 SumBeg        0          0
+  474      7 CntrBeg       0        140 i
+  475     29 SumBeg        0          0
+  476      7 CntrBeg       0        138 j
+  477     12 Index         0          2
+  478     12 Index         0          3
+  479     12 Index         0          1
+  480      2 Push          0        156 Xmas
+  481     12 Index         0          2
+  482     12 Index         0          3
+  483     12 Index         0          1
+  484      2 Push          0        157 Xmenos
+  485      6 AddOp         0          0
+  486     12 Index         0          2
+  487     12 Index         0          3
+  488      2 Push          0        153 dist
+  489      4 MultOp        0          0
+  490      2 Push          0        146 coste_variable
+  491      4 MultOp        0          0
+  492     30 SumOp         0          0
+  493      8 CntrEnd       0          0
+  494     30 SumOp         0          0
+  495      8 CntrEnd       0          0
+  496     30 SumOp         0          0
+  497      8 CntrEnd       0          0
+  498      6 AddOp         0          0
+  499     29 SumBeg        0          0
+  500      7 CntrBeg       0        140 i
+  501     29 SumBeg        0          0
+  502      7 CntrBeg       0        138 j
+  503     12 Index         0          1
+  504     12 Index         0          2
+  505      2 Push          0        154 coste_rehabilitacion
+  506     12 Index         0          1
+  507     12 Index         0          2
+  508      2 Push          0        161 H
+  509      4 MultOp        0          0
+  510     30 SumOp         0          0
+  511      8 CntrEnd       0          0
+  512     30 SumOp         0          0
+  513      8 CntrEnd       0          0
+  514      6 AddOp         0          0
+  515     42 EquOp         0          0
+  516     15 DefOp         0        186 def_coste
+  517     16 DefEnd        0        186 def_coste
+  518      1 UnitEnd       0          0
+
+  519      0 UnitBeg       1        192
+  520     14 DefBeg        0        187 def_fiabilidad
+  521     55 EndLhs        0          0
+  522      2 Push          0        167 Fiabilidad
+  523     29 SumBeg        0          0
+  524      7 CntrBeg       0        140 i
+  525     29 SumBeg        0          0
+  526      7 CntrBeg       0        138 j
+  527     12 Index         0          1
+  528     12 Index         0          2
+  529      2 Push          0        162 Usado
+  530     12 Index         0          1
+  531     12 Index         0          2
+  532      2 Push          0        155 P
+  533      4 MultOp        0          0
+  534     30 SumOp         0          0
+  535      8 CntrEnd       0          0
+  536     30 SumOp         0          0
+  537      8 CntrEnd       0          0
+  538     42 EquOp         0          0
+  539     15 DefOp         0        187 def_fiabilidad
+  540     16 DefEnd        0        187 def_fiabilidad
+  541      1 UnitEnd       0          0
+
+  542      0 UnitBeg       1        193
+  543     14 DefBeg        0        188 lim_fiabilidad
+  544     55 EndLhs        0          0
+  545      2 Push          0        167 Fiabilidad
+  546      2 Push          0        150 P_total
+  547     42 EquOp         1          0
+  548     15 DefOp         0        188 lim_fiabilidad
+  549     16 DefEnd        0        188 lim_fiabilidad
+  550      1 UnitEnd       0          0
+
+  551      0 UnitBeg       1        194
+  552     14 DefBeg        0        189 arco_usado
+  553      7 CntrBeg       0        140 i
+  554      7 CntrBeg       0        138 j
+  555     12 Index         0          1
+  556     12 Index         0          2
+  557     55 EndLhs        0          0
+  558      2 Push          0        149 M
+  559     12 Index         0          1
+  560     12 Index         0          2
+  561      2 Push          0        162 Usado
+  562      4 MultOp        0          0
+  563     29 SumBeg        0          0
+  564      7 CntrBeg       0        139 v
+  565     12 Index         0          1
+  566     12 Index         0          2
+  567     12 Index         0          3
+  568      2 Push          0        156 Xmas
+  569     12 Index         0          1
+  570     12 Index         0          2
+  571     12 Index         0          3
+  572      2 Push          0        157 Xmenos
+  573      6 AddOp         0          0
+  574     30 SumOp         0          0
+  575      8 CntrEnd       0          0
+  576     42 EquOp         1          0
+  577     15 DefOp         0        189 arco_usado
+  578      8 CntrEnd       0          2
+  579      8 CntrEnd       0          1
+  580     16 DefEnd        0        189 arco_usado
+  581      1 UnitEnd       0          0
+  582     54 SetLin        0        198
+  583     43 Solve1        0        190 modelo1
+  584     44 Solve2        2        164 Insatis
+  585     54 SetLin        0        199
+  586     43 Solve1        1        190 modelo1
+  587     44 Solve2        2        165 Eq
+  588     56 ProgEnd       0          0
+
+MODEL LISTS
+
+ENTRY                               ID  TYPE   LENGTH
+  190                          modelo1  MODEL      22
+    168               flujo_transitorios  EQU  
+    169                   flujo_destinos  EQU  
+    170                            def_Y  EQU  
+    171                            def_Z  EQU  
+    172                 arcos_buenos_mas  EQU  
+    173               arcos_buenos_menos  EQU  
+    174              existencia_ruta_max  EQU  
+    175              existencia_ruta_min  EQU  
+    176              usabilidad_ruta_max  EQU  
+    177              usabilidad_ruta_min  EQU  
+    178                        lim_coste  EQU  
+    179               lim_habilitaciones  EQU  
+    180                   def_insatisaux  EQU  
+    181                def_Zaux_destinos  EQU  
+    182            def_Zaux_transitorios  EQU  
+    183                      lim_demanda  EQU  
+    184                        f_insatis  EQU  
+    185                             f_eq  EQU  
+    186                        def_coste  EQU  
+    187                   def_fiabilidad  EQU  
+    188                   lim_fiabilidad  EQU  
+    189                       arco_usado  EQU  

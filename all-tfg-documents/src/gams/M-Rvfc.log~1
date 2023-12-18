@@ -1,0 +1,104 @@
+
+--- Job M-Rvfc.gms Start 02/25/23 12:26:04 41.2.0 5110e5ff WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    D:\GAMS\41\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms"
+    PageSize 0
+    ScrDir "G:\Mi unidad\5. TFG\src\gams\225p\"
+    SysDir D:\GAMS\41\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: GAMS Demo license for Antonio Sevilla Sastre   G221121|0002CO-GEN
+          UCM, Spain                                               DL079880
+          C:\Users\Antonio\Documents\GAMS\gamslice.txt
+          antsev01@ucm.es, Antonio Sevilla Sastre                          
+          Demo license for demonstration and instructional purposes only
+Processor information: 1 socket(s), 14 core(s), and 20 thread(s) available
+GAMS 41.2.0   Copyright (C) 1987-2022 GAMS Development. All rights reserved
+--- Starting compilation
+--- M-Rvfc.gms(23) 3 Mb 1 Error
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(24) 3 Mb 2 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(25) 3 Mb 3 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(40) 3 Mb 6 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(48) 3 Mb 7 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(49) 3 Mb 8 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(50) 3 Mb 9 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(53) 3 Mb 12 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(61) 3 Mb 13 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(62) 3 Mb 14 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(63) 3 Mb 15 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(66) 3 Mb 18 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(74) 3 Mb 19 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(75) 3 Mb 20 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(76) 3 Mb 21 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(79) 3 Mb 24 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(87) 3 Mb 25 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(88) 3 Mb 26 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(89) 3 Mb 27 Errors
+*** Error 170 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Domain violation for element
+--- M-Rvfc.gms(184) 3 Mb 28 Errors
+*** Error 257 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Solve statement not checked because of previous errors
+--- M-Rvfc.gms(186) 3 Mb 29 Errors
+*** Error 257 in G:\Mi unidad\5. TFG\src\gams\M-Rvfc.gms
+    Solve statement not checked because of previous errors
+--- M-Rvfc.gms(201) 3 Mb 29 Errors
+*** Status: Compilation error(s)
+--- Job M-Rvfc.gms Stop 02/25/23 12:26:04 elapsed 0:00:00.057

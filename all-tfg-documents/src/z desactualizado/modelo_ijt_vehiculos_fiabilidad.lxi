@@ -1,0 +1,115 @@
+B 3 C o m p i l a t i o n
+B 171 Equation Listing    SOLVE modelo1 Using MIP From line 146
+D 174 definir_Y
+D 185 definir_Z
+D 196 definir_Z_
+D 207 definir_auxZ
+D 218 lim_salida
+D 229 flujo_ini
+D 240 flujo_ini_0
+D 245 existencia_ruta
+D 256 usabilidad_ruta
+D 267 orientacion
+D 278 lim_puentes
+D 283 lim_demanda
+D 294 arco_usado
+D 305 arco_usado_orientacion
+D 316 fiabilidad
+D 321 f_ayuda
+D 326 f_equidad
+B 332 Column Listing      SOLVE modelo1 Using MIP From line 146
+E 335 X
+E 360 Y
+E 382 Z
+E 401 Z_
+E 426 auxZ
+E 445 H
+E 507 Used
+E 529 Ayuda
+E 536 Eq
+B 544 Range Statistics    SOLVE modelo1 Using MIP From line 146
+B 555 Model Statistics    SOLVE modelo1 Using MIP From line 146
+B 568 Solution Report     SOLVE modelo1 Using MIP From line 146
+F 612 definir_Y
+F 701 definir_Z
+F 720 definir_Z_
+F 732 definir_auxZ
+F 744 lim_salida
+F 847 flujo_ini
+F 866 flujo_ini_0
+F 870 existencia_ruta
+F 1561 usabilidad_ruta
+F 2252 orientacion
+F 2301 lim_puentes
+F 2305 lim_demanda
+F 2317 arco_usado
+F 2371 arco_usado_orientacion
+F 2420 fiabilidad
+F 2421 f_ayuda
+F 2422 f_equidad
+G 2428 X
+G 3119 Y
+G 3222 Z
+G 3241 Z_
+G 3253 auxZ
+G 3265 H
+G 3319 Used
+G 3375 Ayuda
+G 3376 Eq
+B 3387 Equation Listing    SOLVE modelo1 Using MIP From line 148
+D 3390 definir_Y
+D 3401 definir_Z
+D 3412 definir_Z_
+D 3423 definir_auxZ
+D 3434 lim_salida
+D 3445 flujo_ini
+D 3456 flujo_ini_0
+D 3461 existencia_ruta
+D 3472 usabilidad_ruta
+D 3483 orientacion
+D 3494 lim_puentes
+D 3499 lim_demanda
+D 3510 arco_usado
+D 3521 arco_usado_orientacion
+D 3532 fiabilidad
+D 3537 f_ayuda
+D 3542 f_equidad
+B 3548 Column Listing      SOLVE modelo1 Using MIP From line 148
+E 3551 X
+E 3576 Y
+E 3598 Z
+E 3617 Z_
+E 3642 auxZ
+E 3661 H
+E 3723 Used
+E 3745 Ayuda
+E 3752 Eq
+B 3760 Range Statistics    SOLVE modelo1 Using MIP From line 148
+B 3771 Model Statistics    SOLVE modelo1 Using MIP From line 148
+B 3784 Solution Report     SOLVE modelo1 Using MIP From line 148
+F 3828 definir_Y
+F 3917 definir_Z
+F 3936 definir_Z_
+F 3948 definir_auxZ
+F 3960 lim_salida
+F 4063 flujo_ini
+F 4082 flujo_ini_0
+F 4086 existencia_ruta
+F 4777 usabilidad_ruta
+F 5468 orientacion
+F 5517 lim_puentes
+F 5521 lim_demanda
+F 5533 arco_usado
+F 5587 arco_usado_orientacion
+F 5636 fiabilidad
+F 5637 f_ayuda
+F 5638 f_equidad
+G 5644 X
+G 6335 Y
+G 6438 Z
+G 6457 Z_
+G 6469 auxZ
+G 6481 H
+G 6535 Used
+G 6591 Ayuda
+G 6592 Eq

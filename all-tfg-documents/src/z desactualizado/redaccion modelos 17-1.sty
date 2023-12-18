@@ -1,0 +1,377 @@
+\documentclass[11pt]{article}
+\usepackage{a4wide}
+
+\usepackage[american]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\keepXColumns
+\usepackage{xcolor}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\title{Formulación y comparación de modelos con y sin periodos}
+\maketitle
+\section*{Modelo con periodos}
+Este modelo estudia la recuperación de elementos dañados de la red de distribución. Se desarrolla en un momento avanzado de la catástrofe, tras evacuación y rescate; en la fase de recuperación y distribución. La ayuda a enviar se considera discretizada. Se asume que el primer periodo se inicia una vez se ha realizado la reconstrucción de las rutas. \\
+
+Este modelo es fundamentalmente un problema de rutas con las limitaciones añadidas de los arcos no usables. \\
+
+Tener en cuenta periodos implica mayor coste computacional. Como ventaja, permitiría implementar el factor seguridad como un problema de rutas así como hacer depender otros factores del tiempo o incluir eventos.\\
+
+\subsection*{Conjuntos}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Variable} & \textbf{Subíndices} & \textbf{Descripción}\\ 
+\hline 
+\endhead 
+j, i & * & Nodos. Representan los asentamientos. \\ 
+t & * & Periodos. Se asumen de misma duración ademas de que todos los arcos se pueden recorrer en uno de estos periodos \\ 
+\hline 
+\end{tabularx}
+\subsection*{Parámetros}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Variable} & \textbf{Subíndices} & \textbf{Descripción}\\ 
+\hline 
+\endhead 
+dem & j & Demanda por cada asentamiento de un único recurso en cierta unidad discreta \\ 
+max\_camiones &  & Máximo número de camiones que podemos mandar en total a la misión. Se asume que cada camión transporta exactamente una unidad del recurso a repartir \\ 
+max\_puentes &  & Máximo número de puentes que podemos reconstruir previo paso a los camiones (un puente por cada sentido. consideramos un grafo orientado) \\ 
+E & i, j & Existe la ruta de i a j \\ 
+U & i, j & Al inicio es utilizable la ruta de i a j \\ 
+\hline 
+\end{tabularx}
+\newpage
+\subsection*{Variables}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Variable} & \textbf{Subíndices} & \textbf{Descripción}\\ 
+\hline 
+\endhead 
+X & i, j, t & Camiones que van de i a j en el periodo t \\ 
+Y & j, t & Camiones que hay en j en el periodo t. Se asume que pueden seguir su ruta, quedarse en j para proseguir su ruta en otro periodo o permanecer en j hasta el final del último periodo \\ 
+Z & j & Camiones totales emplazados en j al final del último periodo. Se asume que en ese momento hacen el reparto a j \\ 
+auxZ & j & Variable binaria que representa si se reparte al menos una unidad de recurso a j \\ 
+H & i, j & Variable binaria que determina si habilitamos el puente de i a j \\ 
+\hline 
+\end{tabularx}
+
+\subsection*{Ecuaciones}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Variable} & \textbf{Subíndices} & \textbf{Descripción}\\ 
+\hline 
+\endhead 
+\hyperref[definir_Y]{definir\_Y}  & j, t & Restricción de almacenamiento. En cierto nodo permanece lo almacenado en el anterior periodo más lo que entra a él en el presente menos lo que sale de él. No se incluye otra limitación de capacidad pues los nodos son asentamientos. El almacenaje debe ser discreto, no se bajan suministros de los camiones. \\ 
+\hyperref[definir_Z]{definir\_Z}  & j & Determina lo repartido como lo ubicado en cierto nodo en el último periodo \\ 
+\hyperref[definir_auxZ]{definir\_auxZ}  & j &  \\ 
+\hyperref[lim_salida]{lim\_salida}  & j, t & Limita las unidades que pueden salir de un nodo a las almacenadas en el mismo \\ 
+\hyperref[flujo_ini]{flujo\_ini}  & j & No hay almacenado nada en ningún nodo no inicial \\ 
+\hyperref[flujo_ini_0]{flujo\_ini\_0}  &  & En el nodo inicial esta almacenada la totalidad de los camiones \\ 
+\hyperref[existencia_ruta]{existencia\_ruta}  & i, j, t &  \\ 
+\hyperref[usabilidad_ruta]{usabilidad\_ruta}  & i, j, t &  \\ 
+\hyperref[orientacion]{orientacion}  & i, j & Si se habilita un sentido se ha de habilitar el opuesto \\ 
+\hyperref[lim_puentes]{lim\_puentes}  &  & Límite de puentes que podemos reconstruir \\ 
+\hyperref[lim_demanda]{lim\_demanda}  & j & No se puede superar la demanda \\ 
+\hyperref[f_ayuda]{f\_ayuda}  &  & Función objetivo 1. Cantidad total del recurso repartida, en cierta unidad \\ 
+\hyperref[f_equidad]{f\_equidad}  &  & Función objetivo 2.  Criterio de equidad. Número de nodos a los que se les reparte al menos una unidad del recurso \\ 
+\hline 
+\end{tabularx}
+\newpage
+\subsection*{Definición de las ecuaciones}
+\subsubsection*{$\text{definir\_Y}_{j, t}$} \label{definir_Y}
+$
+\textcolor{black}{\text{Y}}_{j, t} = \textcolor{black}{\text{Y}}_{j, t-1} + \displaystyle \sum_{i}\textcolor{black}{\text{X}}_{i, j, t} - \displaystyle \sum_{i}\textcolor{black}{\text{X}}_{j, i, t}
+$
+\hfill
+$
+\forall{ j, t}  ~ | ~ (  \text{ord}( \textcolor{black}{\text{t}} )   >  1 ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{definir\_Z}_{j}$} \label{definir_Z}
+$
+\textcolor{black}{\text{Z}}_{j} = \textcolor{black}{\text{Y}}_{j, \texttt{3}}
+$
+\hfill
+$
+\forall{ j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{definir\_auxZ}_{j}$} \label{definir_auxZ}
+$
+\textcolor{black}{\text{auxZ}}_{j} \leq \textcolor{black}{\text{Z}}_{j}
+$
+\hfill
+$
+\forall{ j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{lim\_salida}_{j, t}$} \label{lim_salida}
+$
+\displaystyle \sum_{i}\textcolor{black}{\text{X}}_{j, i, t} \leq \textcolor{black}{\text{Y}}_{j, t-1}
+$
+\hfill
+$
+\forall{ j, t} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{flujo\_ini}_{j}$} \label{flujo_ini}
+$
+\textcolor{black}{\text{Y}}_{j, \texttt{0}} = 0
+$
+\hfill
+$
+\forall{ j}  ~ | ~ (  \text{ord}( \textcolor{black}{\text{j}} )   >  1 ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{flujo\_ini\_0}$} \label{flujo_ini_0}
+$
+\textcolor{black}{\text{Y}}_{\texttt{0}, \texttt{0}} = \textcolor{black}{\text{max\_camiones}}
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{existencia\_ruta}_{i, j, t}$} \label{existencia_ruta}
+$
+\textcolor{black}{\text{X}}_{i, j, t} \leq M \cdot \textcolor{black}{\text{E}}_{i, j}
+$
+\hfill
+$
+\forall{ i, j, t} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{usabilidad\_ruta}_{i, j, t}$} \label{usabilidad_ruta}
+$
+\textcolor{black}{\text{X}}_{i, j, t} \leq M \cdot  ( \textcolor{black}{\text{U}}_{i, j} + \textcolor{black}{\text{H}}_{i, j} ) 
+$
+\hfill
+$
+\forall{ i, j, t} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{orientacion}_{i, j}$} \label{orientacion}
+$
+\textcolor{black}{\text{H}}_{i, j} = \textcolor{black}{\text{H}}_{j, i}
+$
+\hfill
+$
+\forall{ i, j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{lim\_puentes}$} \label{lim_puentes}
+$
+\displaystyle \sum_{i} ( \displaystyle \sum_{j}\textcolor{black}{\text{H}}_{i, j} )  \leq \textcolor{black}{\text{max\_puentes}}
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{lim\_demanda}_{j}$} \label{lim_demanda}
+$
+\textcolor{black}{\text{Z}}_{j} \leq \textcolor{black}{\text{dem}}_{j}
+$
+\hfill
+$
+\forall{ j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{f\_ayuda}$} \label{f_ayuda}
+$
+\textcolor{black}{\text{Ayuda}} = \displaystyle \sum_{j} ( \textcolor{black}{\text{Z}}_{j} - \textcolor{black}{\text{dem}}_{j} ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{f\_equidad}$} \label{f_equidad}
+$
+\textcolor{black}{\text{Eq}} = \displaystyle \sum_{j}\textcolor{black}{\text{auxZ}}_{j}
+$ \vspace{5pt}
+\hrule 
+\bigskip
+$\text{Y}_{j, t}\in \mathbb{Z}_{+} \forall j, t$ \newline 
+$\text{X}_{i, j, t}\in \mathbb{Z}_{+} \forall i, j, t$ \newline 
+$\text{Z}_{j}\in \mathbb{Z}_{+} \forall j$ \newline 
+$\text{auxZ}_{j}\in \{0,1\} ~ \forall j$ \newline 
+$\text{H}_{i, j}\in \{0,1\} ~ \forall i, j$ \newline
+\bigskip
+
+
+
+
+
+\newpage
+\section*{Modelo sin periodos}
+Este modelo es esencialmente un problema de flujo. A diferencia del primer modelo los nodos son catalogados en tres tipos según si emiten o reciben suministros. Además, el flujo es contínuo. Se ha obviado la limitación de no superar la demanda para conseguir mayor factibilidad. \\ \\
+No tener en cuenta periodos ni la mitad de los nodos permite manejar ejemplos más grandes. Sacrificamos determinar en qué instante sucede qué evento. Sin embargo, criterios como el tiempo que tarda en llegar la ayuda se pueden implementar de otras formas más eficientes que incluir convertir muchas restricciones en familias dependientes del periodo.\\\\
+Esta propuesta es más parecida al modelo RecHADS.
+\subsection*{Conjuntos}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Variable} & \textbf{Subíndices} & \textbf{Descripción}\\ 
+\hline 
+\endhead 
+j, i & * & Nodos. Representan los asentamientos. En este modelo hemos de distinguir entre transitorios, destino y origen \\ 
+\hline 
+\end{tabularx}
+\subsection*{Parámetros}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Variable} & \textbf{Subíndices} & \textbf{Descripción}\\ 
+\hline 
+\endhead 
+dem & j & Demanda por cada asentamiento de un único recurso en cierta unidad contínua \\ 
+max\_ayuda &  & Máxima cantidad de ayuda que podemos mandar en total a la misión. Se asume que se puede transportar cualquier cantidad sin coste temporal o económico alguno \\ 
+max\_puentes &  & Máximo número de puentes que podemos reconstruir previo paso al transporte de la ayuda\\ 
+E & i, j & Existe la ruta de i a j \\ 
+U & i, j & Al inicio es utilizable la ruta de i a j \\ 
+\hline 
+\end{tabularx}
+\subsection*{Variables}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Variable} & \textbf{Subíndices} & \textbf{Descripción}\\ 
+\hline 
+\endhead 
+X & i, j & Flujo de i a j. Es contínuo. Puede ser negativo si el de j a a i es positivo \\ 
+Y & j & Flujo que se queda en j \\ 
+auxZ & j & Variable binaria que determina si llega alguna ayuda a j \\ 
+H & i, j & Variable binaria que determina si habilitamos el puente (i,j) \\ 
+Insatisaux &  & Variable auxiliar para definir la demanda insatisfecha  \\
+\hline 
+\end{tabularx}
+\newpage
+\subsection*{Ecuaciones}
+\begin{tabularx}{\textwidth}{| l | l | X |} 
+\hline 
+\textbf{Variable} & \textbf{Subíndices} & \textbf{Descripción}\\ 
+\hline 
+\endhead 
+\hyperref[definir_Y]{definir\_Y}  & j & Ecuación de flujo \\ 
+\hyperref[solo_arcos_buenos]{solo\_arcos\_buenos}  & i, j & Consideramos de flujo nulo la mitad de los nodos. Así consideramos un grafo no orientado \\ 
+\hyperref[lim_provisiones]{lim\_provisiones}  &  & Límite en la cantidad de ayuda que podemos enviar \\ 
+\hyperref[flujo_nulo]{flujo\_nulo}  & j & En los nodos transitorios el flujo es nulo \\ 
+\hyperref[existencia_ruta]{existencia\_ruta}  & i, j &  \\ 
+\hyperref[usabilidad_ruta]{usabilidad\_ruta}  & i, j &  \\ 
+\hyperref[existencia_ruta_min]{existencia\_ruta\_min}  & i, j & En este modelo son necesarias 2 restricciones para que el flujo sea nulo y no negativo en los arcos no existentes \\ 
+\hyperref[usabilidad_ruta_min]{usabilidad\_ruta\_min}  & i, j & Ídem con los no usables \\ 
+\hyperref[lim_puentes]{lim\_puentes}  &  &  \\ 
+\hyperref[def_insatisaux]{def\_insatisaux}  & * & Definimos la demanda insatisfecha \\ 
+\hyperref[def_auxZ1]{def\_auxZ1}  & j & Definimos los nodos a los que llega alguna ayuda \\ 
+\hyperref[def_auxZ2]{def\_auxZ2}  & j & A los nodos transitorios no puede llegar ninguna ayuda por lo que no se tienen en cuenta para la función objetivo \\ 
+\hyperref[f_insatis]{f\_insatis}  &  & Función objetivo 1. Demanda insatisfecha total \\ 
+\hyperref[f_eq]{f\_eq}  &  & Función objetivo 2. Criterio de equidad. Número de nodos a los que se les reparte alguna cantidad de ayuda \\ 
+\hline 
+\end{tabularx}
+\subsection*{Definición de las ecuaciones}
+\subsubsection*{$\text{definir\_Y}_{j}$} \label{definir_Y}
+$
+\textcolor{black}{\text{Y}}_{j} = \displaystyle \sum_{i}\textcolor{black}{\text{X}}_{i, j} - \displaystyle \sum_{i}\textcolor{black}{\text{X}}_{j, i}
+$
+\hfill
+$
+\forall{ j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{solo\_arcos\_buenos}_{i, j}$} \label{solo_arcos_buenos}
+$
+\textcolor{black}{\text{X}}_{j, i} = 0
+$
+\hfill
+$
+\forall{ i, j}  ~ | ~ (  \text{ord}( \textcolor{black}{\text{i}} )   \leq   \text{ord}( \textcolor{black}{\text{j}} )  ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{lim\_provisiones}$} \label{lim_provisiones}
+$
+\textcolor{black}{\text{Y}}_{\texttt{0}} \geq -\textcolor{black}{\text{max\_ayuda}}
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{flujo\_nulo}_{j}$} \label{flujo_nulo}
+$
+\textcolor{black}{\text{Y}}_{j} = 0
+$
+\hfill
+$
+\forall{ j}  ~ | ~ (  (  \text{ord}( \textcolor{black}{\text{j}} )   >  1 )  \wedge  (  \text{ord}( \textcolor{black}{\text{j}} )   \leq  4 )  )
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{existencia\_ruta}_{i, j}$} \label{existencia_ruta}
+$
+\textcolor{black}{\text{X}}_{i, j} \leq M \cdot \textcolor{black}{\text{E}}_{i, j}
+$
+\hfill
+$
+\forall{ i, j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{usabilidad\_ruta}_{i, j}$} \label{usabilidad_ruta}
+$
+\textcolor{black}{\text{X}}_{i, j} \leq M \cdot  ( \textcolor{black}{\text{U}}_{i, j} + \textcolor{black}{\text{H}}_{i, j} ) 
+$
+\hfill
+$
+\forall{ i, j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{existencia\_ruta\_min}_{i, j}$} \label{existencia_ruta_min}
+$
+\textcolor{black}{\text{X}}_{i, j} \geq - ( M \cdot \textcolor{black}{\text{E}}_{i, j} ) 
+$
+\hfill
+$
+\forall{ i, j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{usabilidad\_ruta\_min}_{i, j}$} \label{usabilidad_ruta_min}
+$
+\textcolor{black}{\text{X}}_{i, j} \geq - ( M \cdot  ( \textcolor{black}{\text{U}}_{i, j} + \textcolor{black}{\text{H}}_{i, j} )  ) 
+$
+\hfill
+$
+\forall{ i, j} 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{lim\_puentes}$} \label{lim_puentes}
+$
+\displaystyle \sum_{i} ( \displaystyle \sum_{j}\textcolor{black}{\text{H}}_{i, j} )  \leq \textcolor{black}{\text{max\_puentes}}
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{def\_insatisaux}_{j}$} \label{def_insatisaux}
+$
+\textcolor{black}{\text{Insatisaux}} \geq \textcolor{black}{\text{dem}}_{j} - \textcolor{black}{\text{Y}}_{j}
+$
+\hfill
+$
+\forall{ j}  ~ | ~ (  \text{ord}( \textcolor{black}{\text{j}} )   \geq  5 ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{def\_auxZ1}_{j}$} \label{def_auxZ1}
+$
+\textcolor{black}{\text{auxZ}}_{j} \leq M \cdot \textcolor{black}{\text{Y}}_{j}
+$
+\hfill
+$
+\forall{ j}  ~ | ~ (  \text{ord}( \textcolor{black}{\text{j}} )   \geq  5 ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{def\_auxZ2}_{j}$} \label{def_auxZ2}
+$
+\textcolor{black}{\text{auxZ}}_{j} = 0
+$
+\hfill
+$
+\forall{ j}  ~ | ~ (  \text{ord}( \textcolor{black}{\text{j}} )   \leq  4 ) 
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{f\_eq}$} \label{f_eq}
+$
+\textcolor{black}{\text{Eq}} = \displaystyle \sum_{j}\textcolor{black}{\text{auxZ}}_{j}
+$ \vspace{5pt}
+\hrule 
+\subsubsection*{$\text{f\_insatis}$} \label{f_insatis}
+$
+\textcolor{black}{\text{Insatis}} = \displaystyle \sum_{j}\textcolor{black}{\text{Insatisaux}}
+$ \vspace{5pt}
+\hrule 
+\bigskip
+$\text{H}_{i, j}\in \{0,1\} ~ \forall i, j$ \newline 
+$\text{Insatisaux}\geq 0 ~ \forall $ \newline 
+$\text{auxZ}_{j}\in \{0,1\} ~ \forall j$ \newline
+\bigskip
+\end{document}
