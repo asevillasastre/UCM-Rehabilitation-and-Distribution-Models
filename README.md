@@ -1,3 +1,4 @@
+# Description
 This repository includes my final degree project: Rehabilitation and Distribution Models in Unsafe Conditions for Humanitarian Logistics, and all the code created ad hoc for it.
 
 It is proposed a rehabilitation and delivery problem considering the characteristics of reliability and safety of the road network on it.
