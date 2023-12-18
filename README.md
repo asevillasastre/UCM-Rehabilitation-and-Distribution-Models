@@ -8,6 +8,10 @@ It is proposed a rehabilitation and delivery problem considering the characteris
 It is studied through integer programming models, applying various multi-objective techniques.
 It is used the situation of West Bank as a relevant case study.
 
+### Content
+- Read full project [here](https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models/blob/main/TFG-Antonio-Sevila-Sastre.pdf)
+- 
+
 ### Author
 Antonio Sevilla Sastre; directed by Mᵃ Teresa Ortuño Sánchez, from Complutense University of Madrid.
 
