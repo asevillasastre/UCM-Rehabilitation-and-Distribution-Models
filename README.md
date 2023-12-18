@@ -10,8 +10,7 @@ It is used the situation of West Bank as a relevant case study
 
 ### Author
 - Antonio Sevilla Sastre
-- Mᵃ Teresa Ortuño Sánchez
-- Complutense University of Madrid
+- Directed by Mᵃ Teresa Ortuño Sánchez, from Complutense University of Madrid
 
 ### Link to repository
 [asevillasastre/UCM-TFG](https://github.com/asevillasastre/UCM-TFG)
