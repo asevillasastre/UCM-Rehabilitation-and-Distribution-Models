@@ -19,3 +19,5 @@ Antonio Sevilla Sastre; directed by Mᵃ Teresa Ortuño Sánchez, from Compluten
 -----------------------------------------------------------------------------
 
 You can check [my other projects](https://github.com/asevillasastre) and follow me on [LinkedIn](https://www.linkedin.com/in/asevillasastre/)!
+
+![alt text](https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models/blob/main/images/Figure-4.2.png?raw=true)
