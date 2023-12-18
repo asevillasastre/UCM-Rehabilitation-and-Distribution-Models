@@ -22,3 +22,7 @@ Antonio Sevilla Sastre; directed by Mᵃ Teresa Ortuño Sánchez, from Compluten
 
 #### Check my other projects!
 https://github.com/asevillasastre
+
+#### Contact
+asevillasastre@gmail.com
+https://www.linkedin.com/in/asevillasastre/
