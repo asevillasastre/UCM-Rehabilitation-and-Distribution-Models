@@ -22,4 +22,5 @@ You can check [my other projects](https://github.com/asevillasastre) and follow 
 
 -----------------------------------------------------------------------------
 
+![alt text](https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models/blob/main/images/Beamer-1.png?raw=true)
 ![alt text](https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models/blob/main/images/Figure-4.5.png?raw=true)
