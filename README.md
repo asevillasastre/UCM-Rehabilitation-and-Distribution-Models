@@ -1,7 +1,7 @@
 # Rehabilitation and Distribution Models in Unsafe Conditions for Humanitarian Logistics
 
 ### Description
-This repository includes my Final Degree Project, and all the code created _ad hoc_ for it.
+This repository includes my Final Degree Project, and ad hoc code for it.
 
 ### Abstract
 It is proposed a rehabilitation and delivery problem considering the characteristics of reliability and safety of the road network on it.
