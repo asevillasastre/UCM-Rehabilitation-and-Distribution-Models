@@ -20,3 +20,7 @@ You can check [my other projects](https://github.com/asevillasastre?tab=reposito
 -----------------------------------------------------------------------------
 
 ![alt text](https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models/blob/main/images/Beamer-1.png?raw=true)
+![alt text](https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models/blob/main/images/Figure-4.6.png?raw=true)
+![alt text](https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models/blob/main/images/Figure-4.1.png?raw=true)
+
+
