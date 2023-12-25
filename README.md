@@ -8,14 +8,14 @@ It is used the situation of West Bank as a relevant case study.
 ### Content
 - Read the full project [here](https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models/blob/main/TFG-Antonio-Sevila-Sastre.pdf).
 - Models are [formulated in GAMS](https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models/tree/main/src/gams).
-- There is some [auxiliar Python code](https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models/tree/main/src/python).
+- There is some [auxiliary Python code](https://github.com/asevillasastre/UCM-Rehabilitation-and-Distribution-Models/tree/main/src/python).
 
 ### Author
 Antonio Sevilla Sastre; directed by Mᵃ Teresa Ortuño Sánchez, from Complutense University of Madrid
 
 -----------------------------------------------------------------------------
 
-You can check [my other projects](https://github.com/asevillasastre?tab=repositories) and follow me on [LinkedIn](https://www.linkedin.com/in/asevillasastre/)!
+You may check [my other projects](https://github.com/asevillasastre?tab=repositories) and follow me on [LinkedIn](https://www.linkedin.com/in/asevillasastre/)!
 
 -----------------------------------------------------------------------------
 
